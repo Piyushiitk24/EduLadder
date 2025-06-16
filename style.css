@@ -18,52 +18,62 @@ button:hover {
 
 .container {
   margin: auto;
-  width: min(1440px, 100%);
+  width: min(1600px, 100%); /* MODIFIED: Increased max-width for larger screens */
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* MODIFIED: Align items to the top */
+  padding: 24px;
 }
 .boardArea {
-  padding: 24px;
-  width: 100%;
+  /* MODIFIED: Give the board area priority. It will take up 2/3 of the space */
+  flex: 2; 
+  padding: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .bigBoard {
-  width: calc(var(--box) * 10);
+  /* MODIFIED: Made the board larger */
+  width: 800px; 
   max-width: 100%;
   aspect-ratio: 1;
   position: relative;
 }
 .gamePlayers {
+  /* MODIFIED: Player area takes 1/3 of the space */
   flex: 1;
-  padding: 24px;
+  padding: 12px;
+  max-width: 400px; /* NEW: Added max-width for better control */
 }
 .playersBox {
   background-color: #ffffff6b;
   height: 100%;
   border-radius: 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 24px;
+  /* MODIFIED: Changed from grid to a vertical flex layout */
+  display: flex;
+  flex-direction: column; 
+  gap: 12px; /* MODIFIED: Reduced gap */
+  padding: 12px; /* MODIFIED: Reduced padding */
 }
 .playerCard {
   border-radius: 12px;
   background-color: #ffffff88;
-  padding: 24px;
+  padding: 12px; /* MODIFIED: Reduced padding */
 }
 .level1 {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* NEW: Vertically align items */
 }
 .level1 img {
-  width: 120px;
+  /* MODIFIED: Reduced size of player avatars */
+  width: 70px; 
   aspect-ratio: 1;
   border-radius: 100%;
 }
 .diceBox {
-  width: 120px;
+  /* MODIFIED: Reduced size of the dice box */
+  width: 70px;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -73,7 +83,8 @@ button:hover {
   cursor: pointer;
 }
 .diceImg {
-  font-size: 96px;
+  /* MODIFIED: Reduced size of the dice icon */
+  font-size: 60px;
   opacity: 0;
   transform: rotate(360deg) scale(0);
   animation: zoomInRotate 1.5s 1 forwards;
@@ -102,24 +113,24 @@ button:hover {
 }
 .level2 {
   width: 100%;
-  margin: 16px 0 0 0;
+  margin: 8px 0 0 0; /* MODIFIED: Reduced margin */
 }
 .level2 div {
   background-color: #ffffff88;
   width: 100%;
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 20px;
+  padding: 8px 12px; /* MODIFIED: Reduced padding */
+  border-radius: 8px;
+  font-size: 18px; /* MODIFIED: Reduced font size */
   letter-spacing: 1px;
   font-weight: normal;
+  text-align: center; /* NEW: Center the player name */
 }
 .board {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  width: 600px;
-  max-width: 100%;
+  width: 100%; /* MODIFIED: Let it fill the .bigBoard container */
   aspect-ratio: 1;
   box-shadow: -9px -9px 20px 5px rgba(0, 0, 0, 0.1),
     9px 9px 20px 5px rgba(0, 0, 0, 0.1);
@@ -130,17 +141,15 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  width: calc(var(--box) * 10);
-  max-width: 100%;
+  width: 100%; /* MODIFIED: Let it fill the .bigBoard container */
   aspect-ratio: 1;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
 
 .box {
-  max-width: 100%;
+  width: 100%; /* MODIFIED: Let grid handle the size */
   aspect-ratio: 1;
-  width: min(100%, 60px);
   flex-wrap: wrap;
   font-size: 10px;
   font-weight: 700;
@@ -148,10 +157,9 @@ button:hover {
   justify-content: center;
   align-items: center;
   padding: 4px;
-  /* border: 1px solid; */
 }
 .pot {
-  width: calc(var(--box) / 3);
+  width: 33%; /* MODIFIED: Relative width */
   aspect-ratio: 1;
   border-radius: 100%;
   transform: scale(1);
@@ -302,22 +310,38 @@ button:hover {
   background-position: center;
 }
 
-@media only screen and (max-width: 1360px) {
+/* MODIFIED: Changed the breakpoint for better responsiveness */
+@media only screen and (max-width: 1200px) {
   .container {
     flex-direction: column;
+    align-items: center; /* NEW: Center items when stacked */
     gap: 12px;
+  }
+  .gamePlayers {
+      width: 100%;
+      max-width: 800px; /* NEW: Allow player area to be as wide as the board */
+  }
+  /* NEW: This is the key part for your request. When the container stacks, 
+     we make the players box horizontal. */
+  .playersBox {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .playerCard {
+      flex: 1; /* NEW: Allow cards to grow and fill space */
+      min-width: 220px; /* NEW: Prevent cards from getting too small */
   }
 }
 @media only screen and (max-width: 700px) {
+  .container {
+      padding: 8px; /* MODIFIED: Less padding on mobile */
+  }
   .boardArea {
     padding: 0px;
   }
   .gamePlayers {
     padding: 0px;
-    width: min(600px, 100%);
-  }
-  .board {
-    width: 100%;
   }
   .playersBox {
     border-radius: 0;
@@ -334,9 +358,6 @@ button:hover {
   }
   .diceBox {
     width: 40px;
-  }
-  .diceBox:hover {
-    cursor: pointer;
   }
   .diceImg {
     font-size: 40px;
@@ -464,7 +485,7 @@ button:hover {
     font-size: 14px;
   }
   .pot {
-    width: calc(var(--box) / 5);
+    width: 20%;
   }
   .pot::after {
     width: 7.2px;
@@ -801,7 +822,6 @@ button:hover {
     font-weight: 500;
 }
 
-background-image: url("correct/path/to/image.png");
 #welcomeBoard {
     width: 100%;
     aspect-ratio: 1;
@@ -873,7 +893,7 @@ background-image: url("correct/path/to/image.png");
 .rules-column li {
   position: relative;
   padding-left: 2vw;
-  font-size: 2.8 vh;
+  font-size: 2.8vh;
   line-height: 1.5;
 }
 
@@ -883,7 +903,7 @@ background-image: url("correct/path/to/image.png");
   width: 3.8vh;
   height: 3.8vh;
   vertical-align: middle;
-  margin-right: 05px;
+  margin-right: 5px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -898,18 +918,6 @@ background-image: url("correct/path/to/image.png");
 /* Adjust bullet images inside nested lists */
 .rules-column ul ul {
   margin-left: 2vw;
-}
-
-
-/* Scoreboard container using grid layout */
-.scoreboard {
-  display: grid;
-  gap: 20px;
-  margin: 20px auto;
-  padding: 20px;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 
