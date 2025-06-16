@@ -31,7 +31,7 @@ button:hover {
   flex: 3; /* Give the board 3 parts of the available space */
 }
 .bigBoard {
-  width: calc(var(--box) * 10);
+  width: 100%;
   max-width: 100%;
   aspect-ratio: 1;
   position: relative;
@@ -120,7 +120,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 600px;
+  width: 100%;
   max-width: 100%;
   aspect-ratio: 1;
   box-shadow: -9px -9px 20px 5px rgba(0, 0, 0, 0.1),
@@ -132,7 +132,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  width: calc(var(--box) * 10);
+  width: 100%;
   max-width: 100%;
   aspect-ratio: 1;
   display: grid;
