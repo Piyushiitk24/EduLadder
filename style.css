@@ -24,10 +24,11 @@ button:hover {
 }
 .boardArea {
   padding: 24px;
-  width: 100%;
+  width: auto; /* Let flexbox handle the width */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 3; /* Give the board 3 parts of the available space */
 }
 .bigBoard {
   width: calc(var(--box) * 10);
@@ -36,34 +37,35 @@ button:hover {
   position: relative;
 }
 .gamePlayers {
-  flex: 1;
+  flex: 1; /* Give the player area 1 part of the available space */
   padding: 24px;
+  max-width: 380px; /* Set a max width to control its size */
 }
 .playersBox {
   background-color: #ffffff6b;
   height: 100%;
   border-radius: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 24px;
+  grid-template-columns: 1fr; /* Change to a single column */
+  gap: 12px; /* Reduce the gap between cards */
+  padding: 12px; /* Reduce the internal padding */
 }
 .playerCard {
   border-radius: 12px;
   background-color: #ffffff88;
-  padding: 24px;
+  padding: 12px; /* Reduce padding to make the card more compact */
 }
 .level1 {
   display: flex;
   justify-content: space-between;
 }
 .level1 img {
-  width: 120px;
+  width: 80px; /* Make the avatar smaller */
   aspect-ratio: 1;
   border-radius: 100%;
 }
 .diceBox {
-  width: 120px;
+  width: 80px; /* Make the dice box smaller to match */
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -73,7 +75,7 @@ button:hover {
   cursor: pointer;
 }
 .diceImg {
-  font-size: 96px;
+  font-size: 64px; /* Reduce dice icon size */
   opacity: 0;
   transform: rotate(360deg) scale(0);
   animation: zoomInRotate 1.5s 1 forwards;
@@ -302,10 +304,13 @@ button:hover {
   background-position: center;
 }
 
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1024px) {
   .container {
     flex-direction: column;
     gap: 12px;
+  }
+  .gamePlayers {
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -873,7 +878,7 @@ background-image: url("correct/path/to/image.png");
 .rules-column li {
   position: relative;
   padding-left: 2vw;
-  font-size: 2.8 vh;
+  font-size: 2.8vh;
   line-height: 1.5;
 }
 
