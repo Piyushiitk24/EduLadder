@@ -22,38 +22,44 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+
+/* --- Changes Start Here --- */
+
 .boardArea {
   padding: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 2.5; /* Give the board area 2.5 parts of the space */
+  flex: 2.5; /* 1. Give the board area more space */
 }
 .bigBoard {
-  width: 100%;
+  width: 100%; /* 2. Make the board fill its new, larger area */
   max-width: 100%;
   aspect-ratio: 1;
   position: relative;
 }
 .gamePlayers {
-  flex: 1; /* Give the player area 1 part of the space */
+  flex: 1; /* 1. Give the player area less space */
   padding: 24px;
-  max-width: 350px;
+  max-width: 350px; /* 1. Set a max-width for the player area */
 }
 .playersBox {
   background-color: #ffffff6b;
   height: 100%;
   border-radius: 24px;
   display: grid;
-  grid-template-columns: 1fr; /* Stack cards in 1 column */
-  gap: 12px; /* Reduce space between cards */
-  padding: 12px; /* Reduce internal padding */
+  grid-template-columns: 1fr; /* 3. Stack player cards vertically */
+  gap: 12px; /* 3. Reduce gap between cards */
+  padding: 12px; /* 3. Reduce padding inside the box */
 }
 .playerCard {
   border-radius: 12px;
   background-color: #ffffff88;
-  padding: 24px;
+  padding: 12px; /* 3. Reduce padding in the card */
 }
+
+/* --- Changes End Here --- */
+
 .level1 {
   display: flex;
   justify-content: space-between;
@@ -119,7 +125,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100%;
+  width: 100%; /* Changed from 600px */
   max-width: 100%;
   aspect-ratio: 1;
   box-shadow: -9px -9px 20px 5px rgba(0, 0, 0, 0.1),
@@ -131,7 +137,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%;
+  width: 100%; /* Changed from calc(var(--box) * 10) */
   max-width: 100%;
   aspect-ratio: 1;
   display: grid;
