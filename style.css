@@ -18,7 +18,8 @@ button:hover {
 
 .container {
   margin: auto;
-  width: min(1440px, 100%);
+  width: 100%; /* Allow it to fill the full width */
+  height: 100%; /* And the full height */
   display: flex;
   justify-content: center;
 }
@@ -31,7 +32,8 @@ button:hover {
   flex: 3; /* Give the board 3 parts of the available space */
 }
 .bigBoard {
-  width: 100%;
+  width: auto; /* Let the height and aspect-ratio determine the width */
+  height: 100%; /* Make the board as TALL as its container allows */
   max-width: 100%;
   aspect-ratio: 1;
   position: relative;
@@ -104,12 +106,12 @@ button:hover {
 }
 .level2 {
   width: 100%;
-  margin: 16px 0 0 0;
+  margin: 8px 0 0 0; /* Reduce top margin */
 }
 .level2 div {
   background-color: #ffffff88;
   width: 100%;
-  padding: 16px;
+  padding: 10px 16px; /* Reduce vertical padding from 16px to 10px */
   border-radius: 12px;
   font-size: 20px;
   letter-spacing: 1px;
@@ -576,6 +578,8 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 100dvh; /* Set a fixed height based on the viewport */
+  box-sizing: border-box; /* Ensure padding is included in the height */
 }
 .modal {
   width: 100%;
