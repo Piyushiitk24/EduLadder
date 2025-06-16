@@ -18,56 +18,58 @@ button:hover {
 
 .container {
   margin: auto;
-  width: 100%; /* Allow it to fill the full width */
-  height: 100%; /* And the full height */
+  width: min(1440px, 100%);
   display: flex;
   justify-content: center;
+  align-items: center; /* Vertically align items */
+  gap: 24px;
 }
 .boardArea {
   padding: 24px;
-  width: auto; /* Let flexbox handle the width */
+  flex: 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 3; /* Give the board 3 parts of the available space */
 }
+
+/* --- THE KEY FIX IS HERE --- */
 .bigBoard {
-  width: auto; /* Let the height and aspect-ratio determine the width */
-  height: 100%; /* Make the board as TALL as its container allows */
-  max-width: 100%;
-  aspect-ratio: 1;
+  width: 85vh; /* Set the width to 85% of the viewport's HEIGHT */
+  height: 85vh; /* Set the height to 85% of the viewport's HEIGHT */
+  max-width: 100%; /* Still allows shrinking on narrow screens */
   position: relative;
 }
+
 .gamePlayers {
-  flex: 1; /* Give the player area 1 part of the available space */
+  flex: 1;
   padding: 24px;
-  max-width: 380px; /* Set a max width to control its size */
+  max-width: 380px;
 }
 .playersBox {
   background-color: #ffffff6b;
   height: 100%;
   border-radius: 24px;
   display: grid;
-  grid-template-columns: 1fr; /* Change to a single column */
-  gap: 12px; /* Reduce the gap between cards */
-  padding: 12px; /* Reduce the internal padding */
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 12px;
 }
 .playerCard {
   border-radius: 12px;
   background-color: #ffffff88;
-  padding: 12px; /* Reduce padding to make the card more compact */
+  padding: 12px;
 }
 .level1 {
   display: flex;
   justify-content: space-between;
 }
 .level1 img {
-  width: 80px; /* Make the avatar smaller */
+  width: 80px;
   aspect-ratio: 1;
   border-radius: 100%;
 }
 .diceBox {
-  width: 80px; /* Make the dice box smaller to match */
+  width: 80px;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -77,7 +79,7 @@ button:hover {
   cursor: pointer;
 }
 .diceImg {
-  font-size: 64px; /* Reduce dice icon size */
+  font-size: 64px;
   opacity: 0;
   transform: rotate(360deg) scale(0);
   animation: zoomInRotate 1.5s 1 forwards;
@@ -106,12 +108,12 @@ button:hover {
 }
 .level2 {
   width: 100%;
-  margin: 8px 0 0 0; /* Reduce top margin */
+  margin: 8px 0 0 0; /* Reduced margin */
 }
 .level2 div {
   background-color: #ffffff88;
   width: 100%;
-  padding: 10px 16px; /* Reduce vertical padding from 16px to 10px */
+  padding: 10px 16px; /* Reduced padding */
   border-radius: 12px;
   font-size: 20px;
   letter-spacing: 1px;
@@ -122,7 +124,8 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100%;
+  width: 100%; /* Will now be 100% of the 85vh parent */
+  height: 100%; /* Will now be 100% of the 85vh parent */
   max-width: 100%;
   aspect-ratio: 1;
   box-shadow: -9px -9px 20px 5px rgba(0, 0, 0, 0.1),
@@ -134,7 +137,8 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%;
+  width: 100%; /* Will now be 100% of the 85vh parent */
+  height: 100%; /* Will now be 100% of the 85vh parent */
   max-width: 100%;
   aspect-ratio: 1;
   display: grid;
@@ -152,7 +156,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   padding: 4px;
-  /* border: 1px solid; */
 }
 .pot {
   width: calc(var(--box) / 3);
@@ -310,6 +313,10 @@ button:hover {
   .container {
     flex-direction: column;
     gap: 12px;
+  }
+  .bigBoard {
+     width: 90vw; /* On smaller screens, use viewport width */
+     height: 90vw;
   }
   .gamePlayers {
     max-width: 100%;
@@ -578,8 +585,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100dvh; /* Set a fixed height based on the viewport */
-  box-sizing: border-box; /* Ensure padding is included in the height */
 }
 .modal {
   width: 100%;
