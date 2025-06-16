@@ -21,25 +21,21 @@ button:hover {
   width: min(1440px, 100%);
   display: flex;
   justify-content: center;
-  align-items: center; /* Vertically align items */
-  gap: 24px;
 }
 .boardArea {
   padding: 24px;
-  flex: 3;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 3;
 }
-
-/* --- THE KEY FIX IS HERE --- */
 .bigBoard {
-  width: 85vh; /* Set the width to 85% of the viewport's HEIGHT */
-  height: 85vh; /* Set the height to 85% of the viewport's HEIGHT */
-  max-width: 100%; /* Still allows shrinking on narrow screens */
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
   position: relative;
 }
-
 .gamePlayers {
   flex: 1;
   padding: 24px;
@@ -108,12 +104,12 @@ button:hover {
 }
 .level2 {
   width: 100%;
-  margin: 8px 0 0 0; /* Reduced margin */
+  margin: 16px 0 0 0;
 }
 .level2 div {
   background-color: #ffffff88;
   width: 100%;
-  padding: 10px 16px; /* Reduced padding */
+  padding: 16px;
   border-radius: 12px;
   font-size: 20px;
   letter-spacing: 1px;
@@ -124,8 +120,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100%; /* Will now be 100% of the 85vh parent */
-  height: 100%; /* Will now be 100% of the 85vh parent */
+  width: 100%;
   max-width: 100%;
   aspect-ratio: 1;
   box-shadow: -9px -9px 20px 5px rgba(0, 0, 0, 0.1),
@@ -137,8 +132,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%; /* Will now be 100% of the 85vh parent */
-  height: 100%; /* Will now be 100% of the 85vh parent */
+  width: 100%;
   max-width: 100%;
   aspect-ratio: 1;
   display: grid;
@@ -313,10 +307,6 @@ button:hover {
   .container {
     flex-direction: column;
     gap: 12px;
-  }
-  .bigBoard {
-     width: 90vw; /* On smaller screens, use viewport width */
-     height: 90vw;
   }
   .gamePlayers {
     max-width: 100%;
