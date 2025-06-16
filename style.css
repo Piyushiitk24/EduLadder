@@ -24,11 +24,10 @@ button:hover {
 }
 .boardArea {
   padding: 24px;
-  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 3;
+  flex: 2.5; /* Give the board area 2.5 parts of the space */
 }
 .bigBoard {
   width: 100%;
@@ -37,35 +36,35 @@ button:hover {
   position: relative;
 }
 .gamePlayers {
-  flex: 1;
+  flex: 1; /* Give the player area 1 part of the space */
   padding: 24px;
-  max-width: 380px;
+  max-width: 350px;
 }
 .playersBox {
   background-color: #ffffff6b;
   height: 100%;
   border-radius: 24px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  padding: 12px;
+  grid-template-columns: 1fr; /* Stack cards in 1 column */
+  gap: 12px; /* Reduce space between cards */
+  padding: 12px; /* Reduce internal padding */
 }
 .playerCard {
   border-radius: 12px;
   background-color: #ffffff88;
-  padding: 12px;
+  padding: 24px;
 }
 .level1 {
   display: flex;
   justify-content: space-between;
 }
 .level1 img {
-  width: 80px;
+  width: 120px;
   aspect-ratio: 1;
   border-radius: 100%;
 }
 .diceBox {
-  width: 80px;
+  width: 120px;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -75,7 +74,7 @@ button:hover {
   cursor: pointer;
 }
 .diceImg {
-  font-size: 64px;
+  font-size: 96px;
   opacity: 0;
   transform: rotate(360deg) scale(0);
   animation: zoomInRotate 1.5s 1 forwards;
@@ -304,13 +303,10 @@ button:hover {
   background-position: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1360px) {
   .container {
     flex-direction: column;
     gap: 12px;
-  }
-  .gamePlayers {
-    max-width: 100%;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -877,7 +873,7 @@ button:hover {
 .rules-column li {
   position: relative;
   padding-left: 2vw;
-  font-size: 2.8vh;
+  font-size: 2.8 vh;
   line-height: 1.5;
 }
 
