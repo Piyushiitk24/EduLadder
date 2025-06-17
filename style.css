@@ -3,7 +3,6 @@
   --box: 60px;
 }
 
-/* FIX: Force scrollbar to prevent layout shift on screen transitions */
 html {
   overflow-y: scroll;
 }
@@ -322,10 +321,9 @@ button:hover {
   .playersBox {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center; /* FIX: Center the player cards horizontally */
+      justify-content: center;
   }
   .playerCard {
-      /* FIX: Prevent card from growing to full width when wrapped */
       flex: 0 1 220px;
   }
 }
@@ -714,7 +712,6 @@ button:hover {
   margin: auto;
 }
 
-/* FIX: Smoother animation to reduce vibration */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -722,7 +719,7 @@ button:hover {
 
 .screen {
   display: none;
-  animation: fadeIn 0.5s ease-out; /* FIX: Made animation faster */
+  animation: fadeIn 0.5s ease-out;
 }
 
 .show {
@@ -739,7 +736,6 @@ button:hover {
     border: none;
 }
 
-/* FIX: Welcome screen layout adjustments */
 #welcomeScreen {
     width: 100%;
     min-height: 100dvh;
@@ -751,7 +747,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* FIX: Changed to center to better position content */
+    /* FIX: This will space out the content vertically and push the button into view */
+    justify-content: space-evenly;
     text-align: center;
 }
 
@@ -775,6 +772,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* This class is no longer used in the HTML but is safe to keep */
 .welcomeBoardContainer {
     display: flex;
     justify-content: center;
@@ -801,6 +799,7 @@ button:hover {
     font-weight: 500;
 }
 
+/* This class is no longer used in the HTML but is safe to keep */
 #welcomeBoard {
     width: 100%;
     aspect-ratio: 1;
@@ -812,21 +811,20 @@ button:hover {
     border-radius: 10px;
 }
 
-/* FIX: Rules screen layout adjustments */
 .rules-container {
-  width: 100%; /* FIX: Use 100% width instead of 100vw */
-  min-height: 100vh; /* FIX: Use min-height to allow content to expand */
+  width: 100%;
+  min-height: 100vh;
   padding: 2vh 3vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* FIX: Center the content vertically */
+  justify-content: center;
   background: rgba(255, 255, 255, 0.9);
 }
 
 .rules-title {
-  font-size: clamp(24px, 4.5vh, 48px); /* FIX: Use clamp for responsive font size */
+  font-size: clamp(24px, 4.5vh, 48px);
   text-align: center;
   margin-bottom: 2vh;
 }
@@ -837,19 +835,18 @@ button:hover {
   justify-content: space-between;
   width: 100%;
   max-width: 90vw;
-  /* FIX: Removed fixed height to let content determine the size */
 }
 
 .rules-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* FIX: Align content to the top */
-  overflow-y: auto; /* FIX: Allow individual columns to scroll if needed */
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .rules-column h3 {
-  font-size: clamp(18px, 3vh, 28px); /* FIX: Responsive font size */
+  font-size: clamp(18px, 3vh, 28px);
   color: #333;
   text-align: left;
   margin-bottom: 1vh;
@@ -863,13 +860,13 @@ button:hover {
 .rules-column li {
   position: relative;
   padding-left: 2vw;
-  font-size: clamp(14px, 2.5vh, 18px); /* FIX: Responsive font size */
-  line-height: 1.6; /* FIX: Increased line-height for readability */
+  font-size: clamp(14px, 2.5vh, 18px);
+  line-height: 1.6;
 }
 
 .bullet {
   display: inline-block;
-  width: 24px; /* FIX: Use fixed pixel size for bullets */
+  width: 24px;
   height: 24px;
   vertical-align: middle;
   margin-right: 8px;
