@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![Game Logo](images/logo.png)
+![Game Logo](images/board.png)
 
 **🎮 Interactive Learning Game + 👩‍🏫 Teacher Management System 🎯**
 
