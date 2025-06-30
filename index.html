@@ -331,6 +331,84 @@
   </div>
 </div>
 
+<!-- Module Selection Screen -->
+<div class="screen" id="moduleScreen" style="display: none;">
+  <div class="s1-card">
+    <h1>Choose Your Learning Module</h1>
+    <p class="subHeading">Select a topic to test your knowledge!</p>
+    
+    <div class="modules-grid">
+      <!-- Teaching Learning Process -->
+      <div class="module-card" data-module="tlprocess" onclick="selectModule('tlprocess')">
+        <div class="module-icon">
+          <img src="images/modules/tlprocess.png" alt="Teaching Learning Process">
+        </div>
+        <button class="module-btn">Teaching Learning Process</button>
+      </div>
+
+      <!-- Learning Theories -->
+      <div class="module-card" data-module="learningtheories" onclick="selectModule('learningtheories')">
+        <div class="module-icon">
+          <img src="images/modules/learningtheories.png" alt="Learning Theories">
+        </div>
+        <button class="module-btn">Learning Theories</button>
+      </div>
+
+      <!-- 4 Ways of Learning -->
+      <div class="module-card" data-module="fourways" onclick="selectModule('fourways')">
+        <div class="module-icon">
+          <img src="images/modules/fourways.png" alt="4 Ways of Learning">
+        </div>
+        <button class="module-btn">4 Ways of Learning</button>
+      </div>
+
+      <!-- Andragogy -->
+      <div class="module-card" data-module="andragogy" onclick="selectModule('andragogy')">
+        <div class="module-icon">
+          <img src="images/modules/andragogy.png" alt="Andragogy">
+        </div>
+        <button class="module-btn">Andragogy</button>
+      </div>
+
+      <!-- Systematic Approach to Training -->
+      <div class="module-card" data-module="sat" onclick="selectModule('sat')">
+        <div class="module-icon">
+          <img src="images/modules/sat.png" alt="Systematic Approach to Training">
+        </div>
+        <button class="module-btn">Systematic Approach to Training (SAT)</button>
+      </div>
+
+      <!-- Basic Teaching Model -->
+      <div class="module-card" data-module="btm" onclick="selectModule('btm')">
+        <div class="module-icon">
+          <img src="images/modules/btm.png" alt="Basic Teaching Model">
+        </div>
+        <button class="module-btn">Basic Teaching Model</button>
+      </div>
+
+      <!-- Domains of Learning -->
+      <div class="module-card" data-module="dol" onclick="selectModule('dol')">
+        <div class="module-icon">
+          <img src="images/modules/dol.png" alt="Domains of Learning">
+        </div>
+        <button class="module-btn">Domains of Learning</button>
+      </div>
+
+      <!-- Writing Objectives -->
+      <div class="module-card" data-module="objectives" onclick="selectModule('objectives')">
+        <div class="module-icon">
+          <img src="images/modules/objectives.png" alt="Writing Objectives">
+        </div>
+        <button class="module-btn">Writing Objectives</button>
+      </div>
+    </div>
+
+    <div class="navigation-buttons">
+      <button class="startBtn" onclick="backToRules()">Back</button>
+      <button class="startBtn next" id="moduleNextBtn" onclick="proceedToPlayerSelection()" disabled>NEXT</button>
+    </div>
+  </div>
+</div>
 
 <!-- Scoreboard Screen -->
 <div class="screen" id="finalscoreboardScreen" style="display: none;">

@@ -933,3 +933,219 @@ button:hover {
   background-color: #f0f0f0;
   color: #555;
 }
+
+/* --------------------------------- */
+/* Module Selection Screen */
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+  padding: 0 16px;
+}
+
+.module-card {
+  background: linear-gradient(145deg, #ffffff88, #ffffff55);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.1),
+    -8px -8px 16px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.module-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -12px -12px 24px rgba(255, 255, 255, 0.7),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.4);
+  border-color: rgba(36, 85, 219, 0.3);
+}
+
+.module-card.selected {
+  background: linear-gradient(145deg, #2455db, #6d94ff);
+  color: white;
+  border-color: #2455db;
+  box-shadow: 
+    8px 8px 16px rgba(36, 85, 219, 0.3),
+    -8px -8px 16px rgba(109, 148, 255, 0.3),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.module-card.selected:hover {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.module-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff99, #ffffff66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.1),
+    -4px -4px 8px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.module-card:hover .module-icon {
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.15),
+    -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+
+.module-card.selected .module-icon {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.module-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.module-card:hover .module-icon img {
+  transform: scale(1.1);
+}
+
+.module-btn {
+  background: linear-gradient(145deg, #ffffff99, #ffffff77);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-family: "Kalam", cursive;
+  letter-spacing: 0.5px;
+  box-shadow: 
+    3px 3px 6px rgba(0, 0, 0, 0.1),
+    -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+
+.module-card:hover .module-btn {
+  background: linear-gradient(145deg, #ffffff, #ffffffaa);
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.15),
+    -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.module-card.selected .module-btn {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  color: #2455db;
+  font-weight: 700;
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.navigation-buttons .startBtn {
+  flex: 1;
+  max-width: 200px;
+}
+
+.startBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: linear-gradient(45deg, #cccccc 10%, #dddddd);
+}
+
+.startBtn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design for Module Screen */
+@media only screen and (max-width: 1200px) {
+  .modules-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .module-card {
+    padding: 20px;
+  }
+  
+  .module-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .module-icon img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .module-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 8px;
+  }
+  
+  .module-card {
+    padding: 16px;
+  }
+  
+  .module-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+  }
+  
+  .module-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .module-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .navigation-buttons .startBtn {
+    max-width: none;
+  }
+}

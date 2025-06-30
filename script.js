@@ -749,7 +749,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Event listener for the Rules Next button
   document.getElementById("rulesNextBtn").addEventListener("click", function() {
-    showScreen("screen1");
+    showScreen("moduleScreen");
   });
 });
 
@@ -1123,3 +1123,44 @@ function getSnakeBiteQuestion() {
   const q = snakeBiteQuestions.splice(randomIndex, 1)[0];
   return q;
 };
+
+// =============================
+// MODULE SELECTION LOGIC
+// =============================
+
+let selectedModule = null;
+
+// Function to select a module
+function selectModule(moduleId) {
+  // Remove selection from all cards
+  const allCards = document.querySelectorAll('.module-card');
+  allCards.forEach(card => card.classList.remove('selected'));
+  
+  // Add selection to clicked card
+  const selectedCard = document.querySelector(`[data-module="${moduleId}"]`);
+  if (selectedCard) {
+    selectedCard.classList.add('selected');
+    selectedModule = moduleId;
+    
+    // Enable the next button
+    const nextBtn = document.getElementById('moduleNextBtn');
+    if (nextBtn) {
+      nextBtn.disabled = false;
+    }
+  }
+}
+
+// Function to go back to rules screen
+function backToRules() {
+  showScreen("rulesScreen");
+}
+
+// Function to proceed to player selection after module is selected
+function proceedToPlayerSelection() {
+  if (selectedModule) {
+    // Store the selected module for later use in questions
+    console.log(`Selected module: ${selectedModule}`);
+    // Navigate to player selection screen
+    showScreen("screen1");
+  }
+}
