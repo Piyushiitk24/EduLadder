@@ -159,13 +159,27 @@
                 <h1>🎯 EduLadder Admin Panel</h1>
                 <h2>Question Management System</h2>
                 <p>Upload and manage questions for different learning modules</p>
+                <div class="status-info">
+                    <strong>📝 Important:</strong> CSV uploads ADD questions to the master questions.json file. 
+                    Each module can have questions uploaded separately. Questions are merged, not replaced.
+                    <br><strong>📁 Use template_questions.csv as your format guide!</strong>
+                </div>
             </div>
 
             <div class="upload-section">
                 <h3>📤 Upload Questions via CSV</h3>
                 
+                <div class="status-info" style="margin-bottom: 20px;">
+                    <strong>📋 CSV Format Requirements:</strong><br>
+                    • Columns: module_id, module_name, difficulty, question_text, option_a, option_b, option_c, option_d, correct_option<br>
+                    • Difficulty: "easy" or "hard" (lowercase)<br>
+                    • Correct_option: A, B, C, or D (uppercase)<br>
+                    • Module_id must match exactly (case-sensitive)<br>
+                    <strong>💡 Tip:</strong> Download the template below to see the exact format!
+                </div>
+                
                 <div class="module-selector">
-                    <label for="moduleSelect"><strong>Select Module:</strong></label>
+                    <label for="moduleSelect"><strong>Select Target Module (for verification):</strong></label>
                     <select id="moduleSelect">
                         <option value="">-- Choose Module --</option>
                         <option value="tlprocess">Teaching Learning Process</option>
@@ -179,19 +193,13 @@
                     </select>
                 </div>
 
-                <div class="difficulty-selector">
-                    <label><strong>Question Difficulty:</strong></label><br>
-                    <label><input type="radio" name="difficulty" value="easy" checked> Easy (Question Mark locations)</label><br>
-                    <label><input type="radio" name="difficulty" value="hard"> Hard (Snake Bite questions)</label>
-                </div>
-
                 <div class="file-upload">
                     <label for="csvFile"><strong>Choose CSV File:</strong></label>
                     <input type="file" id="csvFile" accept=".csv" />
                 </div>
 
-                <button class="admin-btn" onclick="uploadCSV()">📤 Upload Questions</button>
-                <button class="admin-btn" onclick="downloadTemplate()">📋 Download CSV Template</button>
+                <button class="admin-btn" onclick="uploadCSV()">📤 Upload & Merge Questions</button>
+                <button class="admin-btn success" onclick="downloadTemplate()">📋 Download CSV Template</button>
             </div>
 
             <div class="csv-template">
@@ -268,20 +276,28 @@
         }
 
         function downloadTemplate() {
-            const csvContent = `question_text,option1,option2,option3,option4,correct_answer
-"What is the capital of France?","Berlin","Madrid","Paris","Rome","3"
-"Which of the following is a programming language?","HTML","CSS","JavaScript","XML","3"
-"What does CPU stand for?","Central Processing Unit","Computer Personal Unit","Central Personal Unit","Computer Processing Unit","1"`;
+            // Create the exact template content matching our requirements
+            const csvContent = `module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
+tlprocess,Teaching Learning Process,easy,What is the first step in the teaching-learning process?,Assessment,Planning,Implementation,Evaluation,B
+tlprocess,Teaching Learning Process,hard,According to Kolb's experiential learning theory which stage follows 'Concrete Experience'?,Abstract Conceptualization,Reflective Observation,Active Experimentation,Theoretical Analysis,B
+learningtheories,Learning Theories,easy,Who is known as the father of behaviorism?,Jean Piaget,B.F. Skinner,John Watson,Albert Bandura,C
+learningtheories,Learning Theories,hard,According to Vygotsky's Zone of Proximal Development learning occurs best when:,Students work completely independently,Tasks are too difficult to complete,Students receive appropriate guidance,Learning is purely theoretical,C
+fourways,4 Ways of Learning,easy,Visual learners prefer to learn through:,Listening to lectures,Seeing charts and diagrams,Physical movement,Group discussions,B
+andragogy,Andragogy,easy,Andragogy is the study of:,Child learning,Adult learning,Animal behavior,Memory techniques,B
+sat,Systematic Approach to Training (SAT),easy,SAT stands for:,Simple Approach to Teaching,Systematic Approach to Training,Strategic Academic Training,Standard Assessment Tool,B
+btm,Basic Teaching Model,easy,The Basic Teaching Model typically includes:,Only assessment,Preparation presentation practice,Just lecturing,Testing only,B
+dol,Domains of Learning,easy,The three main domains of learning are:,Reading writing arithmetic,Cognitive affective psychomotor,Visual auditory kinesthetic,Memory thinking feeling,B
+objectives,Writing Objectives,easy,A learning objective should be:,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B`;
             
             const blob = new Blob([csvContent], { type: 'text/csv' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'question_template.csv';
+            a.download = 'template_questions.csv';
             a.click();
             window.URL.revokeObjectURL(url);
             
-            showStatus('CSV template downloaded!', 'success');
+            showStatus('✅ CSV template downloaded successfully! Use this exact format for uploading questions.', 'success');
         }
 
         function uploadCSV() {

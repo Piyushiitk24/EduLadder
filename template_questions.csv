@@ -1,0 +1,17 @@
+module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
+tlprocess,Teaching Learning Process,easy,What is the first step in the teaching-learning process?,Assessment,Planning,Implementation,Evaluation,B
+tlprocess,Teaching Learning Process,hard,According to Kolb's experiential learning theory which stage follows 'Concrete Experience'?,Abstract Conceptualization,Reflective Observation,Active Experimentation,Theoretical Analysis,B
+learningtheories,Learning Theories,easy,Who is known as the father of behaviorism?,Jean Piaget,B.F. Skinner,John Watson,Albert Bandura,C
+learningtheories,Learning Theories,hard,According to Vygotsky's Zone of Proximal Development learning occurs best when:,Students work completely independently,Tasks are too difficult to complete,Students receive appropriate guidance,Learning is purely theoretical,C
+fourways,4 Ways of Learning,easy,Visual learners prefer to learn through:,Listening to lectures,Seeing charts and diagrams,Physical movement,Group discussions,B
+fourways,4 Ways of Learning,hard,According to Fleming's VARK model multimodal learners:,Use only one learning style,Combine multiple learning preferences,Avoid visual inputs,Focus solely on auditory learning,B
+andragogy,Andragogy,easy,Andragogy is the study of:,Child learning,Adult learning,Animal behavior,Memory techniques,B
+andragogy,Andragogy,hard,Knowles' andragogical model assumes that adults:,Have no prior experience,Are externally motivated only,Have a problem-centered orientation,Learn exactly like children,C
+sat,Systematic Approach to Training (SAT),easy,SAT stands for:,Simple Approach to Teaching,Systematic Approach to Training,Strategic Academic Training,Standard Assessment Tool,B
+sat,Systematic Approach to Training (SAT),hard,In the SAT model which phase involves determining the gap between current and desired performance?,Design phase,Analysis phase,Implementation phase,Evaluation phase,B
+btm,Basic Teaching Model,easy,The Basic Teaching Model typically includes:,Only assessment,Preparation presentation practice,Just lecturing,Testing only,B
+btm,Basic Teaching Model,hard,The Basic Teaching Model's effectiveness depends heavily on:,Student compliance only,Proper sequencing and alignment of components,Teacher personality,Classroom size,B
+dol,Domains of Learning,easy,The three main domains of learning are:,Reading writing arithmetic,Cognitive affective psychomotor,Visual auditory kinesthetic,Memory thinking feeling,B
+dol,Domains of Learning,hard,In Bloom's revised cognitive taxonomy which level represents the highest form of cognitive processing?,Analyzing,Evaluating,Creating,Applying,C
+objectives,Writing Objectives,easy,A learning objective should be:,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B
+objectives,Writing Objectives,hard,According to Mager's criteria for writing objectives which component specifies the acceptable level of performance?,Condition,Behavior,Criterion,Context,C
