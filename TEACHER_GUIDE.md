@@ -61,13 +61,30 @@ module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option
 - **Hard Questions**: Shown when players get bitten by snakes (🐍)
 - **Module Selection**: Players choose a module before starting, only those questions appear
 
-### 🔄 Upload Process
+### 🔄 Step-by-Step Upload Process
 
-1. Open `admin.html` in your browser
-2. Click "Choose File" and select your CSV file
-3. Click "Convert to JSON" - this will add your questions to the master questions.json file
-4. Your questions will be merged with existing questions
-5. Students can immediately use the new questions in the game
+**Method 1: Using Admin Web Interface**
+1. Open `admin.html` in your web browser
+2. Download the CSV template by clicking "📋 Download CSV Template"
+3. Open the downloaded template file in Excel or any spreadsheet software
+4. Replace the sample data with your own questions (keep the header row)
+5. Save the file as CSV format
+6. Go back to admin.html and select your module from the dropdown
+7. Click "Choose File" and select your CSV file
+8. Click "📤 Upload & Merge Questions"
+9. Wait for success confirmation message
+10. Your questions are now live in the game!
+
+**Method 2: Using Template File**
+1. Copy the `template_questions.csv` file from the project folder
+2. Rename it (e.g., `my_module_questions.csv`)
+3. Edit with your questions following the exact same format
+4. Upload via admin.html as described above
+
+**Verification:**
+- After upload, you can test by starting the game
+- Select your module to see if your questions appear
+- Check both easy (question marks) and hard (snake bites) questions
 
 ### ⚠️ Important Notes
 
@@ -76,6 +93,28 @@ module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option
 - **Always test your CSV format using the template first**
 - **Avoid special characters and commas within question text**
 - **Module IDs are case-sensitive and must match exactly**
+- **Each CSV upload can contain questions for multiple modules**
+- **Questions are immediately available after successful upload**
+- **The system validates your CSV format before processing**
+
+### 🔧 Troubleshooting Common Issues
+
+**CSV Format Errors:**
+- Ensure exactly 9 columns in correct order
+- Check that difficulty is "easy" or "hard" (lowercase)
+- Verify correct_option is A, B, C, or D (uppercase)
+- Remove extra commas from question text
+
+**Upload Issues:**
+- File must have .csv extension
+- Check internet connection for web interface
+- Ensure module_id matches one of the 8 valid modules
+- Try downloading and using the template again
+
+**Question Not Appearing:**
+- Verify the module was selected correctly during upload
+- Check that questions were added to the right difficulty level
+- Test by playing the game and selecting the specific module
 
 ### 📁 Example Files Location
 - Template: `template_questions.csv`

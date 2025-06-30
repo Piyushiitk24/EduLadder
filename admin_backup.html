@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLadder Admin - Question Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2455db;
+        }
+        
+        .upload-section {
+            background: linear-gradient(145deg, #f8f9ff, #e8f0ff);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px dashed #2455db;
+        }
+        
+        .module-selector {
+            margin-bottom: 20px;
+        }
+        
+        .module-selector select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #2455db;
+            font-size: 16px;
+            background: white;
+        }
+        
+        .difficulty-selector {
+            margin-bottom: 20px;
+        }
+        
+        .difficulty-selector input[type="radio"] {
+            margin: 0 10px 0 0;
+        }
+        
+        .file-upload {
+            margin-bottom: 20px;
+        }
+        
+        .file-upload input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #2455db;
+            background: white;
+        }
+        
+        .csv-template {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .preview-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        
+        .question-preview {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #2455db;
+        }
+        
+        .admin-btn {
+            background: linear-gradient(45deg, #2455db, #6d94ff);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(36, 85, 219, 0.3);
+        }
+        
+        .admin-btn.danger {
+            background: linear-gradient(45deg, #ff4757, #ff6b7a);
+        }
+        
+        .admin-btn.success {
+            background: linear-gradient(45deg, #2ed573, #7bed9f);
+        }
+        
+        .status-message {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .current-questions {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background: #fafafa;
+        }
+        
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen" style="background-image: url('images/screen1.png');">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h1>🎯 EduLadder Admin Panel</h1>
+                <h2>Question Management System</h2>
+                <p>Upload and manage questions for different learning modules</p>
+                <div class="status-info">
+                    <strong>📝 Important:</strong> CSV uploads ADD questions to the master questions.json file. 
+                    Each module can have questions uploaded separately. Questions are merged, not replaced.
+                    <br><strong>📁 Use template_questions.csv as your format guide!</strong>
+                </div>
+            </div>
+
+            <div class="upload-section">
+                <h3>📤 Upload Questions via CSV</h3>
+                
+                <div class="status-info" style="margin-bottom: 20px;">
+                    <strong>📋 CSV Format Requirements:</strong><br>
+                    • Columns: module_id, module_name, difficulty, question_text, option_a, option_b, option_c, option_d, correct_option<br>
+                    • Difficulty: "easy" or "hard" (lowercase)<br>
+                    • Correct_option: A, B, C, or D (uppercase)<br>
+                    • Module_id must match exactly (case-sensitive)<br>
+                    <strong>💡 Tip:</strong> Download the template below to see the exact format!
+                </div>
+                
+                <div class="module-selector">
+                    <label for="moduleSelect"><strong>Select Target Module (for verification):</strong></label>
+                    <select id="moduleSelect">
+                        <option value="">-- Choose Module --</option>
+                        <option value="tlprocess">Teaching Learning Process</option>
+                        <option value="learningtheories">Learning Theories</option>
+                        <option value="fourways">4 Ways of Learning</option>
+                        <option value="andragogy">Andragogy</option>
+                        <option value="sat">Systematic Approach to Training (SAT)</option>
+                        <option value="btm">Basic Teaching Model</option>
+                        <option value="dol">Domains of Learning</option>
+                        <option value="objectives">Writing Objectives</option>
+                    </select>
+                </div>
+
+                <div class="file-upload">
+                    <label for="csvFile"><strong>Choose CSV File:</strong></label>
+                    <input type="file" id="csvFile" accept=".csv" />
+                </div>
+
+                <button class="admin-btn" onclick="uploadCSV()">📤 Upload & Merge Questions</button>
+                <button class="admin-btn success" onclick="downloadTemplate()">📋 Download CSV Template</button>
+            </div>
+
+            <div class="csv-template">
+                <h4>📋 CSV Format Requirements:</h4>
+                <p><strong>Required columns (in exact order):</strong></p>
+                <ol>
+                    <li><strong>question_text</strong> - The question text</li>
+                    <li><strong>option1</strong> - First answer option</li>
+                    <li><strong>option2</strong> - Second answer option</li>
+                    <li><strong>option3</strong> - Third answer option</li>
+                    <li><strong>option4</strong> - Fourth answer option</li>
+                    <li><strong>correct_answer</strong> - Number (1-4) indicating correct option</li>
+                </ol>
+                <p><strong>Example:</strong></p>
+                <code>
+                    "What is 2+2?","2","3","4","5","3"
+                </code>
+            </div>
+
+            <div id="statusMessages"></div>
+
+            <div class="preview-section">
+                <h3>👀 Question Preview</h3>
+                <div id="questionPreview">
+                    <p>Upload a CSV file to preview questions...</p>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3>📚 Current Questions in Database</h3>
+                <div class="module-selector">
+                    <select id="viewModuleSelect" onchange="viewCurrentQuestions()">
+                        <option value="">-- Select Module to View --</option>
+                        <option value="tlprocess">Teaching Learning Process</option>
+                        <option value="learningtheories">Learning Theories</option>
+                        <option value="fourways">4 Ways of Learning</option>
+                        <option value="andragogy">Andragogy</option>
+                        <option value="sat">Systematic Approach to Training (SAT)</option>
+                        <option value="btm">Basic Teaching Model</option>
+                        <option value="dol">Domains of Learning</option>
+                        <option value="objectives">Writing Objectives</option>
+                    </select>
+                </div>
+                <div id="currentQuestions" class="current-questions">
+                    <p>Select a module to view current questions...</p>
+                </div>
+                <button class="admin-btn danger" onclick="clearModuleQuestions()">🗑️ Clear All Questions for Selected Module</button>
+            </div>
+
+            <div class="navigation">
+                <button class="admin-btn success" onclick="goToGame()">🎮 Back to Game</button>
+                <button class="admin-btn" onclick="exportAllQuestions()">💾 Export All Questions</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestions = {};
+        let previewQuestions = [];
+
+        // Load existing questions on page load
+        window.addEventListener('load', loadExistingQuestions);
+
+        async function loadExistingQuestions() {
+            try {
+                const response = await fetch('questions/questions.json');
+                currentQuestions = await response.json();
+                showStatus('Questions loaded successfully!', 'success');
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                showStatus('Could not load existing questions. Starting fresh.', 'info');
+                currentQuestions = {};
+            }
+        }
+
+        function downloadTemplate() {
+            // Create the exact template content matching our requirements
+            const csvContent = `module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
+tlprocess,Teaching Learning Process,easy,What is the first step in the teaching-learning process?,Assessment,Planning,Implementation,Evaluation,B
+tlprocess,Teaching Learning Process,hard,According to Kolb's experiential learning theory which stage follows 'Concrete Experience'?,Abstract Conceptualization,Reflective Observation,Active Experimentation,Theoretical Analysis,B
+learningtheories,Learning Theories,easy,Who is known as the father of behaviorism?,Jean Piaget,B.F. Skinner,John Watson,Albert Bandura,C
+learningtheories,Learning Theories,hard,According to Vygotsky's Zone of Proximal Development learning occurs best when:,Students work completely independently,Tasks are too difficult to complete,Students receive appropriate guidance,Learning is purely theoretical,C
+fourways,4 Ways of Learning,easy,Visual learners prefer to learn through:,Listening to lectures,Seeing charts and diagrams,Physical movement,Group discussions,B
+andragogy,Andragogy,easy,Andragogy is the study of:,Child learning,Adult learning,Animal behavior,Memory techniques,B
+sat,Systematic Approach to Training (SAT),easy,SAT stands for:,Simple Approach to Teaching,Systematic Approach to Training,Strategic Academic Training,Standard Assessment Tool,B
+btm,Basic Teaching Model,easy,The Basic Teaching Model typically includes:,Only assessment,Preparation presentation practice,Just lecturing,Testing only,B
+dol,Domains of Learning,easy,The three main domains of learning are:,Reading writing arithmetic,Cognitive affective psychomotor,Visual auditory kinesthetic,Memory thinking feeling,B
+objectives,Writing Objectives,easy,A learning objective should be:,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B`;
+            
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'template_questions.csv';
+            a.click();
+            window.URL.revokeObjectURL(url);
+            
+            showStatus('✅ CSV template downloaded successfully! Use this exact format for uploading questions.', 'success');
+        }
+
+        function uploadCSV() {
+            const moduleSelect = document.getElementById('moduleSelect');
+            const difficultyRadio = document.querySelector('input[name="difficulty"]:checked');
+            const fileInput = document.getElementById('csvFile');
+
+            if (!moduleSelect.value) {
+                showStatus('Please select a module!', 'error');
+                return;
+            }
+
+            if (!fileInput.files[0]) {
+                showStatus('Please select a CSV file!', 'error');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                try {
+                    const csv = e.target.result;
+                    const questions = parseCSV(csv);
+                    
+                    if (questions.length === 0) {
+                        showStatus('No valid questions found in CSV!', 'error');
+                        return;
+                    }
+
+                    previewQuestions = questions;
+                    displayPreview(questions);
+                    
+                    // Add questions to current data structure
+                    const moduleKey = moduleSelect.value;
+                    const difficulty = difficultyRadio.value;
+
+                    if (!currentQuestions[moduleKey]) {
+                        currentQuestions[moduleKey] = {
+                            name: moduleSelect.options[moduleSelect.selectedIndex].text,
+                            easy: [],
+                            hard: []
+                        };
+                    }
+
+                    // Add new questions to the selected difficulty level
+                    currentQuestions[moduleKey][difficulty].push(...questions);
+
+                    showStatus(`Successfully parsed ${questions.length} questions for ${moduleSelect.options[moduleSelect.selectedIndex].text} (${difficulty})!`, 'success');
+                    
+                } catch (error) {
+                    console.error('Error parsing CSV:', error);
+                    showStatus('Error parsing CSV file. Please check the format.', 'error');
+                }
+            };
+
+            reader.readAsText(file);
+        }
+
+        function parseCSV(csv) {
+            const lines = csv.split('\n').filter(line => line.trim());
+            const questions = [];
+
+            // Skip header row
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                try {
+                    // Parse CSV line (handling quoted fields)
+                    const columns = parseCSVLine(line);
+                    
+                    if (columns.length >= 6) {
+                        const question = {
+                            text: columns[0],
+                            options: [columns[1], columns[2], columns[3], columns[4]],
+                            correctIndex: parseInt(columns[5]) - 1 // Convert from 1-4 to 0-3
+                        };
+
+                        // Validate correct index
+                        if (question.correctIndex >= 0 && question.correctIndex < 4) {
+                            questions.push(question);
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error parsing line:', line, error);
+                }
+            }
+
+            return questions;
+        }
+
+        function parseCSVLine(line) {
+            const columns = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    columns.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            // Add the last column
+            columns.push(current.trim());
+            
+            // Remove quotes from columns
+            return columns.map(col => col.replace(/^"|"$/g, ''));
+        }
+
+        function displayPreview(questions) {
+            const preview = document.getElementById('questionPreview');
+            let html = `<h4>Preview of ${questions.length} questions:</h4>`;
+
+            questions.slice(0, 5).forEach((q, index) => {
+                html += `
+                    <div class="question-preview">
+                        <strong>Q${index + 1}:</strong> ${q.text}<br>
+                        <strong>Options:</strong><br>
+                        ${q.options.map((opt, i) => 
+                            `${i + 1}. ${opt} ${i === q.correctIndex ? '✅' : ''}`
+                        ).join('<br>')}
+                    </div>
+                `;
+            });
+
+            if (questions.length > 5) {
+                html += `<p><em>... and ${questions.length - 5} more questions</em></p>`;
+            }
+
+            html += `<button class="admin-btn success" onclick="saveQuestions()">💾 Save Questions to Database</button>`;
+
+            preview.innerHTML = html;
+        }
+
+        function saveQuestions() {
+            // Convert to JSON and trigger download
+            const jsonData = JSON.stringify(currentQuestions, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'questions.json';
+            a.click();
+            window.URL.revokeObjectURL(url);
+
+            showStatus('Questions saved! Please replace the questions.json file in your project.', 'success');
+        }
+
+        function viewCurrentQuestions() {
+            const moduleSelect = document.getElementById('viewModuleSelect');
+            const container = document.getElementById('currentQuestions');
+
+            if (!moduleSelect.value) {
+                container.innerHTML = '<p>Select a module to view current questions...</p>';
+                return;
+            }
+
+            const moduleKey = moduleSelect.value;
+            const moduleData = currentQuestions[moduleKey];
+
+            if (!moduleData) {
+                container.innerHTML = '<p>No questions found for this module.</p>';
+                return;
+            }
+
+            let html = `<h4>${moduleData.name}</h4>`;
+            
+            html += `<h5>Easy Questions (${moduleData.easy?.length || 0}):</h5>`;
+            (moduleData.easy || []).forEach((q, index) => {
+                html += `
+                    <div class="question-preview">
+                        <strong>Easy Q${index + 1}:</strong> ${q.text}<br>
+                        <strong>Correct Answer:</strong> ${q.options[q.correctIndex]}
+                    </div>
+                `;
+            });
+
+            html += `<h5>Hard Questions (${moduleData.hard?.length || 0}):</h5>`;
+            (moduleData.hard || []).forEach((q, index) => {
+                html += `
+                    <div class="question-preview">
+                        <strong>Hard Q${index + 1}:</strong> ${q.text}<br>
+                        <strong>Correct Answer:</strong> ${q.options[q.correctIndex]}
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function clearModuleQuestions() {
+            const moduleSelect = document.getElementById('viewModuleSelect');
+            
+            if (!moduleSelect.value) {
+                showStatus('Please select a module first!', 'error');
+                return;
+            }
+
+            if (confirm(`Are you sure you want to clear all questions for ${moduleSelect.options[moduleSelect.selectedIndex].text}?`)) {
+                const moduleKey = moduleSelect.value;
+                if (currentQuestions[moduleKey]) {
+                    currentQuestions[moduleKey].easy = [];
+                    currentQuestions[moduleKey].hard = [];
+                    viewCurrentQuestions();
+                    showStatus('Questions cleared for selected module!', 'success');
+                }
+            }
+        }
+
+        function exportAllQuestions() {
+            const jsonData = JSON.stringify(currentQuestions, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `questions_backup_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+            
+            showStatus('All questions exported successfully!', 'success');
+        }
+
+        function goToGame() {
+            window.location.href = 'index.html';
+        }
+
+        function showStatus(message, type) {
+            const container = document.getElementById('statusMessages');
+            const div = document.createElement('div');
+            div.className = `status-message status-${type}`;
+            div.innerHTML = message;
+            
+            container.appendChild(div);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (div.parentNode) {
+                    div.parentNode.removeChild(div);
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
