@@ -55,19 +55,438 @@ function getFallbackQuestions() {
     "dol": {
       "name": "Domains of Learning",
       "easy": [
-        {
-          text: "Which of the following is NOT one of the three primary domains of learning?",
-          options: ["Cognitive", "Affective", "Psychomotor", "Social"],
-          correctIndex: 3
+  {
+    text: "Which of the following is NOT one of the three primary domains of learning?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Social"],
+    correctIndex: 3
+  },
+  {
+    text: "The cognitive domain primarily deals with which aspect of learning?",
+    options: ["Emotions", "Motor skills", "Knowledge", "Values"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain of learning involves attitudes, values, and feelings?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Sensory"],
+    correctIndex: 1
+  },
+  {
+    text: "The psychomotor domain is most concerned with:",
+    options: ["Physical movement and skills", "Emotional responses", "Intellectual understanding", "Moral judgments"],
+    correctIndex: 0
+  },
+  {
+    text: "A common maxim of teaching is to 'make the learning meaningful'. This means teachers should:",
+    options: ["Focus solely on memorisation", "Relate content to students’ real-life experiences", "Deliver information without context", "Enforce rote repetition"],
+    correctIndex: 1
+  },
+  {
+    text: "One educational maxim is to 'learn by doing'. This maxim emphasizes:",
+    options: ["Passive absorption of facts", "Active engagement in tasks", "Teacher-centred lectures", "Strict discipline"],
+    correctIndex: 1
+  },
+  {
+    text: "Which statement best describes the objective of learning?",
+    options: ["To impart knowledge and skills", "To merely entertain", "To simply test students", "To restrict inquiry"],
+    correctIndex: 0
+  },
+  {
+    text: "An effective educational objective should be:",
+    options: ["Vague and general", "Specific and measurable", "Unattainable", "Too broad to evaluate"],
+    correctIndex: 1
+  },
+  {
+    text: "Bloom's Taxonomy is primarily associated with which domain?",
+    options: ["Cognitive", "Affective", "Psychomotor", "None of the above"],
+    correctIndex: 0
+  },
+  {
+    text: "Which of the following is an example of a teaching maxim?",
+    options: ["Teach as you are taught", "Ignore individual differences", "Control the class through fear", "Avoid simplifying complex topics"],
+    correctIndex: 0
+  },
+  {
+    text: "A well-defined educational objective typically includes which components?",
+    options: ["Behaviour", "Condition", "Criterion", "All of the above"],
+    correctIndex: 3
+  },
+  {
+    text: "The affective domain in learning is most related to:",
+    options: ["Factual recall", "Emotional development and attitudes", "Physical skill acquisition", "Analytical reasoning"],
+    correctIndex: 1
+  },
+  {
+    text: "Maxims of teaching often emphasise the importance of:",
+    options: ["Student engagement and active learning", "Teacher domination of the classroom", "Rote learning only", "Strict memorisation"],
+    correctIndex: 0
+  },
+  {
+    text: "Developing critical thinking skills is an objective that falls under which domain?",
+    options: ["Cognitive", "Affective", "Psychomotor", "None of the above"],
+    correctIndex: 0
+  },
+  {
+    text: "In setting learning objectives, the 'SMART' criteria stand for:",
+    options: [
+      "Simple, Meaningless, Achievable, Realistic, Timeless",
+      "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "Special, Modest, Attainable, Reliable, Timely",
+      "Standard, Manageable, Accessible, Reasonable, Tested"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Which of the following cognitive skills involves analysis and evaluation?",
+    options: ["Remembering", "Understanding", "Analysing", "Recalling"],
+    correctIndex: 2
+  },
+  {
+    text: "The cognitive domain includes which of the following processes?",
+    options: ["Perception, memory, and problem-solving", "Emotional regulation", "Physical movement", "Social interaction"],
+    correctIndex: 0
+  },
+  {
+    text: "What does the affective domain primarily measure?",
+    options: ["Knowledge retention", "Emotional responses and attitudes", "Motor skills", "Logical reasoning"],
+    correctIndex: 1
+  },
+  {
+    text: "Which option best represents a psychomotor skill?",
+    options: ["Writing an essay", "Performing a dance routine", "Solving a math problem", "Reciting a poem"],
+    correctIndex: 1
+  },
+  {
+    text: "In the cognitive domain, what is the highest level of thinking according to Bloom's taxonomy?",
+    options: ["Remembering", "Understanding", "Evaluating", "Creating"],
+    correctIndex: 3
+  },
+  {
+    text: "Which domain is associated with performance-based outcomes?",
+    options: ["Cognitive", "Affective", "Psychomotor", "None of the above"],
+    correctIndex: 2
+  },
+  {
+    text: "Which of the following is an example of a cognitive objective?",
+    options: ["Analyse the causes of the French Revolution", "Express feelings about the French Revolution", "Demonstrate a dance representing the French Revolution", "Recite a poem about the French Revolution"],
+    correctIndex: 0
+  },
+  {
+    text: "What is the key focus of affective learning?",
+    options: ["Knowledge acquisition", "Emotional and value development", "Physical skill practice", "Logical reasoning"],
+    correctIndex: 1
+  },
+  {
+    text: "Affective domain objectives often emphasise:",
+    options: ["Memorisation of facts", "Demonstration of skills", "Development of attitudes and feelings", "Calculation of numbers"],
+    correctIndex: 2
+  },
+  {
+    text: "The psychomotor domain can be best measured by:",
+    options: ["Written tests", "Observations of performance", "Interviews", "Self-assessments"],
+    correctIndex: 1
+  },
+  {
+    text: "What is an example of a task that falls under the psychomotor domain?",
+    options: ["Completing a written exam", "Performing a surgical procedure", "Engaging in a debate", "Listening to a lecture"],
+    correctIndex: 1
+  },
+  {
+    text: "How does Bloom’s taxonomy classify learning objectives?",
+    options: ["By content type only", "By difficulty level only", "By cognitive processes", "By student interest"],
+    correctIndex: 2
+  },
+  {
+    text: "Which learning domain is most associated with memorisation and recall?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Creative"],
+    correctIndex: 0
+  },
+  {
+    text: "Which domain would a teacher target when designing activities for empathy?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Logical"],
+    correctIndex: 1
+  },
+  {
+    text: "Which learning objective is more affective in nature?",
+    options: ["List the capitals of European countries", "Describe your feelings about community service", "Calculate the area of a rectangle", "Perform a laboratory experiment"],
+    correctIndex: 1
+  },
+  {
+    text: "What does the 'evaluation' stage of the cognitive domain involve?",
+    options: ["Remembering information", "Judging the value of material", "Performing physical tasks", "Experiencing emotions"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of the following best defines psychomotor learning?",
+    options: ["Learning through reflection", "Learning through doing", "Learning through reading", "Learning through listening"],
+    correctIndex: 1
+  },
+  {
+    text: "What skill is primarily developed in the cognitive domain?",
+    options: ["Critical thinking", "Coordination", "Emotional intelligence", "Physical endurance"],
+    correctIndex: 0
+  },
+  {
+    text: "Which domain involves perceptual and motor skills?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Behavioural"],
+    correctIndex: 2
+  },
+  {
+    text: "The term 'cognition' refers to which process?",
+    options: ["Physical movement", "Emotional experience", "Mental processing", "Sensory perception"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain of learning includes social skills and emotional intelligence?",
+    options: ["Cognitive", "Affective", "Psychomotor", "None of the above"],
+    correctIndex: 1
+  },
+  {
+    text: "What kind of learning is improved through hands-on activities?",
+    options: ["Auditory learning", "Visual learning", "Kinesthetic learning", "Conceptual learning"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain would be engaged by a practical science experiment?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Theoretical"],
+    correctIndex: 2
+  },
+  {
+    text: "What is the primary objective of cognitive learning?",
+    options: ["To develop skills", "To understand and apply knowledge", "To express emotions", "To perform tasks"],
+    correctIndex: 1
+  },
+  {
+    text: "What does affective learning typically involve?",
+    options: ["Physical performance", "Understanding concepts", "Emotional growth", "Logical reasoning"],
+    correctIndex: 2
+  },
+  {
+    text: "Which type of objective is targeted when a teacher wants to improve students’ problem-solving skills?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Social"],
+    correctIndex: 0
+  },
+  {
+    text: "What is an example of an objective in the psychomotor domain?",
+    options: ["Analyse a theory", "Develop fine motor skills", "Express feelings", "Memorise vocabulary"],
+    correctIndex: 1
+  },
+  {
+    text: "Which statement best describes Bloom’s taxonomy in the cognitive domain?",
+    options: ["It categorises levels of intellectual behaviour", "It measures physical skills", "It focuses on emotional response", "It outlines social interactions"],
+    correctIndex: 0
+  },
+  {
+    text: "Which domain would you associate with developing communication skills?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Interpersonal"],
+    correctIndex: 1
+  },
+  {
+    text: "What is the focus of psychomotor domain learning?",
+    options: ["Mental processes", "Emotional responses", "Physical actions", "Verbal communication"],
+    correctIndex: 2
+  },
+  {
+    text: "In which domain would critical analysis be placed?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Practical"],
+    correctIndex: 0
+  },
+  {
+    text: "What type of learning outcome does a hands-on activity promote?",
+    options: ["Cognitive development", "Emotional engagement", "Motor skills", "Abstract thinking"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain is most likely to involve performance-based assessments?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Conceptual"],
+    correctIndex: 2
+  },
+  {
+    text: "What is a characteristic of effective cognitive objectives?",
+    options: ["They are vague", "They are specific and measurable", "They are subjective", "They are not testable"],
+    correctIndex: 1
+  },
+  {
+    text: "Which domain emphasises the development of attitudes and values?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Behavioural"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of the following is NOT typically part of the affective domain?",
+    options: ["Expressing emotions", "Attitude formation", "Knowledge recall", "Value internalisation"],
+    correctIndex: 2
+  },
+  {
+    text: "What is a key feature of learning objectives in the psychomotor domain?",
+    options: ["They focus on mental skills", "They require physical performance", "They are assessed by exams", "They are measured by surveys"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of these is most likely an objective in the cognitive domain?",
+    options: ["Demonstrate a physical skill", "Analyse a case study", "Perform a dance routine", "Express a personal opinion"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of these best describes the nature of psychomotor skills?",
+    options: ["Mental processing", "Emotional understanding", "Physical coordination", "Creative thinking"],
+    correctIndex: 2
+  },
+  {
+    text: "What does the term 'affective' primarily relate to?",
+    options: ["Mental processes", "Emotional responses", "Physical abilities", "Cognitive skills"],
+    correctIndex: 1
+  },
+  {
+    text: "Which objective is clearly measurable in the cognitive domain?",
+    options: ["Recalling a fact", "Expressing an opinion", "Showing empathy", "Performing a physical task"],
+    correctIndex: 0
+  },
+  {
+    text: "Which domain would involve training for a sport?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Social"],
+    correctIndex: 2
+  },
+  {
+    text: "Which of the following is a hallmark of affective learning?",
+    options: ["Critical analysis", "Skill demonstration", "Emotional engagement", "Physical coordination"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain is primarily concerned with critical thinking?",
+    options: ["Cognitive", "Affective", "Psychomotor", "None of the above"],
+    correctIndex: 0
+  },
+  {
+    text: "Which option best represents an affective learning outcome?",
+    options: ["Improved memory", "Enhanced empathy", "Better coordination", "Increased calculation speed"],
+    correctIndex: 1
+  },
+  {
+    text: "What does a practical exam in a laboratory typically assess?",
+    options: ["Theoretical knowledge", "Physical skills", "Emotional responses", "Critical analysis"],
+    correctIndex: 1
+  },
+  {
+    text: "Which domain is targeted when assessing theoretical understanding?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Practical"],
+    correctIndex: 0
+  },
+  {
+    text: "Which learning domain focuses on feelings and emotions?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Intellectual"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of these best describes a tactile learning activity?",
+    options: ["Listening to a lecture", "Handling objects", "Reading a textbook", "Watching a video"],
+    correctIndex: 1
+  },
+  {
+    text: "What is a common teaching strategy for cognitive development?",
+    options: ["Group discussion", "Hands-on experiments", "Drill and practice", "Role-playing"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain might include learning through role-playing?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Behavioural"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of the following is an example of a sensory-motor activity?",
+    options: ["Solving a puzzle", "Drawing a picture", "Performing a dance", "Reciting a speech"],
+    correctIndex: 2
+  },
+  {
+    text: "Which domain of learning includes subjective experiences and feelings?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Analytical"],
+    correctIndex: 1
+  },
+  {
+    text: "Which objective is clearly aligned with the psychomotor domain?",
+    options: ["Describe a process", "Evaluate an argument", "Demonstrate a skill", "Analyse data"],
+    correctIndex: 2
+  },
+  {
+    text: "In the cognitive domain, which skill is associated with creating new ideas?",
+    options: ["Remembering", "Understanding", "Evaluating", "Creating"],
+    correctIndex: 3
+  },
+  {
+    text: "Which domain would you target to develop teamwork and collaboration?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Interpersonal"],
+    correctIndex: 3
+  },
+  {
+    text: "What is an example of a cognitive process that involves summarising information?",
+    options: ["Recalling details", "Synthesising information", "Repeating facts", "Demonstrating a procedure"],
+    correctIndex: 1
+  },
+  {
+    text: "Which of these objectives requires emotional involvement?",
+    options: ["Solving an equation", "Writing a reflective essay", "Performing a physical task", "Analyzing data"],
+    correctIndex: 1
+  },
+  {
+    text: "Which domain is best for assessing manual dexterity?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Conceptual"],
+    correctIndex: 2
+  },
+  {
+    text: "What type of learning objective involves recalling factual information?",
+    options: ["Cognitive", "Affective", "Psychomotor", "Creative"],
+    correctIndex: 0
+  }
+];
+
+//Adding Difficult Questions for Snakebite
+const snakeBiteQuestions = [
+  {
+    text: "Which action verb is most suitable for the Responding level in the affective domain?",
+    options: ["Assists", "Organizes", "Evaluates", "Generates"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb aligns with the Valuing level in the affective domain?",
+    options: ["Shares", "Locates", "Imitates", "Classifies"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb best represents the Organization level in the affective domain?",
+    options: ["Arranges", "Listens", "Repeats", "Practices"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb is appropriate for the Characterization level in the affective domain?",
+    options: ["Behaves", "Complies", "Defines", "Recalls"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb best represents the Impulsion level in the psychomotor domain?",
+    options: ["Initiates", "Adjusts", "Coordinates", "Calibrates"],
+    correctIndex: 3
+  },
+  {
+    text: "Which action verb is most suitable for the Imitation level in the psychomotor domain?",
+    options: ["Copies", "Evaluates", "Constructs", "Demonstrates"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb aligns with the Manipulation level in the psychomotor domain?",
+    options: ["Adapts", "Observes", "Recalls", "Illustrates"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb best represents the Coordination level in the psychomotor domain?",
+    options: ["Balances", "Identifies", "States", "Explains"],
+    correctIndex: 0
+  },
+  {
+    text: "Which action verb is appropriate for the Control level in the psychomotor domain?",
+    options: ["Tunes", "Compares", "Summarizes", "Recognizes"],
+    correctIndex: 1
         },
         {
-          text: "The cognitive domain primarily deals with which aspect of learning?",
-          options: ["Emotions", "Motor skills", "Knowledge", "Values"],
-          correctIndex: 2
-        },
-        {
-          text: "Which domain of learning involves attitudes, values, and feelings?",
-          options: ["Cognitive", "Affective", "Psychomotor", "Sensory"],
+          text: "What is the main purpose of education?",
+          options: ["To entertain", "To facilitate learning", "To pass time", "To create rules"],
           correctIndex: 1
         }
       ],
