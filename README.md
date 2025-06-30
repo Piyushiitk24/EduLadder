@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![Game Logo](images/logo.png)
+![Game Logo](images/board.png)
 
 **🎮 Experience the next-generation twist on the classic board game! 🎯**
 
