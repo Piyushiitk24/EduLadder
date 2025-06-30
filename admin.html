@@ -458,20 +458,23 @@
             const modules = ['tlprocess', 'learningtheories', 'fourways', 'andragogy', 'sat', 'btm', 'dol', 'objectives'];
             
             console.log('Updating question counts. Data loaded:', !!allQuestionsData);
-            console.log('Questions data keys:', Object.keys(allQuestionsData));
+            if (allQuestionsData) {
+                console.log('Questions data keys:', Object.keys(allQuestionsData));
+            }
             
             modules.forEach(moduleId => {
                 const countElement = document.getElementById(`count-${moduleId}`);
-                if (allQuestionsData[moduleId]) {
-                    const easyCount = allQuestionsData[moduleId].easy?.length || 0;
-                    const hardCount = allQuestionsData[moduleId].hard?.length || 0;
-                    console.log(`${moduleId}: ${easyCount} easy, ${hardCount} hard`);
+                if (allQuestionsData && allQuestionsData[moduleId] && Array.isArray(allQuestionsData[moduleId])) {
+                    // Count questions by difficulty from the array
+                    const easyCount = allQuestionsData[moduleId].filter(q => q.difficulty === 'easy').length;
+                    const hardCount = allQuestionsData[moduleId].filter(q => q.difficulty === 'hard').length;
+                    console.log(`${moduleId}: ${easyCount} easy, ${hardCount} hard (total: ${allQuestionsData[moduleId].length})`);
                     countElement.textContent = `${easyCount} Easy • ${hardCount} Hard`;
                     countElement.style.background = easyCount > 0 || hardCount > 0 ? '#d4edda' : '#f8d7da';
                     countElement.style.color = easyCount > 0 || hardCount > 0 ? '#155724' : '#721c24';
                 } else {
-                    console.log(`${moduleId}: No data found`);
-                    countElement.textContent = 'No questions';
+                    console.log(`${moduleId}: No data found or invalid format`);
+                    countElement.textContent = '0 Easy • 0 Hard';
                     countElement.style.background = '#f8d7da';
                     countElement.style.color = '#721c24';
                 }
@@ -648,44 +651,87 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
         function mergeQuestionsIntoData(newQuestions) {
             console.log('=== MERGE START ===');
             console.log('Merging', newQuestions.length, 'new questions');
-            console.log('Current data before merge:', JSON.stringify(allQuestionsData, null, 2));
+            console.log('Current data before merge:', allQuestionsData ? Object.keys(allQuestionsData) : 'No data');
             
             newQuestions.forEach((q, index) => {
                 console.log(`Processing question ${index + 1}:`, q);
                 
+                // Initialize module array if it doesn't exist
                 if (!allQuestionsData[q.module_id]) {
-                    allQuestionsData[q.module_id] = {
-                        name: q.module_name,
-                        easy: [],
-                        hard: []
-                    };
-                    console.log('Created new module:', q.module_id);
+                    allQuestionsData[q.module_id] = [];
+                    console.log('Created new module array:', q.module_id);
                 }
                 
+                // Create question object matching the existing JSON structure
                 const questionObj = {
-                    text: q.text,
+                    question: q.text,
                     options: q.options,
-                    correctIndex: q.correctIndex
+                    correct: q.correctIndex,
+                    difficulty: q.difficulty,
+                    module: q.module_name
                 };
                 
-                if (q.difficulty === 'easy') {
-                    allQuestionsData[q.module_id].easy.push(questionObj);
-                    console.log(`Added easy question to ${q.module_id}. Total easy: ${allQuestionsData[q.module_id].easy.length}`);
-                } else if (q.difficulty === 'hard') {
-                    allQuestionsData[q.module_id].hard.push(questionObj);
-                    console.log(`Added hard question to ${q.module_id}. Total hard: ${allQuestionsData[q.module_id].hard.length}`);
-                }
+                // Add to module array
+                allQuestionsData[q.module_id].push(questionObj);
+                console.log(`Added ${q.difficulty} question to ${q.module_id}. Total questions: ${allQuestionsData[q.module_id].length}`);
             });
             
-            console.log('Final data after merge:', JSON.stringify(allQuestionsData, null, 2));
+            console.log('Final data after merge - module counts:');
+            Object.keys(allQuestionsData).forEach(moduleId => {
+                const questions = allQuestionsData[moduleId];
+                if (Array.isArray(questions)) {
+                    const easyCount = questions.filter(q => q.difficulty === 'easy').length;
+                    const hardCount = questions.filter(q => q.difficulty === 'hard').length;
+                    console.log(`${moduleId}: ${easyCount} easy, ${hardCount} hard (total: ${questions.length})`);
+                }
+            });
             console.log('=== MERGE END ===');
         }
 
         function updateQuestionsFile() {
-            // In a real implementation, this would send data to a server
-            // For now, we'll update localStorage and show a message
+            // Save to localStorage for immediate use
             localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
-            console.log('Questions updated - Note: In production, this would update the server file');
+            
+            // Provide download link for the updated questions.json
+            const dataStr = JSON.stringify(allQuestionsData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            // Create download link
+            const downloadLink = document.createElement('a');
+            downloadLink.href = url;
+            downloadLink.download = 'questions.json';
+            downloadLink.textContent = 'Download Updated questions.json';
+            downloadLink.style.cssText = `
+                display: inline-block;
+                margin: 10px 0;
+                padding: 10px 20px;
+                background: #28a745;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+            `;
+            
+            // Add download message
+            const statusContainer = document.getElementById('statusContainer');
+            const downloadDiv = document.createElement('div');
+            downloadDiv.className = 'status-message status-success';
+            downloadDiv.innerHTML = `
+                <strong>✅ Questions merged successfully!</strong><br>
+                Click the link below to download the updated questions.json file, then replace the file in your questions/ folder.
+                <br><br>
+            `;
+            downloadDiv.appendChild(downloadLink);
+            statusContainer.appendChild(downloadDiv);
+            
+            // Auto-remove after 30 seconds
+            setTimeout(() => {
+                downloadDiv.remove();
+                URL.revokeObjectURL(url);
+            }, 30000);
+            
+            console.log('Questions updated - Download link provided for questions.json');
         }
 
         function showStatus(message, type) {
