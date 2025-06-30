@@ -34,8 +34,34 @@ function setModuleQuestions(moduleId) {
   }
   
   const moduleData = allQuestionsData[moduleId];
-  moduleQuestions.easy = [...moduleData.easy]; // Copy arrays to avoid mutation
-  moduleQuestions.hard = [...moduleData.hard];
+  
+  // Check if moduleData is an array (new format) or object with easy/hard (old format)
+  if (Array.isArray(moduleData)) {
+    // New format: array of questions with difficulty property
+    const easyQuestions = moduleData.filter(q => q.difficulty === 'easy');
+    const hardQuestions = moduleData.filter(q => q.difficulty === 'hard');
+    
+    // Convert to the format expected by the game
+    moduleQuestions.easy = easyQuestions.map(q => ({
+      text: q.question,
+      options: q.options,
+      correctIndex: q.correct
+    }));
+    
+    moduleQuestions.hard = hardQuestions.map(q => ({
+      text: q.question,
+      options: q.options,
+      correctIndex: q.correct
+    }));
+    
+    console.log(`Loaded ${moduleQuestions.easy.length} easy and ${moduleQuestions.hard.length} hard questions for module: ${moduleId}`);
+  } else {
+    // Old format: object with easy/hard arrays
+    moduleQuestions.easy = [...moduleData.easy]; // Copy arrays to avoid mutation
+    moduleQuestions.hard = [...moduleData.hard];
+    
+    console.log(`Loaded ${moduleQuestions.easy.length} easy and ${moduleQuestions.hard.length} hard questions for module: ${moduleData.name}`);
+  }
   
   // Shuffle both arrays
   shuffle(moduleQuestions.easy);
@@ -45,7 +71,6 @@ function setModuleQuestions(moduleId) {
   currentQuestionIndex = 0;
   currentSnakeQuestionIndex = 0;
   
-  console.log(`Loaded ${moduleQuestions.easy.length} easy and ${moduleQuestions.hard.length} hard questions for module: ${moduleData.name}`);
   return true;
 }
 
@@ -781,6 +806,9 @@ function updatescoreboard(playerStats) {
 
 // Function to select a module
 function selectModule(moduleId) {
+  console.log(`Selecting module: ${moduleId}`);
+  console.log('Available questions data:', allQuestionsData ? Object.keys(allQuestionsData) : 'No data');
+  
   // Remove selection from all cards
   const allCards = document.querySelectorAll('.module-card');
   allCards.forEach(card => card.classList.remove('selected'));
@@ -795,15 +823,25 @@ function selectModule(moduleId) {
     const success = setModuleQuestions(moduleId);
     if (success) {
       console.log(`Successfully loaded questions for module: ${moduleId}`);
+      console.log(`Easy questions: ${moduleQuestions.easy.length}, Hard questions: ${moduleQuestions.hard.length}`);
+      
       // Enable the next button
       const nextBtn = document.getElementById('moduleNextBtn');
       if (nextBtn) {
         nextBtn.disabled = false;
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.style.cursor = 'pointer';
+        nextBtn.style.backgroundColor = '#ff6b35';
+        console.log('Next button enabled');
+      } else {
+        console.error('Next button not found!');
       }
     } else {
       console.error(`Failed to load questions for module: ${moduleId}`);
-      // You might want to show an error message to the user here
     }
+  } else {
+    console.error(`Module card not found for: ${moduleId}`);
   }
 }
 
