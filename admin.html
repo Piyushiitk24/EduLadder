@@ -558,18 +558,43 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
         }
 
         function parseCSV(csv) {
+            console.log('=== CSV PARSING START ===');
+            console.log('Raw CSV length:', csv.length);
+            console.log('First 500 chars:', csv.substring(0, 500));
+            
             const lines = csv.split('\n').filter(line => line.trim());
+            console.log('Total lines after filtering:', lines.length);
+            
+            if (lines.length === 0) {
+                throw new Error('CSV file appears to be empty');
+            }
+            
             const headers = lines[0].split(',').map(h => h.trim());
+            console.log('Headers found:', headers);
             
             // Validate headers
             const expectedHeaders = ['module_id', 'module_name', 'difficulty', 'question_text', 'option_a', 'option_b', 'option_c', 'option_d', 'correct_option'];
-            if (!expectedHeaders.every(h => headers.includes(h))) {
+            console.log('Expected headers:', expectedHeaders);
+            
+            const headerMatch = expectedHeaders.every(h => headers.includes(h));
+            console.log('Headers match:', headerMatch);
+            
+            if (!headerMatch) {
+                console.error('Header mismatch. Found:', headers, 'Expected:', expectedHeaders);
                 throw new Error('Invalid CSV headers. Please use the template format.');
             }
             
             const questions = [];
+            console.log('Processing', lines.length - 1, 'data lines...');
+            
             for (let i = 1; i < lines.length; i++) {
-                const values = lines[i].split(',').map(v => v.trim());
+                const line = lines[i];
+                console.log(`Processing line ${i}:`, line.substring(0, 100) + '...');
+                
+                // Handle quoted CSV fields properly
+                const values = parseCSVLine(line);
+                console.log(`Parsed values for line ${i}:`, values);
+                
                 if (values.length >= 9) {
                     const question = {
                         module_id: values[0],
@@ -582,21 +607,59 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                     
                     if (question.correctIndex !== -1) {
                         questions.push(question);
+                        console.log(`Added question for ${question.module_id} (${question.difficulty})`);
+                    } else {
+                        console.warn(`Invalid correct_option in line ${i}:`, values[8]);
                     }
+                } else {
+                    console.warn(`Line ${i} has insufficient columns:`, values.length);
                 }
             }
             
+            console.log('=== CSV PARSING END ===');
+            console.log('Total questions parsed:', questions.length);
             return questions;
         }
 
+        // Helper function to properly parse CSV lines with quoted fields
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current.trim().replace(/^"|"$/g, ''));
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            // Add the last field
+            result.push(current.trim().replace(/^"|"$/g, ''));
+            return result;
+        }
+
         function mergeQuestionsIntoData(newQuestions) {
-            newQuestions.forEach(q => {
+            console.log('=== MERGE START ===');
+            console.log('Merging', newQuestions.length, 'new questions');
+            console.log('Current data before merge:', JSON.stringify(allQuestionsData, null, 2));
+            
+            newQuestions.forEach((q, index) => {
+                console.log(`Processing question ${index + 1}:`, q);
+                
                 if (!allQuestionsData[q.module_id]) {
                     allQuestionsData[q.module_id] = {
                         name: q.module_name,
                         easy: [],
                         hard: []
                     };
+                    console.log('Created new module:', q.module_id);
                 }
                 
                 const questionObj = {
@@ -607,10 +670,15 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                 
                 if (q.difficulty === 'easy') {
                     allQuestionsData[q.module_id].easy.push(questionObj);
+                    console.log(`Added easy question to ${q.module_id}. Total easy: ${allQuestionsData[q.module_id].easy.length}`);
                 } else if (q.difficulty === 'hard') {
                     allQuestionsData[q.module_id].hard.push(questionObj);
+                    console.log(`Added hard question to ${q.module_id}. Total hard: ${allQuestionsData[q.module_id].hard.length}`);
                 }
             });
+            
+            console.log('Final data after merge:', JSON.stringify(allQuestionsData, null, 2));
+            console.log('=== MERGE END ===');
         }
 
         function updateQuestionsFile() {
