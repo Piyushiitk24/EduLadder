@@ -457,15 +457,20 @@
         function updateQuestionCounts() {
             const modules = ['tlprocess', 'learningtheories', 'fourways', 'andragogy', 'sat', 'btm', 'dol', 'objectives'];
             
+            console.log('Updating question counts. Data loaded:', !!allQuestionsData);
+            console.log('Questions data keys:', Object.keys(allQuestionsData));
+            
             modules.forEach(moduleId => {
                 const countElement = document.getElementById(`count-${moduleId}`);
                 if (allQuestionsData[moduleId]) {
                     const easyCount = allQuestionsData[moduleId].easy?.length || 0;
                     const hardCount = allQuestionsData[moduleId].hard?.length || 0;
+                    console.log(`${moduleId}: ${easyCount} easy, ${hardCount} hard`);
                     countElement.textContent = `${easyCount} Easy • ${hardCount} Hard`;
                     countElement.style.background = easyCount > 0 || hardCount > 0 ? '#d4edda' : '#f8d7da';
                     countElement.style.color = easyCount > 0 || hardCount > 0 ? '#155724' : '#721c24';
                 } else {
+                    console.log(`${moduleId}: No data found`);
                     countElement.textContent = 'No questions';
                     countElement.style.background = '#f8d7da';
                     countElement.style.color = '#721c24';
