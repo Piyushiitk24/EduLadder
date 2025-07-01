@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduLadder Admin - Question Manager</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .admin-screen {
@@ -528,7 +529,10 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             reader.onload = function(e) {
                 try {
                     const csv = e.target.result;
+                    console.log('CSV content loaded:', csv.substring(0, 200));
+                    
                     const questions = parseCSV(csv);
+                    console.log('Parsed questions:', questions);
                     
                     if (questions.length === 0) {
                         showStatus('❌ No valid questions found in CSV! Please check your format.', 'error');
@@ -553,8 +557,13 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                     
                 } catch (error) {
                     console.error('Error processing CSV:', error);
-                    showStatus('❌ Error processing CSV file. Please check the format and try again.', 'error');
+                    showStatus(`❌ Error processing CSV file: ${error.message}. Please check the format and try again.`, 'error');
                 }
+            };
+
+            reader.onerror = function(error) {
+                console.error('FileReader error:', error);
+                showStatus('❌ Error reading CSV file. Please try again.', 'error');
             };
 
             reader.readAsText(file);
