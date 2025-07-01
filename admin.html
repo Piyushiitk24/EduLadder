@@ -1019,22 +1019,14 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
     </div>
 
     <script>
-        let currentQuestions = {};
         let previewQuestions = [];
 
         // Load existing questions on page load
         window.addEventListener('load', loadExistingQuestions);
 
         async function loadExistingQuestions() {
-            try {
-                const response = await fetch('questions/questions.json');
-                currentQuestions = await response.json();
-                showStatus('Questions loaded successfully!', 'success');
-            } catch (error) {
-                console.error('Error loading questions:', error);
-                showStatus('Could not load existing questions. Starting fresh.', 'info');
-                currentQuestions = {};
-            }
+            // This function is now handled by the main load event listener above
+            // which calls loadQuestionsData() and updateQuestionCounts()
         }
 
         function downloadTemplate() {
@@ -1062,120 +1054,7 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
             showStatus('✅ CSV template downloaded successfully! Use this exact format for uploading questions.', 'success');
         }
 
-        function uploadCSV() {
-            const moduleSelect = document.getElementById('moduleSelect');
-            const difficultyRadio = document.querySelector('input[name="difficulty"]:checked');
-            const fileInput = document.getElementById('csvFile');
 
-            if (!moduleSelect.value) {
-                showStatus('Please select a module!', 'error');
-                return;
-            }
-
-            if (!fileInput.files[0]) {
-                showStatus('Please select a CSV file!', 'error');
-                return;
-            }
-
-            const file = fileInput.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                try {
-                    const csv = e.target.result;
-                    const questions = parseCSV(csv);
-                    
-                    if (questions.length === 0) {
-                        showStatus('No valid questions found in CSV!', 'error');
-                        return;
-                    }
-
-                    previewQuestions = questions;
-                    displayPreview(questions);
-                    
-                    // Add questions to current data structure
-                    const moduleKey = moduleSelect.value;
-                    const difficulty = difficultyRadio.value;
-
-                    if (!currentQuestions[moduleKey]) {
-                        currentQuestions[moduleKey] = {
-                            name: moduleSelect.options[moduleSelect.selectedIndex].text,
-                            easy: [],
-                            hard: []
-                        };
-                    }
-
-                    // Add new questions to the selected difficulty level
-                    currentQuestions[moduleKey][difficulty].push(...questions);
-
-                    showStatus(`Successfully parsed ${questions.length} questions for ${moduleSelect.options[moduleSelect.selectedIndex].text} (${difficulty})!`, 'success');
-                    
-                } catch (error) {
-                    console.error('Error parsing CSV:', error);
-                    showStatus('Error parsing CSV file. Please check the format.', 'error');
-                }
-            };
-
-            reader.readAsText(file);
-        }
-
-        function parseCSV(csv) {
-            const lines = csv.split('\n').filter(line => line.trim());
-            const questions = [];
-
-            // Skip header row
-            for (let i = 1; i < lines.length; i++) {
-                const line = lines[i].trim();
-                if (!line) continue;
-
-                try {
-                    // Parse CSV line (handling quoted fields)
-                    const columns = parseCSVLine(line);
-                    
-                    if (columns.length >= 6) {
-                        const question = {
-                            text: columns[0],
-                            options: [columns[1], columns[2], columns[3], columns[4]],
-                            correctIndex: parseInt(columns[5]) - 1 // Convert from 1-4 to 0-3
-                        };
-
-                        // Validate correct index
-                        if (question.correctIndex >= 0 && question.correctIndex < 4) {
-                            questions.push(question);
-                        }
-                    }
-                } catch (error) {
-                    console.error('Error parsing line:', line, error);
-                }
-            }
-
-            return questions;
-        }
-
-        function parseCSVLine(line) {
-            const columns = [];
-            let current = '';
-            let inQuotes = false;
-            
-            for (let i = 0; i < line.length; i++) {
-                const char = line[i];
-                
-                if (char === '"') {
-                    inQuotes = !inQuotes;
-                } else if (char === ',' && !inQuotes) {
-                    columns.push(current.trim());
-                    current = '';
-                } else {
-                    current += char;
-                }
-            }
-            
-            // Add the last column
-            columns.push(current.trim());
-            
-            // Remove quotes from columns
-            return columns.map(col => col.replace(/^"|"$/g, ''));
-        }
 
         function displayPreview(questions) {
             const preview = document.getElementById('questionPreview');
@@ -1204,7 +1083,7 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
 
         function saveQuestions() {
             // Convert to JSON and trigger download
-            const jsonData = JSON.stringify(currentQuestions, null, 2);
+            const jsonData = JSON.stringify(allQuestionsData, null, 2);
             const blob = new Blob([jsonData], { type: 'application/json' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -1226,7 +1105,7 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
             }
 
             const moduleKey = moduleSelect.value;
-            const moduleData = currentQuestions[moduleKey];
+            const moduleData = allQuestionsData[moduleKey];
 
             if (!moduleData) {
                 container.innerHTML = '<p>No questions found for this module.</p>';
@@ -1268,9 +1147,9 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
 
             if (confirm(`Are you sure you want to clear all questions for ${moduleSelect.options[moduleSelect.selectedIndex].text}?`)) {
                 const moduleKey = moduleSelect.value;
-                if (currentQuestions[moduleKey]) {
-                    currentQuestions[moduleKey].easy = [];
-                    currentQuestions[moduleKey].hard = [];
+                if (allQuestionsData[moduleKey]) {
+                    allQuestionsData[moduleKey].easy = [];
+                    allQuestionsData[moduleKey].hard = [];
                     viewCurrentQuestions();
                     showStatus('Questions cleared for selected module!', 'success');
                 }
@@ -1278,7 +1157,7 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
         }
 
         function exportAllQuestions() {
-            const jsonData = JSON.stringify(currentQuestions, null, 2);
+            const jsonData = JSON.stringify(allQuestionsData, null, 2);
             const blob = new Blob([jsonData], { type: 'application/json' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
