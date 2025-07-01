@@ -539,13 +539,20 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                         return;
                     }
 
-                    // Merge questions into existing data
-                    mergeQuestionsIntoData(questions);
+                    // Merge questions into existing data with smart deduplication
+                    const mergeStats = mergeQuestionsIntoData(questions);
                     
                     // Update the JSON file (this would typically be a server operation)
                     updateQuestionsFile();
                     
-                    showStatus(`✅ Successfully uploaded ${questions.length} questions! They are now available in the game.`, 'success');
+                    // Show detailed merge results
+                    let message = '✅ CSV processing completed! ';
+                    if (mergeStats.added > 0) message += `Added ${mergeStats.added} new questions. `;
+                    if (mergeStats.updated > 0) message += `Updated ${mergeStats.updated} existing questions. `;
+                    if (mergeStats.skipped > 0) message += `Skipped ${mergeStats.skipped} duplicate questions. `;
+                    message += 'All changes are now available in the game.';
+                    
+                    showStatus(message, 'success');
                     
                     // Reset form
                     fileInput.value = '';
@@ -658,12 +665,16 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
         }
 
         function mergeQuestionsIntoData(newQuestions) {
-            console.log('=== MERGE START ===');
-            console.log('Merging', newQuestions.length, 'new questions');
+            console.log('=== SMART MERGE START ===');
+            console.log('Processing', newQuestions.length, 'questions for merge');
             console.log('Current data before merge:', allQuestionsData ? Object.keys(allQuestionsData) : 'No data');
             
+            let addedCount = 0;
+            let updatedCount = 0;
+            let skippedCount = 0;
+            
             newQuestions.forEach((q, index) => {
-                console.log(`Processing question ${index + 1}:`, q);
+                console.log(`Processing question ${index + 1}:`, q.text.substring(0, 50) + '...');
                 
                 // Initialize module array if it doesn't exist
                 if (!allQuestionsData[q.module_id]) {
@@ -680,10 +691,44 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                     module: q.module_name
                 };
                 
-                // Add to module array
-                allQuestionsData[q.module_id].push(questionObj);
-                console.log(`Added ${q.difficulty} question to ${q.module_id}. Total questions: ${allQuestionsData[q.module_id].length}`);
+                // Check if this question already exists (based on question text)
+                const existingQuestionIndex = allQuestionsData[q.module_id].findIndex(
+                    existingQ => existingQ.question.trim().toLowerCase() === q.text.trim().toLowerCase()
+                );
+                
+                if (existingQuestionIndex !== -1) {
+                    // Question exists - check if it has changed
+                    const existingQuestion = allQuestionsData[q.module_id][existingQuestionIndex];
+                    
+                    // Compare the questions to see if they're different
+                    const hasChanged = 
+                        JSON.stringify(existingQuestion.options) !== JSON.stringify(questionObj.options) ||
+                        existingQuestion.correct !== questionObj.correct ||
+                        existingQuestion.difficulty !== questionObj.difficulty ||
+                        existingQuestion.module !== questionObj.module;
+                    
+                    if (hasChanged) {
+                        // Update existing question
+                        allQuestionsData[q.module_id][existingQuestionIndex] = questionObj;
+                        updatedCount++;
+                        console.log(`Updated existing question in ${q.module_id}`);
+                    } else {
+                        // Question is identical, skip
+                        skippedCount++;
+                        console.log(`Skipped identical question in ${q.module_id}`);
+                    }
+                } else {
+                    // New question - add it
+                    allQuestionsData[q.module_id].push(questionObj);
+                    addedCount++;
+                    console.log(`Added new ${q.difficulty} question to ${q.module_id}`);
+                }
             });
+            
+            console.log('=== SMART MERGE RESULTS ===');
+            console.log(`Added: ${addedCount} new questions`);
+            console.log(`Updated: ${updatedCount} existing questions`);
+            console.log(`Skipped: ${skippedCount} identical questions`);
             
             console.log('Final data after merge - module counts:');
             Object.keys(allQuestionsData).forEach(moduleId => {
@@ -694,7 +739,10 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                     console.log(`${moduleId}: ${easyCount} easy, ${hardCount} hard (total: ${questions.length})`);
                 }
             });
-            console.log('=== MERGE END ===');
+            console.log('=== SMART MERGE END ===');
+            
+            // Return merge statistics for user feedback
+            return { added: addedCount, updated: updatedCount, skipped: skippedCount };
         }
 
         function updateQuestionsFile() {
@@ -872,6 +920,10 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             background: linear-gradient(45deg, #2ed573, #7bed9f);
         }
         
+        .admin-btn.warning {
+            background: linear-gradient(45deg, #ff9500, #ffb84d);
+        }
+        
         .status-message {
             padding: 15px;
             border-radius: 10px;
@@ -1014,6 +1066,7 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             <div class="navigation">
                 <button class="admin-btn success" onclick="goToGame()">🎮 Back to Game</button>
                 <button class="admin-btn" onclick="exportAllQuestions()">💾 Export All Questions</button>
+                <button class="admin-btn warning" onclick="removeDuplicateQuestions()">🧹 Remove Duplicates</button>
             </div>
         </div>
     </div>
@@ -1167,6 +1220,54 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
             window.URL.revokeObjectURL(url);
             
             showStatus('All questions exported successfully!', 'success');
+        }
+
+        function removeDuplicateQuestions() {
+            if (!confirm('⚠️ This will remove duplicate questions from the database based on question text. This action cannot be undone. Are you sure you want to continue?')) {
+                return;
+            }
+            
+            console.log('=== DUPLICATE REMOVAL START ===');
+            let totalRemoved = 0;
+            
+            Object.keys(allQuestionsData).forEach(moduleId => {
+                if (!Array.isArray(allQuestionsData[moduleId])) {
+                    return;
+                }
+                
+                const originalCount = allQuestionsData[moduleId].length;
+                const seen = new Set();
+                const uniqueQuestions = [];
+                
+                allQuestionsData[moduleId].forEach(question => {
+                    const questionKey = question.question.trim().toLowerCase();
+                    
+                    if (!seen.has(questionKey)) {
+                        seen.add(questionKey);
+                        uniqueQuestions.push(question);
+                    }
+                });
+                
+                const removedCount = originalCount - uniqueQuestions.length;
+                allQuestionsData[moduleId] = uniqueQuestions;
+                
+                if (removedCount > 0) {
+                    console.log(`${moduleId}: Removed ${removedCount} duplicates (${originalCount} → ${uniqueQuestions.length})`);
+                    totalRemoved += removedCount;
+                }
+            });
+            
+            console.log(`=== DUPLICATE REMOVAL END: ${totalRemoved} total duplicates removed ===`);
+            
+            if (totalRemoved > 0) {
+                showStatus(`✅ Successfully removed ${totalRemoved} duplicate questions from the database!`, 'success');
+                updateQuestionCounts();
+                
+                // Auto-save the cleaned data
+                updateQuestionsFile();
+            } else {
+                showStatus('ℹ️ No duplicate questions found in the database.', 'info');
+            }
         }
 
         function goToGame() {
