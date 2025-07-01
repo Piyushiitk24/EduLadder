@@ -1172,22 +1172,6 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
         function goToGame() {
             window.location.href = 'index.html';
         }
-
-        function showStatus(message, type) {
-            const container = document.getElementById('statusMessages');
-            const div = document.createElement('div');
-            div.className = `status-message status-${type}`;
-            div.innerHTML = message;
-            
-            container.appendChild(div);
-            
-            // Auto-remove after 5 seconds
-            setTimeout(() => {
-                if (div.parentNode) {
-                    div.parentNode.removeChild(div);
-                }
-            }, 5000);
-        }
     </script>
 </body>
 </html>
