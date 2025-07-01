@@ -3,14 +3,14 @@
 
 <div align="center">
 
-![Game Logo](images/board.png)
+![Game Board](images/board.png)
 
 **🎮 Interactive Learning Game + 👩‍🏫 Teacher Management System 🎯**
 
 *EduLadder Quest is a comprehensive educational platform combining classic board game fun with professional content management. Features 8 learning modules, CSV question upload, real-time admin panel, and complete teacher resources.*
 
-[![🎮 Play Game](https://img.shields.io/badge/🎮_Play-Game-brightgreen?style=for-the-badge)](./index.html)
-[![👩‍🏫 Admin Panel](https://img.shields.io/badge/👩‍🏫_Teacher-Admin_Panel-blue?style=for-the-badge)](./admin.html)
+[![🎮 Play Game](https://img.shields.io/badge/🎮_Play-Game_Online-brightgreen?style=for-the-badge)](https://piyushiitk24.github.io/EduLadder/)
+[![👩‍🏫 Admin Panel](https://img.shields.io/badge/👩‍🏫_Teacher-Admin_Panel-blue?style=for-the-badge)](https://piyushiitk24.github.io/EduLadder/admin.html)
 [![📖 Teacher Guide](https://img.shields.io/badge/📖_Teacher-Guide-orange?style=for-the-badge)](./teacher-resources/TEACHER_GUIDE.md)
 
 ---
@@ -87,7 +87,7 @@
 ### 🚀 **Getting Started as an Educator**
 
 1. **📖 Read the Teacher Guide**: Start with [TEACHER_GUIDE.md](./teacher-resources/TEACHER_GUIDE.md)
-2. **🔧 Access Admin Panel**: Open [admin.html](./admin.html) in your browser
+2. **🔧 Access Admin Panel**: Open the [👩‍🏫 Admin Panel](https://piyushiitk24.github.io/EduLadder/admin.html) in your browser
 3. **📋 Download Template**: Get the CSV template from the admin panel
 4. **✏️ Create Questions**: Follow the template format to add your questions
 5. **📤 Upload Content**: Use the drag-and-drop interface to upload questions
@@ -181,12 +181,12 @@ Choose from 8 comprehensive educational topics:
 ## 🚀 Quick Start
 
 ### 🎯 **For Students - Play Immediately**
-1. Open [index.html](./index.html) in your browser
+1. Open the [🎮 Live Game](https://piyushiitk24.github.io/EduLadder/) in your browser
 2. Choose a learning module
 3. Set up players and start playing!
 
 ### 👩‍🏫 **For Teachers - Manage Content**
-1. Open [admin.html](./admin.html) in your browser
+1. Open the [👩‍🏫 Admin Panel](https://piyushiitk24.github.io/EduLadder/admin.html) in your browser
 2. Review current question counts
 3. Download CSV template if needed
 4. Upload new questions via drag-and-drop
@@ -287,16 +287,58 @@ EduLadder/
 <div align="center">
 
 ### 🏠 Welcome Screen
-*Clean, modern interface with animated game logo*
+*Clean, modern interface with animated game elements*
 
-### 📚 Module Selection  
-*Professional module cards with descriptions and icons*
+![Welcome Screen](images/screenshots/welcome.png)
 
-### 🎮 Gameplay Interface
-*Interactive board with real-time player tracking and animations*
+---
 
-### 👩‍🏫 Admin Panel
-*Professional question management system with upload capabilities*
+### 📋 Rules Screen
+*Comprehensive game rules and instructions for players*
+
+![Rules Screen](images/screenshots/rules.png)
+
+---
+
+### 📚 Module Selection Screen
+*Professional module cards with descriptions and educational icons*
+
+![Choose Module Screen](images/screenshots/chooseyourmodule.png)
+
+---
+
+### 👥 Player Count Selection
+*Interactive player selection for 2-4 players*
+
+![Players Selection Screen](images/screenshots/players.png)
+
+---
+
+### 🎭 Player Setup Screen
+*Add names and customize player avatars*
+
+![Add Names Screen](images/screenshots/addnames.png)
+
+---
+
+### 🎮 Main Gameplay Interface
+*Interactive board with real-time player tracking and dice rolling*
+
+![Roll the Dice Screen](images/screenshots/rollthedice.png)
+
+---
+
+### 👩‍🏫 Admin Panel - Upload Questions
+*Professional question management system with CSV upload capabilities*
+
+![Upload Questions Screen](images/screenshots/uploadquestions.png)
+
+---
+
+### 📊 Admin Panel - Question Statistics
+*Live question counter and module statistics dashboard*
+
+![Questions Live Counter Screen](images/screenshots/questionslivecounter.png)
 
 </div>
 
@@ -350,28 +392,38 @@ We especially welcome contributions from educators who can help improve the educ
 
 ---
 
-## 👨‍💻 About the Developer
+## 👨‍💻 About the Developers
 
 <div align="center">
 
-### **Piyush Tiwari**
-*Full Stack Developer & Educational Technology Enthusiast*
+### **Lt Varsha Singh** - *Primary Developer*
+*Full Stack Developer & Educational Technology Expert*
 
-[![GitHub](https://img.shields.io/badge/GitHub-piyushiitk24-black?style=flat-square&logo=github)](https://github.com/piyushiitk24)
+[![Portfolio](https://img.shields.io/badge/Portfolio-varsha2211.github.io-purple?style=flat-square&logo=github)](https://varsha2211.github.io/Responsive-Portfolio/)
+[![GitHub](https://img.shields.io/badge/GitHub-varsha2211-black?style=flat-square&logo=github)](https://github.com/varsha2211)
+
+**🎯 Lead developer passionate about creating engaging, educational experiences through interactive web applications.**
+
+- 🔭 Leading innovative educational gaming solutions
+- 🌱 Expert in modern web technologies and design trends  
+- 💡 Specializes in combining education with entertainment
+- 🎨 Professional UI/UX design and accessibility advocate
+- 🎮 Pioneer in gamified learning methodologies
+- 👩‍🏫 Dedicated to empowering educators with cutting-edge technology tools
+
+---
+
+### **Piyush Tiwari** - *Secondary Developer*
+*Full Stack Developer & Tech Collaborator*
+
+[![GitHub](https://img.shields.io/badge/GitHub-piyushiitk24-blue?style=flat-square&logo=github)](https://github.com/piyushiitk24)
 [![Email](https://img.shields.io/badge/Email-piyushiitk24@gmail.com-red?style=flat-square&logo=gmail)](mailto:piyushiitk24@gmail.com)
+
+**🛠️ Contributing developer focused on project optimization and deployment solutions.**
 
 </div>
 
-**🎯 Passionate about creating engaging, educational experiences through interactive web applications.**
-
-- 🔭 Currently working on innovative educational gaming solutions
-- 🌱 Always learning new technologies and design trends  
-- 💡 Love combining education with entertainment
-- 🎨 Enthusiast of modern UI/UX design principles
-- 🎮 Believer in the power of gamified learning
-- 👩‍🏫 Committed to supporting educators with technology tools
-
-### 🛠️ **Tech Stack & Interests**
+### 🛠️ **Tech Stack & Expertise**
 - **Frontend**: HTML5, CSS3, JavaScript, React
 - **Design**: Modern UI/UX, Responsive Design, Accessibility
 - **Focus Areas**: Educational Technology, Game Development, Teacher Tools
@@ -389,12 +441,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### 🌟 **Star this repository if you found it helpful!** ⭐
 
-**Made with ❤️ by [Piyush Tiwari](https://github.com/piyushiitk24)**
+**Made with ❤️ by [Lt Varsha Singh](https://varsha2211.github.io/Responsive-Portfolio/) & [Piyush Tiwari](https://github.com/piyushiitk24)**
 
 *"Rise Above the Snakes, Aim for the Ladders!"* 🐍🪜
 
 ---
 
-**🎮 [Play Now](./index.html) | 👩‍🏫 [Admin Panel](./admin.html) | 🔧 [Report Bug](https://github.com/piyushiitk24/EduLadder/issues) | 💡 [Request Feature](https://github.com/piyushiitk24/EduLadder/issues)**
+**🎮 [Play Now](https://piyushiitk24.github.io/EduLadder/) | 👩‍🏫 [Admin Panel](https://piyushiitk24.github.io/EduLadder/admin.html) | 🔧 [Report Bug](https://github.com/piyushiitk24/EduLadder/issues) | 💡 [Request Feature](https://github.com/piyushiitk24/EduLadder/issues)**
 
 </div>
