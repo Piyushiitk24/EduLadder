@@ -171,6 +171,10 @@
           </div>
         </div>
         <div class="gamePlayers">
+          <div class="game-instruction">
+            <h3>🎲 Roll the Dice to Play!</h3>
+            <p>Click on your dice when it's your turn</p>
+          </div>
           <div class="playersBox">
             <div class="playerCard" id="playerCard1">
               <div class="level1">
@@ -239,9 +243,16 @@
 
 <div id="questionModal" class="modal hidden">
   <div class="modal-content">
-    <h2 id="questionText"></h2>
+    <div class="modal-header">
+      <h2 id="questionText"></h2>
+      <button id="closeQuestion" class="close-btn" title="Skip Question">&times;</button>
+    </div>
     <div id="optionsContainer"></div>
-    <button id="submitAnswer">Submit</button>
+    <div class="modal-actions">
+      <button id="submitAnswer">Submit</button>
+      <button id="skipQuestion" class="skip-btn">Skip Question</button>
+    </div>
+    <p class="instruction-text">Select an option before submitting or use "Skip Question" to continue.</p>
   </div>
 </div>
 <div id="feedbackModal" class="modal hidden">

@@ -176,7 +176,8 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
   const questionText = document.getElementById("questionText");
   const optionsContainer = document.getElementById("optionsContainer");
   const submitBtn = document.getElementById("submitAnswer");
-  const board = document.getElementById("board");
+  const skipBtn = document.getElementById("skipQuestion");
+  const closeBtn = document.getElementById("closeQuestion");
   
   if (!questionModal || !questionText || !optionsContainer || !submitBtn) {
     console.error("Modal elements missing in HTML.");
@@ -193,21 +194,56 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
   optionsContainer.innerHTML = "";
   q.options.forEach((opt, idx) => {
     optionsContainer.innerHTML += `
-      <label>
+      <label class="option-label">
         <input type="radio" name="questionOption" value="${idx}" />
-        ${opt}
-      </label><br/>
+        <span class="option-text">${opt}</span>
+      </label>
     `;
   });
 
-  // Attach the click handler with the "once" option so it fires only once
-  submitBtn.addEventListener("click", function handler() {
+  // Function to handle skipping questions
+  const skipQuestion = () => {
+    questionModal.classList.add("hidden");
+    questionModalActive = false;
+    
+    if (isStart) {
+      // If skipping during start, move to next player
+      currentPlayer = (playerNumber % playersCount) + 1;
+      disableDices();
+    } else if (isSnakeBite && snakeTail !== null) {
+      // If skipping snake question, apply penalty
+      players[playerNumber - 1].score = snakeTail;
+      updateBoard();
+    } else {
+      // For regular questions, just continue the game
+      skipQuestionCheck = false;
+    }
+  };
+
+  // Add event listeners for skip and close buttons
+  const skipHandler = () => skipQuestion();
+  const closeHandler = () => skipQuestion();
+  
+  if (skipBtn) skipBtn.addEventListener("click", skipHandler, { once: true });
+  if (closeBtn) closeBtn.addEventListener("click", closeHandler, { once: true });
+
+  // Submit button handler with better validation
+  const submitHandler = () => {
     console.log("Submit button clicked");
     const selected = document.querySelector('input[name="questionOption"]:checked');
-    if (!selected) return;
+    
+    if (!selected) {
+      // Show alert if no option is selected
+      alert("Please select an option before submitting, or use 'Skip Question' to continue.");
+      return;
+    }
 
     const userAnswer = parseInt(selected.value);
     questionModal.classList.add("hidden");
+
+    // Clean up event listeners
+    if (skipBtn) skipBtn.removeEventListener("click", skipHandler);
+    if (closeBtn) closeBtn.removeEventListener("click", closeHandler);
 
     // Update question indices for cycling through questions
     if (isSnakeBite) {
@@ -233,20 +269,19 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
 	  if (userAnswer === q.correctIndex) {
 		players[playerNumber - 1].correct++;
 		correctSound.play(); // Play the correct answer sound
-		showFeedback(`Correct Answer ${players[playerNumber - 1].name} 😀!, you can start the Game`, () => {
+		showFeedback(`Correct Answer ${players[playerNumber - 1].name} 😀!<br><strong>Answer:</strong> ${correctAnswerText}<br>You can start the Game!`, () => {
 		  players[playerNumber - 1].hasStarted = true;
 		  currentPlayer = playerNumber;
 		  disableDices();
-		});
+		}, 4000); // Increased time to 4 seconds
 	  } else {
 		players[playerNumber - 1].incorrect++;
 		incorrectSound.play(); // Play the incorrect answer sound
-		showFeedback(`Incorrect Answer ${players[playerNumber - 1].name} 😢! <br> The correct answer is: ${correctAnswerText}. <br> Please try again in the next turn`, () => {
+		showFeedback(`Incorrect Answer ${players[playerNumber - 1].name} 😢!<br><strong>Correct Answer:</strong> ${correctAnswerText}<br>Please try again in the next turn`, () => {
 		  currentPlayer = (playerNumber % playersCount) + 1;
 		  disableDices();
-		});
+		}, 4000); // Increased time to 4 seconds
 	  }
-	  submitBtn.removeEventListener("click", handler);
 	  return;
 	}
 	//NEW1 End
@@ -256,8 +291,8 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
 
     let currentScore = players[playerNumber - 1].score;
 
-    // Function to show feedback then call the callback
-	function showFeedback(message, callback) {
+    // Function to show feedback then call the callback - Updated with longer display time
+	function showFeedback(message, callback, duration = 3500) {
 	  const feedbackModal = document.getElementById("feedbackModal");
 	  const feedbackText = document.getElementById("feedbackText");
 	  if (!feedbackModal || !feedbackText) {
@@ -269,15 +304,15 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
 	  feedbackModal.classList.remove("hidden");
 	  setTimeout(() => {
 		feedbackModal.classList.add("hidden");
-		callback();
-	  }, 2000);
+		if (callback) callback();
+	  }, duration); // Use the duration parameter (default 3.5 seconds)
 	}
 
 		if (userAnswer === q.correctIndex) {
 		  players[playerNumber - 1].correct++; // Increment correct counter
 		  correctSound.play(); // Play the correct answer sound
-		  correctSound.play();
 		  let bonus = 2; // Default bonus for a correct answer
+		  let correctAnswerText = q.options[q.correctIndex];
 
 		  // Check if landing on a snake after bonus steps should increase bonus
 			let futurePosition = players[playerNumber - 1].score + bonus;
@@ -285,9 +320,9 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
 				bonus = 3;
 			  }
 			  // Use the existing feedback modal to display the correct answer screen
-			  showFeedback(`Correct Answer ${players[playerNumber - 1].name} 😀! Moving ${bonus} steps forward.`, () => {
+			  showFeedback(`Correct Answer ${players[playerNumber - 1].name} 😀!<br><strong>Answer:</strong> ${correctAnswerText}<br>Moving ${bonus} steps forward.`, () => {
 				movePot(bonus, playerNumber);
-			  });
+			  }, 4000); // 4 seconds to read the correct answer
 			} else {
 			  players[playerNumber - 1].incorrect++; 
 			  let correctAnswerText = q.options[q.correctIndex];
@@ -295,11 +330,12 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
 			  if (isSnakeBite && snakeTail !== null) {
 				snake.play();
 				showFeedback(
-				  `Incorrect Answer ${players[playerNumber - 1].name} 😢! <br> The correct answer is: ${correctAnswerText}. <br> Moving directly to snake tail at position ${snakeTail}.`,
+				  `Incorrect Answer ${players[playerNumber - 1].name} 😢!<br><strong>Correct Answer:</strong> ${correctAnswerText}<br>Moving directly to snake tail at position ${snakeTail}.`,
 				  () => {
 					players[playerNumber - 1].score = snakeTail;
 					updateBoard();
-				  }
+				  },
+				  4000 // 4 seconds to read the correct answer
 				);
 			  } else {
 			let penalty = -2;
@@ -307,14 +343,18 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
 			  penalty = -3;
 			}
 			showFeedback(
-			  `Incorrect Answer ${players[playerNumber - 1].name} 😢! <br> The correct answer is: ${correctAnswerText}. <br> Moving ${Math.abs(penalty)} steps backward.`,
+			  `Incorrect Answer ${players[playerNumber - 1].name} 😢!<br><strong>Correct Answer:</strong> ${correctAnswerText}<br>Moving ${Math.abs(penalty)} steps backward.`,
 			  () => {
 				movePot(penalty, playerNumber);
-			  }
+			  },
+			  4000 // 4 seconds to read the correct answer
 			);
 		  }
-}
-  }, { once: true });
+		}
+  };
+
+  // Attach the submit handler
+  submitBtn.addEventListener("click", submitHandler, { once: true });
 }
 // =============================
 // END QUESTION LOGIC SECTION
