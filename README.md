@@ -396,7 +396,7 @@ We especially welcome contributions from educators who can help improve the educ
 
 <div align="center">
 
-### **Lt Varsha Singh** - *Primary Developer*
+### **Varsha Singh** - *Primary Developer*
 *Full Stack Developer & Educational Technology Expert*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-varsha2211.github.io-purple?style=flat-square&logo=github)](https://varsha2211.github.io/Responsive-Portfolio/)
@@ -441,7 +441,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### 🌟 **Star this repository if you found it helpful!** ⭐
 
-**Made with ❤️ by [Lt Varsha Singh](https://varsha2211.github.io/Responsive-Portfolio/) & [Piyush Tiwari](https://github.com/piyushiitk24)**
+**Made with ❤️ by [Varsha Singh](https://varsha2211.github.io/Responsive-Portfolio/) & [Piyush Tiwari](https://github.com/piyushiitk24)**
 
 *"Rise Above the Snakes, Aim for the Ladders!"* 🐍🪜
 
