@@ -1,0 +1,5 @@
+module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
+tlprocess,Teaching Learning Process,easy,What is the first step in effective teaching?,Planning,Assessment,Implementation,Evaluation,A
+tlprocess,Teaching Learning Process,hard,Which learning theory emphasizes the role of reinforcement?,Cognitive Theory,Constructivist Theory,Behaviorist Theory,Humanistic Theory,C
+learningtheories,Learning Theories,easy,Who developed the theory of multiple intelligences?,Howard Gardner,Jean Piaget,B.F. Skinner,Albert Bandura,A
+learningtheories,Learning Theories,hard,What is the main principle of constructivist learning theory?,Passive absorption,Active knowledge construction,Repetitive practice,External reinforcement,B

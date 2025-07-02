@@ -51,6 +51,15 @@
 - **💾 Question Database**: 256+ questions across 8 modules with easy/hard difficulty levels
 - **📈 Real-time Updates**: Live question counts and module statistics
 
+### 🆕 Recent Improvements (July 2025)
+
+- **🚫 Smart Deduplication**: Intelligent CSV upload system prevents duplicate questions
+- **🔄 Update Detection**: Automatically updates changed questions instead of creating duplicates
+- **📊 Enhanced Feedback**: Detailed upload statistics showing added/updated/skipped questions
+- **🧹 Cleanup Tools**: One-click duplicate removal for existing databases
+- **🎯 Unified Architecture**: Streamlined admin panel with improved data consistency
+- **✅ Robust Upload**: Advanced CSV parsing with comprehensive error handling
+
 ---
 
 ## ✨ Features
@@ -73,10 +82,13 @@
 
 ### 🔧 Admin Panel Features
 - **📊 Question Management**: Add, edit, and organize questions by module
-- **📤 CSV Upload**: Drag-and-drop CSV file upload with validation
+- **📤 Smart CSV Upload**: Drag-and-drop CSV upload with intelligent deduplication
+- **🚫 Duplicate Prevention**: Automatically detects and prevents duplicate questions
+- **🔄 Update Detection**: Smart merge system updates changed questions instead of duplicating
 - **📋 Template System**: Pre-built CSV templates for easy question creation
-- **📈 Real-time Statistics**: Live question counts and module overview
+- **📈 Real-time Statistics**: Live question counts and detailed upload feedback
 - **💾 Export Functionality**: Download updated question databases
+- **🧹 Cleanup Tools**: One-click duplicate removal for existing databases
 - **🔍 Question Preview**: View and validate questions before upload
 - **📝 Module Organization**: Professional module cards with descriptions
 
@@ -97,13 +109,17 @@
 
 | Feature | Description |
 |---------|-------------|
-| **CSV Upload** | Upload questions via CSV files with drag-and-drop interface |
+| **Smart CSV Upload** | Upload questions via CSV with intelligent duplicate detection |
+| **Deduplication System** | Automatically prevents duplicate questions during upload |
+| **Update Detection** | Identifies and updates changed questions instead of duplicating |
+| **Upload Statistics** | Detailed feedback showing added/updated/skipped question counts |
 | **Template Download** | Ready-to-use CSV template with proper formatting |
 | **Real-time Preview** | See question counts and module statistics instantly |
 | **Module Organization** | Manage questions across 8 educational modules |
 | **Difficulty Levels** | Easy and hard questions for varied challenge levels |
 | **Export Function** | Download your complete question database |
-| **Validation System** | Automatic format checking and error reporting |
+| **Cleanup Tools** | Remove existing duplicates with one-click tool |
+| **Validation System** | Automatic format checking and comprehensive error reporting |
 
 ### 📋 **CSV Format Requirements**
 
