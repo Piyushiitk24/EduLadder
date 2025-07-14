@@ -1074,21 +1074,6 @@ button:hover {
   margin-top: 20px;
 }
 
-.skip-btn {
-  background-color: #6c757d !important;
-  padding: 10px 20px;
-  border: none;
-  color: #fff;
-  font-size: 1em;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.skip-btn:hover {
-  background-color: #5a6268 !important;
-}
-
 .instruction-text {
   margin-top: 15px;
   font-size: 0.9em;

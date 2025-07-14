@@ -176,7 +176,6 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
   const questionText = document.getElementById("questionText");
   const optionsContainer = document.getElementById("optionsContainer");
   const submitBtn = document.getElementById("submitAnswer");
-  const skipBtn = document.getElementById("skipQuestion");
   const closeBtn = document.getElementById("closeQuestion");
   
   if (!questionModal || !questionText || !optionsContainer || !submitBtn) {
@@ -201,17 +200,17 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
     `;
   });
 
-  // Function to handle skipping questions
-  const skipQuestion = () => {
+  // Function to handle closing the modal
+  const closeModal = () => {
     questionModal.classList.add("hidden");
     questionModalActive = false;
     
     if (isStart) {
-      // If skipping during start, move to next player
+      // If closing during start, move to next player
       currentPlayer = (playerNumber % playersCount) + 1;
       disableDices();
     } else if (isSnakeBite && snakeTail !== null) {
-      // If skipping snake question, apply penalty
+      // If closing snake question, apply penalty
       players[playerNumber - 1].score = snakeTail;
       updateBoard();
     } else {
@@ -220,11 +219,9 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
     }
   };
 
-  // Add event listeners for skip and close buttons
-  const skipHandler = () => skipQuestion();
-  const closeHandler = () => skipQuestion();
+  // Add event listener for close button
+  const closeHandler = () => closeModal();
   
-  if (skipBtn) skipBtn.addEventListener("click", skipHandler, { once: true });
   if (closeBtn) closeBtn.addEventListener("click", closeHandler, { once: true });
 
   // Submit button handler with better validation
@@ -234,7 +231,7 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
     
     if (!selected) {
       // Show alert if no option is selected
-      alert("Please select an option before submitting, or use 'Skip Question' to continue.");
+      alert("Please select an option before submitting.");
       return;
     }
 
@@ -242,7 +239,6 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
     questionModal.classList.add("hidden");
 
     // Clean up event listeners
-    if (skipBtn) skipBtn.removeEventListener("click", skipHandler);
     if (closeBtn) closeBtn.removeEventListener("click", closeHandler);
 
     // Update question indices for cycling through questions
