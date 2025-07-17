@@ -485,8 +485,10 @@ function markUnavailableModules() {
   if (!allCards || !allQuestionsData) return;
   allCards.forEach(card => {
     const moduleId = card.getAttribute('data-module');
-    // If module is missing or has no questions, mark as unavailable
-    if (!allQuestionsData[moduleId] || !Array.isArray(allQuestionsData[moduleId]) || allQuestionsData[moduleId].length === 0) {
+    const arr = allQuestionsData[moduleId];
+    // Check for at least one object with a 'question' field
+    const hasValidQuestion = Array.isArray(arr) && arr.some(q => q && typeof q.question === 'string' && q.question.trim().length > 0);
+    if (!hasValidQuestion) {
       card.classList.add('unavailable');
       card.setAttribute('data-unavailable', 'true');
       // Add Coming Soon overlay if not already present
