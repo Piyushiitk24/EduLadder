@@ -26,7 +26,7 @@
 
         .admin-header {
             background: linear-gradient(135deg, #8da7ee, #5577ff);
-            color: white;
+            color: black;
             text-align: center;
             padding: 40px 20px;
         }
@@ -35,12 +35,14 @@
             font-size: 2.5rem;
             margin: 0 0 10px 0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            color: black;
         }
 
         .admin-header p {
             font-size: 1.2rem;
             margin: 10px 0;
             opacity: 0.9;
+            color: black;
         }
 
         .instruction-banner {
@@ -256,7 +258,7 @@
 
         /* Question Management Modal */
         .question-modal {
-            display: none;
+            display: none !important;
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -265,6 +267,10 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(5px);
+        }
+
+        .question-modal.show {
+            display: block !important;
         }
 
         .question-modal-content {
@@ -567,6 +573,7 @@
                 <h3><i class="fas fa-info-circle"></i> Step-by-Step Instructions</h3>
                 <p><strong>1.</strong> Download CSV template below <strong>2.</strong> Edit with your questions <strong>3.</strong> Upload CSV file <strong>4.</strong> Questions are merged into game</p>
                 <p><strong>📋 Important:</strong> CSV uploads ADD questions to existing ones • Use exact format from template • Questions appear immediately in game</p>
+                <p><strong>💾 Data Persistence:</strong> Changes are saved locally • Use "Download Updated JSON" to backup • Replace questions/questions.json to make permanent</p>
             </div>
 
             <div class="main-content">
@@ -747,6 +754,31 @@
         window.addEventListener('load', async function() {
             await loadQuestionsData();
             updateQuestionCounts();
+            
+            // Ensure modal is hidden on page load and initialize default state
+            const modal = document.getElementById('questionModal');
+            if (modal) {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+            }
+            document.body.style.overflow = 'auto';
+            
+            // Clear any selected module
+            selectedModule = null;
+            document.querySelectorAll('.module-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            console.log('Admin panel loaded successfully - default view active');
+        });
+
+        // Also ensure modal is hidden when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('questionModal');
+            if (modal) {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+            }
         });
 
         // File upload handling
@@ -791,12 +823,34 @@
         // Load questions data from JSON file
         async function loadQuestionsData() {
             try {
+                // First try to load from localStorage (for persistence across sessions)
+                const localData = localStorage.getItem('eduladder_questions');
+                if (localData) {
+                    try {
+                        allQuestionsData = JSON.parse(localData);
+                        console.log('Questions data loaded from localStorage:', allQuestionsData);
+                        showStatus('📁 Loaded previously saved question data from local storage.', 'info');
+                        return;
+                    } catch (error) {
+                        console.warn('Failed to parse localStorage data, falling back to JSON file');
+                    }
+                }
+                
+                // Fallback to loading from JSON file
                 const response = await fetch('./questions/questions.json');
-                allQuestionsData = await response.json();
-                console.log('Questions data loaded:', allQuestionsData);
+                if (response.ok) {
+                    allQuestionsData = await response.json();
+                    console.log('Questions data loaded from file:', allQuestionsData);
+                    // Save to localStorage for future sessions
+                    localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
+                } else {
+                    console.warn('Could not load questions.json, starting with empty data');
+                    allQuestionsData = {};
+                }
             } catch (error) {
                 console.error('Error loading questions:', error);
-                showStatus('Could not load existing questions data.', 'error');
+                allQuestionsData = {};
+                showStatus('⚠️ Could not load existing questions data. Starting with empty database.', 'error');
             }
         }
 
@@ -901,6 +955,9 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                     // Merge questions into existing data with smart deduplication
                     const mergeStats = mergeQuestionsIntoData(questions);
                     
+                    // Save changes immediately to localStorage for persistence
+                    localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
+                    
                     // Update the JSON file (this would typically be a server operation)
                     updateQuestionsFile();
                     
@@ -909,7 +966,7 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
                     if (mergeStats.added > 0) message += `Added ${mergeStats.added} new questions. `;
                     if (mergeStats.updated > 0) message += `Updated ${mergeStats.updated} existing questions. `;
                     if (mergeStats.skipped > 0) message += `Skipped ${mergeStats.skipped} duplicate questions. `;
-                    message += 'All changes are now available in the game.';
+                    message += 'All changes are saved locally and available in the game.';
                     
                     showStatus(message, 'success');
                     
@@ -1160,15 +1217,20 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             // Save to localStorage for immediate use
             localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
             
-            // Provide download link for the updated questions.json
+            // Also save to the actual questions.json structure for persistence
+            // This simulates updating the actual file - in a real server environment,
+            // you would send this data to a server endpoint
             const dataStr = JSON.stringify(allQuestionsData, null, 2);
+            
+            // For demonstration, we'll create a downloadable file
+            // In production, this would be an API call to save the data
             const dataBlob = new Blob([dataStr], {type: 'application/json'});
             const url = URL.createObjectURL(dataBlob);
             
-            // Create download link
+            // Create download link for manual update
             const downloadLink = document.createElement('a');
             downloadLink.href = url;
-            downloadLink.download = 'questions.json';
+            downloadLink.download = 'questions_updated.json';
             downloadLink.textContent = 'Download Updated questions.json';
             downloadLink.style.cssText = `
                 display: inline-block;
@@ -1186,8 +1248,8 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             const downloadDiv = document.createElement('div');
             downloadDiv.className = 'status-message status-success';
             downloadDiv.innerHTML = `
-                <strong>✅ Questions merged successfully!</strong><br>
-                Click the link below to download the updated questions.json file, then replace the file in your questions/ folder.
+                <strong>✅ Questions updated successfully!</strong><br>
+                Changes are saved locally. Download the updated file and replace questions/questions.json to make changes permanent.
                 <br><br>
             `;
             downloadDiv.appendChild(downloadLink);
@@ -1239,13 +1301,13 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             populateModalStats(moduleId);
             populateQuestionsTable(moduleId);
             
-            modal.style.display = 'block';
+            modal.classList.add('show');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
 
         function closeQuestionModal() {
             const modal = document.getElementById('questionModal');
-            modal.style.display = 'none';
+            modal.classList.remove('show');
             document.body.style.overflow = 'auto'; // Restore scrolling
         }
 
@@ -1355,10 +1417,14 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             const newQuestionText = prompt('Edit question:', question.question);
             if (newQuestionText && newQuestionText.trim()) {
                 allQuestionsData[moduleId][questionIndex].question = newQuestionText.trim();
+                
+                // Save changes immediately
+                localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
+                
                 populateQuestionsTable(moduleId);
                 populateModalStats(moduleId);
                 updateQuestionCounts();
-                showStatus('Question updated successfully!', 'success');
+                showStatus('Question updated successfully! Changes saved to local storage.', 'success');
             }
         }
 
@@ -1367,10 +1433,14 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             
             if (confirm(`Are you sure you want to delete this question?\n\n"${question.question}"`)) {
                 allQuestionsData[moduleId].splice(questionIndex, 1);
+                
+                // Save changes immediately
+                localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
+                
                 populateQuestionsTable(moduleId);
                 populateModalStats(moduleId);
                 updateQuestionCounts();
-                showStatus('Question deleted successfully!', 'success');
+                showStatus('Question deleted successfully! Changes saved to local storage.', 'success');
             }
         }
 
@@ -1426,10 +1496,14 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
             }
             
             allQuestionsData[moduleId].push(newQuestion);
+            
+            // Save changes immediately
+            localStorage.setItem('eduladder_questions', JSON.stringify(allQuestionsData));
+            
             populateQuestionsTable(moduleId);
             populateModalStats(moduleId);
             updateQuestionCounts();
-            showStatus('New question added successfully!', 'success');
+            showStatus('New question added successfully! Changes saved to local storage.', 'success');
         }
 
         // Close modal when clicking outside of it
@@ -1444,7 +1518,7 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const modal = document.getElementById('questionModal');
-                if (modal.style.display === 'block') {
+                if (modal && modal.classList.contains('show')) {
                     closeQuestionModal();
                 }
             }
