@@ -992,16 +992,34 @@ button:hover {
 
 .module-card h3 {
   color: #2455db;
-  margin: 15px 0 10px;
-  font-size: 1.3rem;
-  font-weight: 600;
+  margin: 10px 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.2;
 }
 
+/* Support long, multi-line subtitles for modules */
 .module-card p {
-  color: #666;
+  color: #444;
   font-size: 0.95rem;
-  margin-bottom: 15px;
-  line-height: 1.4;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: pre-line;
+  max-height: 3.5em;
+  overflow: auto;
+}
+
+/* Make module cards a bit taller for more content */
+.module-card {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 }
 
 /* Navigation buttons for module screen */
