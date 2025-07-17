@@ -1,5 +1,19 @@
 module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
-tlprocess,Teaching Learning Process,easy,What is the first step in effective teaching?,Planning,Assessment,Implementation,Evaluation,A
-tlprocess,Teaching Learning Process,hard,Which learning theory emphasizes the role of reinforcement?,Cognitive Theory,Constructivist Theory,Behaviorist Theory,Humanistic Theory,C
-learningtheories,Learning Theories,easy,Who developed the theory of multiple intelligences?,Howard Gardner,Jean Piaget,B.F. Skinner,Albert Bandura,A
-learningtheories,Learning Theories,hard,What is the main principle of constructivist learning theory?,Passive absorption,Active knowledge construction,Repetitive practice,External reinforcement,B
+mod1,Domains of Learning,easy,Which of the following is NOT one of the three primary domains of learning?,Cognitive,Affective,Psychomotor,Social,D
+mod1,Domains of Learning,hard,Which action verb is most suitable for the Responding level in the affective domain?,Assists,Organizes,Evaluates,Generates,A
+mod2,TOS Master Syllabus & Evaluation,easy,What does TOS stand for in educational planning?,Table of Specifications,Test of Skills,Training Outcome Standards,Technical Objective Setting,A
+mod2,TOS Master Syllabus & Evaluation,hard,Which evaluation method provides immediate feedback during the learning process?,Summative evaluation,Formative evaluation,Diagnostic evaluation,Comparative evaluation,B
+mod3,TL process Andragogy SAT BTM & Ways of Learning,easy,What is defined as a psychological process that prepares a person for general living conditions?,Training,Education,Learning,Teaching,B
+mod3,TL process Andragogy SAT BTM & Ways of Learning,hard,According to Knowles assumptions as a person matures their self-concept moves towards being?,A passive receiver,A subordinate,A self-directed human being,A knowledge expert,C
+mod4,Objectives Maxims & Questioning Technique,easy,A well-written learning objective should be?,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B
+mod4,Objectives Maxims & Questioning Technique,hard,According to Mager's criteria which component specifies the acceptable level of performance?,Condition,Behavior,Criterion,Context,C
+mod5,Lesson Lecture Demonstration Group Discussion Coaching CBT Media in Training,easy,Which teaching method involves direct instruction by the trainer?,Group Discussion,Lecture,Demonstration,Coaching,B
+mod5,Lesson Lecture Demonstration Group Discussion Coaching CBT Media in Training,hard,Which method is most effective for developing problem-solving skills?,Lecture,Demonstration,Group Discussion,Reading,C
+mod6,Instructor Like Qualities Video in Training Feedback,easy,What is the most important quality of an effective instructor?,Subject matter expertise,Ability to communicate effectively,Strict discipline,Advanced degrees,B
+mod6,Instructor Like Qualities Video in Training Feedback,hard,Which instructor quality helps build rapport with learners?,Strictness,Empathy,Perfectionism,Aloofness,B
+mod7,TDEC Item Analysis Result Analysis,easy,What is the purpose of item analysis?,To grade papers faster,To evaluate the effectiveness of test questions,To reduce course content,To increase class size,B
+mod7,TDEC Item Analysis Result Analysis,hard,Which statistical measure is used to determine item difficulty?,Mean score,Percentage of correct responses,Standard deviation,Correlation coefficient,B
+mod8,Training Directives,easy,Training directives are issued by?,Individual instructors,Training institutions,Higher military/organizational authorities,Student committees,C
+mod8,Training Directives,hard,Which level of authority typically issues training directives for military institutions?,Company level,Platoon level,Command/Headquarters level,Individual level,C
+mod9,Motivation Communication Code of Ethics,easy,What is the primary source of motivation according to most theories?,External rewards only,Internal drives and external incentives,Punishment and fear,Competition with others,B
+mod9,Motivation Communication Code of Ethics,hard,Which communication barrier is most common in training environments?,Physical distance,Language and technical complexity,Time constraints,Equipment failure,B

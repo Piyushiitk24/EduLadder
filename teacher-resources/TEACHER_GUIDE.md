@@ -10,14 +10,15 @@
 ### 🎯 Module System
 The game has **8 learning modules**:
 
-1. **tlprocess** - Teaching Learning Process
-2. **learningtheories** - Learning Theories  
-3. **fourways** - 4 Ways of Learning
-4. **andragogy** - Andragogy
-5. **sat** - Systematic Approach to Training (SAT)
-6. **btm** - Basic Teaching Model
-7. **dol** - Domains of Learning
-8. **objectives** - Writing Objectives
+1. **mod1** - Domains of Learning
+2. **mod2** - TOS, Master Syllabus & Evaluation
+3. **mod3** - TL process, Andragogy, SAT, BTM & Ways of Learning
+4. **mod4** - Objectives, Maxims & Questioning Technique
+5. **mod5** - Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training
+6. **mod6** - Instructor Like Qualities, Video in Training, Feedback
+7. **mod7** - TDEC, Item Analysis, Result Analysis
+8. **mod8** - Training Directives
+9. **mod9** - Motivation, Communication, Code of Ethics
 
 ### 📊 Question Requirements per Module
 
@@ -39,7 +40,7 @@ module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option
 ```
 
 **Column Descriptions:**
-- **module_id**: Use exact IDs (tlprocess, learningtheories, fourways, andragogy, sat, btm, dol, objectives)
+- **module_id**: Use exact IDs (mod1, mod2, mod3, mod4, mod5, mod6, mod7, mod8, mod9)
 - **module_name**: Full descriptive name of the module
 - **difficulty**: Either "easy" or "hard" (lowercase)
 - **question_text**: The actual question (avoid commas inside text)
@@ -51,7 +52,7 @@ module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option
 1. **Use the template_questions.csv file as your starting point**
 2. **Replace sample questions with your own content**
 3. **Maintain the exact column order and names**
-4. **Ensure module_id matches exactly (case-sensitive)**
+4. **Ensure module_id matches exactly (case-sensitive, e.g., mod1, mod2, ... mod9)**
 5. **Difficulty must be either "easy" or "hard"**
 6. **Correct_option must be A, B, C, or D**
 
@@ -108,7 +109,7 @@ module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option
 **Upload Issues:**
 - File must have .csv extension
 - Check internet connection for web interface
-- Ensure module_id matches one of the 8 valid modules
+- Ensure module_id matches one of the 9 valid modules
 - Try downloading and using the template again
 
 **Question Not Appearing:**

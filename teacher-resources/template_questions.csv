@@ -1,17 +1,19 @@
 module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
-tlprocess,Teaching Learning Process,easy,What is the first step in the teaching-learning process?,Assessment,Planning,Implementation,Evaluation,B
-tlprocess,Teaching Learning Process,hard,According to Kolb's experiential learning theory which stage follows 'Concrete Experience'?,Abstract Conceptualization,Reflective Observation,Active Experimentation,Theoretical Analysis,B
-learningtheories,Learning Theories,easy,Who is known as the father of behaviorism?,Jean Piaget,B.F. Skinner,John Watson,Albert Bandura,C
-learningtheories,Learning Theories,hard,According to Vygotsky's Zone of Proximal Development learning occurs best when:,Students work completely independently,Tasks are too difficult to complete,Students receive appropriate guidance,Learning is purely theoretical,C
-fourways,4 Ways of Learning,easy,Visual learners prefer to learn through:,Listening to lectures,Seeing charts and diagrams,Physical movement,Group discussions,B
-fourways,4 Ways of Learning,hard,According to Fleming's VARK model multimodal learners:,Use only one learning style,Combine multiple learning preferences,Avoid visual inputs,Focus solely on auditory learning,B
-andragogy,Andragogy,easy,Andragogy is the study of:,Child learning,Adult learning,Animal behavior,Memory techniques,B
-andragogy,Andragogy,hard,Knowles' andragogical model assumes that adults:,Have no prior experience,Are externally motivated only,Have a problem-centered orientation,Learn exactly like children,C
-sat,Systematic Approach to Training (SAT),easy,SAT stands for:,Simple Approach to Teaching,Systematic Approach to Training,Strategic Academic Training,Standard Assessment Tool,B
-sat,Systematic Approach to Training (SAT),hard,In the SAT model which phase involves determining the gap between current and desired performance?,Design phase,Analysis phase,Implementation phase,Evaluation phase,B
-btm,Basic Teaching Model,easy,The Basic Teaching Model typically includes:,Only assessment,Preparation presentation practice,Just lecturing,Testing only,B
-btm,Basic Teaching Model,hard,The Basic Teaching Model's effectiveness depends heavily on:,Student compliance only,Proper sequencing and alignment of components,Teacher personality,Classroom size,B
-dol,Domains of Learning,easy,The three main domains of learning are:,Reading writing arithmetic,Cognitive affective psychomotor,Visual auditory kinesthetic,Memory thinking feeling,B
-dol,Domains of Learning,hard,In Bloom's revised cognitive taxonomy which level represents the highest form of cognitive processing?,Analyzing,Evaluating,Creating,Applying,C
-objectives,Writing Objectives,easy,A learning objective should be:,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B
-objectives,Writing Objectives,hard,According to Mager's criteria for writing objectives which component specifies the acceptable level of performance?,Condition,Behavior,Criterion,Context,C
+mod1,Domains of Learning,easy,Which of the following is NOT one of the three primary domains of learning?,Cognitive,Affective,Psychomotor,Social,D
+mod1,Domains of Learning,hard,Which action verb is most suitable for the Responding level in the affective domain?,Assists,Organizes,Evaluates,Generates,A
+mod2,TOS Master Syllabus & Evaluation,easy,What does TOS stand for in educational planning?,Table of Specifications,Test of Skills,Training Outcome Standards,Technical Objective Setting,A
+mod2,TOS Master Syllabus & Evaluation,hard,Which evaluation method provides immediate feedback during the learning process?,Summative evaluation,Formative evaluation,Diagnostic evaluation,Comparative evaluation,B
+mod3,TL process Andragogy SAT BTM & Ways of Learning,easy,What is defined as a psychological process that prepares a person for general living conditions?,Training,Education,Learning,Teaching,B
+mod3,TL process Andragogy SAT BTM & Ways of Learning,hard,According to Knowles assumptions as a person matures their self-concept moves towards being?,A passive receiver,A subordinate,A self-directed human being,A knowledge expert,C
+mod4,Objectives Maxims & Questioning Technique,easy,A well-written learning objective should be?,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B
+mod4,Objectives Maxims & Questioning Technique,hard,According to Mager's criteria which component specifies the acceptable level of performance?,Condition,Behavior,Criterion,Context,C
+mod5,Lesson Lecture Demonstration Group Discussion Coaching CBT Media in Training,easy,Which teaching method involves direct instruction by the trainer?,Group Discussion,Lecture,Demonstration,Coaching,B
+mod5,Lesson Lecture Demonstration Group Discussion Coaching CBT Media in Training,hard,Which method is most effective for developing problem-solving skills?,Lecture,Demonstration,Group Discussion,Reading,C
+mod6,Instructor Like Qualities Video in Training Feedback,easy,What is the most important quality of an effective instructor?,Subject matter expertise,Ability to communicate effectively,Strict discipline,Advanced degrees,B
+mod6,Instructor Like Qualities Video in Training Feedback,hard,Which instructor quality helps build rapport with learners?,Strictness,Empathy,Perfectionism,Aloofness,B
+mod7,TDEC Item Analysis Result Analysis,easy,What is the purpose of item analysis?,To grade papers faster,To evaluate the effectiveness of test questions,To reduce course content,To increase class size,B
+mod7,TDEC Item Analysis Result Analysis,hard,Which statistical measure is used to determine item difficulty?,Mean score,Percentage of correct responses,Standard deviation,Correlation coefficient,B
+mod8,Training Directives,easy,Training directives are issued by?,Individual instructors,Training institutions,Higher military/organizational authorities,Student committees,C
+mod8,Training Directives,hard,Which level of authority typically issues training directives for military institutions?,Company level,Platoon level,Command/Headquarters level,Individual level,C
+mod9,Motivation Communication Code of Ethics,easy,What is the primary source of motivation according to most theories?,External rewards only,Internal drives and external incentives,Punishment and fear,Competition with others,B
+mod9,Motivation Communication Code of Ethics,hard,Which communication barrier is most common in training environments?,Physical distance,Language and technical complexity,Time constraints,Equipment failure,B

@@ -1,5 +1,105 @@
-{
-  "tlprocess": [
+By mistake, I made commits in my visual in my Versus code. However, I have not synced it to GitHub. Only made commit Did not sync. {
+  "mod1": [
+    {
+      "question": "Which of the following is NOT one of the three primary domains of learning?",
+      "options": [
+        "Cognitive",
+        "Affective", 
+        "Psychomotor",
+        "Social"
+      ],
+      "correct": 3,
+      "difficulty": "easy",
+      "module": "Domains of Learning"
+    },
+    {
+      "question": "The cognitive domain primarily deals with which aspect of learning?",
+      "options": [
+        "Emotions",
+        "Motor skills",
+        "Knowledge",
+        "Values"
+      ],
+      "correct": 2,
+      "difficulty": "easy",
+      "module": "Domains of Learning"
+    },
+    {
+      "question": "Which domain of learning involves attitudes, values, and feelings?",
+      "options": [
+        "Cognitive",
+        "Affective",
+        "Psychomotor",
+        "Sensory"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Domains of Learning"
+    },
+    {
+      "question": "Which action verb is most suitable for the Responding level in the affective domain?",
+      "options": [
+        "Assists",
+        "Organizes",
+        "Evaluates",
+        "Generates"
+      ],
+      "correct": 0,
+      "difficulty": "hard",
+      "module": "Domains of Learning"
+    }
+  ],
+  "mod2": [
+    {
+      "question": "What does TOS stand for in educational planning?",
+      "options": [
+        "Table of Specifications",
+        "Test of Skills",
+        "Training Outcome Standards",
+        "Technical Objective Setting"
+      ],
+      "correct": 0,
+      "difficulty": "easy",
+      "module": "TOS, Master Syllabus & Evaluation"
+    },
+    {
+      "question": "A Master Syllabus typically includes which of the following components?",
+      "options": [
+        "Only learning objectives",
+        "Course objectives, content outline, and assessment methods",
+        "Just the textbook list",
+        "Only attendance requirements"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "TOS, Master Syllabus & Evaluation"
+    },
+    {
+      "question": "What is the primary purpose of evaluation in training?",
+      "options": [
+        "To punish poor performers",
+        "To measure learning outcomes and improve instruction",
+        "To reduce training costs",
+        "To increase class size"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "TOS, Master Syllabus & Evaluation"
+    },
+    {
+      "question": "Which evaluation method provides immediate feedback during the learning process?",
+      "options": [
+        "Summative evaluation",
+        "Formative evaluation",
+        "Diagnostic evaluation",
+        "Comparative evaluation"
+      ],
+      "correct": 1,
+      "difficulty": "hard",
+      "module": "TOS, Master Syllabus & Evaluation"
+    }
+  ],
+  "mod3": [
     {
       "question": "What is defined as a psychological process that prepares a person for general living conditions?",
       "options": [
@@ -10,1551 +110,19 @@
       ],
       "correct": 1,
       "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What is a planned process to modify attitude, knowledge, and skill for a specific task?",
-      "options": [
-        "Education",
-        "Guidance",
-        "Training",
-        "Assessment"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What is the process of imparting knowledge, motivating, and guiding trainees to learn?",
-      "options": [
-        "Learning",
-        "Education",
-        "Assessment",
-        "Teaching"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "A relatively permanent change in behavior brought about by repeated practice is known as what?",
-      "options": [
-        "Instruction",
-        "Learning",
-        "Guidance",
-        "Aptitude"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Which of the following is described as broad-based and general in nature?",
-      "options": [
-        "Training",
-        "Education",
-        "Skill Development",
-        "Task Analysis"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Which process can be terminated once a person achieves satisfactory performance of a task?",
-      "options": [
-        "Education",
-        "Learning",
-        "Training",
-        "Socialization"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What are the three stages of the teaching operation?",
-      "options": [
-        "Before, During, After",
-        "Plan, Do, Check",
-        "Pre-active, Inter-active, Post-active",
-        "Knowledge, Skill, Attitude"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What is the first stage in the teaching operation, also known as the planning stage?",
-      "options": [
-        "Inter-active stage",
-        "Post-active stage",
-        "Pre-active stage",
-        "Evaluation stage"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "In which stage does the instructor interact with the trainees in the classroom?",
-      "options": [
-        "Pre-active stage",
-        "Inter-active stage",
-        "Post-active stage",
-        "Feedback stage"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "In which stage does the instructor analyze the performance of trainees and identify weak areas?",
-      "options": [
-        "Post-active stage",
-        "Pre-active stage",
-        "Inter-active stage",
-        "Planning stage"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Setting or preparing objectives is a key activity of which teaching stage?",
-      "options": [
-        "Inter-active stage",
-        "Post-active stage",
-        "Pre-active stage",
-        "Execution stage"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "According to the text, when does the inter-active stage of teaching begin?",
-      "options": [
-        "After the test",
-        "During lesson planning",
-        "When the instructor enters the class",
-        "After the summary"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Sizing up the class and arranging seating is an activity of which stage?",
-      "options": [
-        "Post-active Stage",
-        "Pre-active Stage",
-        "Inter-active Stage",
-        "Assessment Stage"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What is a general principle of learning mentioned in the text?",
-      "options": [
-        "Learning is purely an individual activity",
-        "Active trainee participation is necessary",
-        "Learning happens best in silence",
-        "New ideas should be kept separate from old ones"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What is the visible outcome of learning?",
-      "options": [
-        "The length of the class",
-        "The instructor's satisfaction",
-        "A change in behaviour in trainees",
-        "The amount of content covered"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "What learning outcome is described as the learning of facts, figures, and experiences?",
-      "options": [
-        "Skill",
-        "Understanding",
-        "Concept",
-        "Knowledge"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "The performance of a job or task with a set standard is which learning outcome?",
-      "options": [
-        "Aptitude",
-        "Skill",
-        "Interest",
-        "Adjustment"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Gaining insight into the subject is defined as which learning outcome?",
-      "options": [
-        "Knowledge",
-        "Concept",
-        "Understanding",
-        "Activities"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "When trainees perceive new ideas, theories, and generalisations, which learning outcome has been achieved?",
-      "options": [
-        "Concept",
-        "Aptitude",
-        "Interest",
-        "Adjustment"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Which principle states that learning is improved if the results of performance are announced?",
-      "options": [
-        "Principle of Active Participation",
-        "Principle of Similarity",
-        "Principle of Feedback",
-        "Principle of Pleasant Surroundings"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "An instructor is deciding whether to use a lecture or a group discussion for an upcoming topic. In which stage of the teaching process is the instructor operating?",
-      "options": [
-        "Inter-active stage",
-        "Post-active stage",
-        "Pre-active stage",
-        "Evaluation stage"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "During a class, an instructor notices some trainees are struggling and decides to ask more direct questions to gauge understanding before moving on. This action is part of which stage?",
-      "options": [
-        "Pre-active stage",
-        "Inter-active stage",
-        "Post-active stage",
-        "Planning stage"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "After reviewing test scores, an instructor concludes that their method of teaching a particular skill was ineffective and needs to be redesigned. This reflection occurs in which stage?",
-      "options": [
-        "Pre-active stage",
-        "Inter-active stage",
-        "Post-active stage",
-        "Conceptualization stage"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Which statement best synthesizes the primary difference between Education and Training based on the provided text?",
-      "options": [
-        "Education is theoretical, while Training is entirely practical.",
-        "Education prepares for life's possibilities, while Training prepares for satisfactory job performance.",
-        "Education is only for the young, while Training is for adults.",
-        "Education focuses on attitude, while Training focuses on knowledge."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Connecting new ideas to a trainee's existing knowledge aligns with which principle of learning?",
-      "options": [
-        "People learn better when they know why they have to learn.",
-        "Learning is better when new ideas are explained in terms of knowledge already acquired.",
-        "Active trainee participation is necessary for effective learning.",
-        "Similarity between tasks leads to effective learning."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Which teaching stage is most critical for an instructor's own professional development and improvement of teaching techniques?",
-      "options": [
-        "The Pre-active stage, as it involves all the planning.",
-        "The Inter-active stage, as it involves direct student contact.",
-        "The Post-active stage, as it involves analysis and examining changes to instruction.",
-        "All stages are equally important for instructor development."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "An instructor teaching car mechanics first teaches how to change a tire, then how to change the oil, building on similar motor skills. This approach leverages which principle of learning?",
-      "options": [
-        "Principle of Generalisation",
-        "Principle of Satisfaction",
-        "Principle of Similarity",
-        "Principle of Understanding Problems"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "A trainee who was previously uninterested in public speaking develops a new hobby of joining debate clubs after a communications course. This represents which learning outcome?",
-      "options": [
-        "Aptitude",
-        "Adjustment",
-        "Interest",
-        "Concept"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Why is it crucial to identify the 'entry behaviour' of trainees in the inter-active stage?",
-      "options": [
-        "To ensure all trainees have the same level of knowledge.",
-        "To tailor the presentation of subject matter effectively.",
-        "To complete the class sizing-up activity.",
-        "To plan the post-active stage tests."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "Which of the following is the best example of the 'Post-active' stage of teaching?",
-      "options": [
-        "Delivering a lecture on a new topic.",
-        "Arranging the subject matter logically before class.",
-        "Designing a final exam to measure learning.",
-        "Asking trainees questions during the lesson."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "A trainee successfully learns to operate three different types of machines and can now quickly learn a new, similar machine. Which learning outcome is most evident?",
-      "options": [
-        "Adjustment",
-        "Knowledge",
-        "Skill",
-        "Aptitude"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    },
-    {
-      "question": "The principle of providing a 'wide range of solutions/examples' is specifically aimed at helping trainees with what?",
-      "options": [
-        "Generalisation of concepts",
-        "Mastery of a single skill",
-        "Development of a new interest",
-        "Adjustment to new situations"
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Teaching Learning Process"
-    }
-  ],
-  "learningtheories": [
-    {
-      "question": "According to the text, learning theories can be broadly divided into which two groups?",
-      "options": [
-        "Cognitive and Behavioral",
-        "Practical and Theoretical",
-        "Pre-twentieth century and Twentieth century",
-        "Simple and Complex"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Which pre-twentieth century theory considers the mind to have 'muscles' that are exercised by drill and practice?",
-      "options": [
-        "Natural Unfoldment",
-        "Appreciation",
-        "Mental Discipline",
-        "Connectionism"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Which theory defines learning as the process of new ideas associating themselves with old ones already in the mind?",
-      "options": [
-        "Appreciation",
-        "Mental Discipline",
-        "Gestalt Theory",
-        "Trial and Error"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Twentieth-century theories are broadly classified into S-R (Stimulus-Response) theories and what other type?",
-      "options": [
-        "Behavioral theories",
-        "Cognitive theories",
-        "Readiness theories",
-        "Effect theories"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "S-R theorists, who believe experience is the only source of knowledge, follow a philosophy known as what?",
-      "options": [
-        "Rationalism",
-        "Mechanism",
-        "Empiricism",
-        "Reductionism"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Cognitive theorists believe that what is the prime source of knowledge?",
-      "options": [
-        "Experience",
-        "Emotion",
-        "Reason",
-        "Repetition"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "E.L. Thorndike's theory of learning is also known as the Theory of Connectionism or...?",
-      "options": [
-        "Theory of Insight",
-        "Theory of Conditioning",
-        "Theory of Readiness",
-        "Theory of Trial and Error"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Thorndike's cat experiment, what served as the strong 'motivator' or 'goal' for the cat?",
-      "options": [
-        "The desire to escape",
-        "The fish outside the cage",
-        "The sound of a bell",
-        "The comfortable cage"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Thorndike's experiment, the final stage where the cat learned the proper way to open the door is called what?",
-      "options": [
-        "Fixation",
-        "Chance Success",
-        "Random Movement",
-        "Drive"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Which of Thorndike's laws states that 'repetition makes learning perfect'?",
-      "options": [
-        "The Law of Readiness",
-        "The Law of Effect",
-        "The Law of Exercise",
-        "The Law of Association"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Which of Thorndike's laws emphasizes the need for a pleasing environment where the learner derives satisfaction?",
-      "options": [
-        "The Law of Effect",
-        "The Law of Repetition",
-        "The Law of Readiness",
-        "The Law of Primacy"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Ivan Pavlov's experiment with the dog, what was the food considered?",
-      "options": [
-        "Conditioned Stimulus (CS)",
-        "Neutral Stimulus (NS)",
-        "Un-Conditioned Stimulus (UCS)",
-        "Conditioned Response (CR)"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Pavlov's experiment, the salivation in response to the food was considered what?",
-      "options": [
-        "Un-Conditioned Response (UCR)",
-        "Conditioned Stimulus (CS)",
-        "Neutral Response (NR)",
-        "Conditioned Response (CR)"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Pavlov's experiment, what was the sound of the bell initially?",
-      "options": [
-        "Conditioned Stimulus (CS)",
-        "Un-Conditioned Stimulus (UCS)",
-        "Conditioned Response (CR)",
-        "Neutral Stimulus (NS)"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "The German word 'Gestalt' is defined as pattern, shape, form, or...?",
-      "options": [
-        "Insight",
-        "Configuration",
-        "Response",
-        "Stimulus"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Gestalt theory, what is the term for the sudden change in perception where a solution becomes clear?",
-      "options": [
-        "Conditioning",
-        "Fixation",
-        "Insight",
-        "Association"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "The idea that all complex ideas are built up from a stock of simple ideas is known as what?",
-      "options": [
-        "Sensationalism",
-        "Mechanism",
-        "Associationism",
-        "Reductionism"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "The belief that the mind is like a machine built out of simple elements is called what?",
-      "options": [
-        "Mechanism",
-        "Rationalism",
-        "Empiricism",
-        "Gestalt"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In the chimpanzee experiment, what did the animal suddenly perceive a relationship between?",
-      "options": [
-        "The cage and the bananas",
-        "The two sticks",
-        "The stick and the bananas",
-        "Its hunger and the bananas"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "According to the text, who proposed that all learning is due to human needs?",
-      "options": [
-        "Watson",
-        "Guthrie",
-        "Pavlov",
-        "Hull"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "A math instructor uses repetitive worksheets and drills to teach multiplication tables. This method aligns most closely with which learning theory?",
-      "options": [
-        "Natural Unfoldment",
-        "Gestalt Theory",
-        "Mental Discipline",
-        "Appreciation"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "What is the core philosophical difference between S-R (Stimulus-Response) theories and Cognitive theories?",
-      "options": [
-        "S-R focuses on animal learning, Cognitive on human learning.",
-        "S-R emphasizes experience (empiricism), while Cognitive emphasizes reason (rationalism).",
-        "S-R is a twentieth-century theory, while Cognitive is a pre-twentieth-century theory.",
-        "S-R uses rewards, while Cognitive uses punishment."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Thorndike's cat experiment, the 'Block' in the learning process was what?",
-      "options": [
-        "The cat's hunger",
-        "The fish being placed outside",
-        "The cat being confined in a cage with a closed door",
-        "The random movements made by the cat"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "How does Gestalt theory's view of problem-solving contrast with Thorndike's Trial and Error method?",
-      "options": [
-        "Gestalt emphasizes mechanical repetition, while Thorndike emphasizes sudden insight.",
-        "Gestalt suggests learning occurs by chance, while Thorndike suggests it is structured.",
-        "Gestalt emphasizes solving problems structurally and organically, not by mechanical trial and error.",
-        "There is no significant difference in their views on problem-solving."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "When a trainee feels a sense of satisfaction and pleasure from mastering a new skill, which of Thorndike's laws is being directly applied?",
-      "options": [
-        "The Law of Exercise",
-        "The Law of Effect",
-        "The Law of Readiness",
-        "The Law of Primacy"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In Pavlov's experiment, after many repetitions of pairing the bell with food, the dog salivates to the bell alone. This salivation is now technically called a...?",
-      "options": [
-        "Un-Conditioned Stimulus (UCS)",
-        "Un-Conditioned Response (UCR)",
-        "Conditioned Response (CR)",
-        "Conditioned Stimulus (CS)"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "In the Gestalt experiment, the chimpanzee's sudden realization that it could use the stick to get the bananas is a clear example of what?",
-      "options": [
-        "Trial and Error",
-        "Conditioning",
-        "S-R Bondage",
-        "Insight"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "According to Thorndike's identified stages of learning, what is the crucial step that occurs between 'Chance Success' and 'Fixation'?",
-      "options": [
-        "Drive",
-        "Goal",
-        "Selection of Proper Movement",
-        "Random Movements"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "How does the S-R concept of 'Reductionism' conflict with the main principle of Gestalt theory?",
-      "options": [
-        "Reductionism builds learning from simple parts, while Gestalt focuses on the whole pattern or configuration.",
-        "Reductionism focuses on reason, while Gestalt focuses on experience.",
-        "Reductionism is about repetition, while Gestalt is about readiness.",
-        "Reductionism applies to humans, while Gestalt applies to animals."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "A trainer begins a course by explaining how the new skills will directly help trainees in their daily tasks, thereby arousing their interest. Which of Thorndike's laws is being demonstrated?",
-      "options": [
-        "The Law of Effect",
-        "The Law of Exercise",
-        "The Law of Recency",
-        "The Law of Readiness"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "The process by which the neutral bell sound in Pavlov's experiment acquired the characteristics of the food is defined as...?",
-      "options": [
-        "Insight",
-        "Conditioning",
-        "Fixation",
-        "Readiness"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    },
-    {
-      "question": "Gestalt theorists advocated for learning by understanding, arguing it was more appropriate than the 'rote process' suggested by which group of theories?",
-      "options": [
-        "Pre-twentieth century theories",
-        "Theories of appreciation",
-        "S-R bond theories",
-        "Theories of unfoldment"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Learning Theories"
-    }
-  ],
-  "andragogy": [
-    {
-      "question": "According to the text, what is Pedagogy?",
-      "options": [
-        "The art and science of teaching adults",
-        "The art and science of teaching children",
-        "The study of ancient teaching methods",
-        "The study of self-directed learning"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "The word 'Andragogy' is derived from the Greek words 'Andra' and 'Agogos', meaning what?",
-      "options": [
-        "Man and learning",
-        "Child and leading",
-        "Man and teaching",
-        "Child and learning"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Who published the influential 1973 book 'The Adult Learner: A Neglected Species'?",
-      "options": [
-        "Plato",
-        "Confucius",
-        "Malcolm Knowles",
-        "John Calvin"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "How is Andragogy defined in the chapter?",
-      "options": [
-        "The art and science of teaching children",
-        "The process of passive reception of knowledge",
-        "The art and science of helping adults to learn",
-        "An authoritarian teaching technique"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
+      "module": "TL process, Andragogy, SAT, BTM & Ways of Learning"
     },
     {
       "question": "According to Knowles' assumptions, as a person matures, their self-concept moves from a dependent personality towards being...?",
       "options": [
         "A passive receiver",
-        "A subordinate",
+        "A subordinate", 
         "A self-directed human being",
         "A knowledge expert"
       ],
       "correct": 2,
       "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Which of Knowles' assumptions states that an adult's motivation to learn is primarily internal?",
-      "options": [
-        "Self-Concept",
-        "Experience",
-        "Readiness to learn",
-        "Motivation to Learn"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "In Pedagogy, which of the four learning components is described as the most prominent?",
-      "options": [
-        "Thinking",
-        "Imitation",
-        "Being Told",
-        "Trial and Error"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "In Andragogy, which of the four learning components has the most influence?",
-      "options": [
-        "Being Told",
-        "Imitation",
-        "Thinking",
-        "Passive Reception"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Which learning approach is described as 'Learner centred'?",
-      "options": [
-        "Pedagogy",
-        "Authoritarianism",
-        "Andragogy",
-        "Calvinism"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Which learning approach is described as 'Trainer centred'?",
-      "options": [
-        "Andragogy",
-        "Pedagogy",
-        "Experiential Learning",
-        "Facilitation"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "In the andragogical model, the instructor should adopt the role of a trainer or a...?",
-      "options": [
-        "Facilitator or resource person",
-        "Grader or evaluator",
-        "Lecturer or expert",
-        "Director or manager"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Adults prefer a learning process that is experiential and...?",
-      "options": [
-        "Passive",
-        "Authoritarian",
-        "Participative",
-        "Theoretical"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "According to the comparison table, the learner in a pedagogical setting is comparatively...?",
-      "options": [
-        "Active",
-        "Passive",
-        "Self-directed",
-        "Independent"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "A key implication of andragogy in training is to create a psychological climate of mutual...?",
-      "options": [
-        "Competition",
-        "Respect & co-operation",
-        "Dependence",
-        "Indifference"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "The text states, 'Experience is the adult learner's living _____'?",
-      "options": [
-        "Quiz",
-        "Curriculum",
-        "Text book",
-        "Problem"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "The term Pedagogy is derived from the Greek word 'paid' which means?",
-      "options": [
-        "Man",
-        "Lead",
-        "Child",
-        "Learn"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Adult learners orient their learning to subjects that have immediate relevance or application to their...?",
-      "options": [
-        "Past",
-        "Job",
-        "Childhood",
-        "Friends"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "According to the text, ancient trainers like Budha and Plato saw learning as a process of active...?",
-      "options": [
-        "Inquiry",
-        "Reception",
-        "Memorization",
-        "Obedience"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "On the Pedagogy-Andragogy continuum, which model is associated with 'Dependence'?",
-      "options": [
-        "Andragogy",
-        "Pedagogy",
-        "Both",
-        "Neither"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "The text states that in conventional education, the learner is required to adjust to an established...?",
-      "options": [
-        "Pace",
-        "Instructor",
-        "Group",
-        "Curriculum"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Andragogy"
-    },
-    {
-      "question": "While an adult's reservoir of experience is a resource for learning, what is a potential drawback mentioned in the text?",
-      "options": [
-        "It makes learning too fast",
-        "It can become a big hindrance to learning",
-        "It is irrelevant to new topics",
-        "It reduces internal motivation"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Which of Knowles' five assumptions best explains why an adult would want to know the immediate, real-world use of a new skill being taught?",
-      "options": [
-        "Self-Concept",
-        "Experience",
-        "Orientation to Learning",
-        "Motivation to Learn"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "How does the role of the instructor in andragogy differ from pedagogy regarding knowledge?",
-      "options": [
-        "In pedagogy the instructor transmits what is known; in andragogy the instructor helps the learner discover the unknown.",
-        "In pedagogy the instructor learns with the student; in andragogy the instructor is the sole expert.",
-        "In pedagogy the instructor focuses on skill; in andragogy the instructor focuses on theory.",
-        "There is no fundamental difference in the role."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "A training program that uses case studies, group discussions, and role-playing is focusing on which key aspect of Andragogy?",
-      "options": [
-        "Making the environment trainer-centred",
-        "Creating experiential and participative learning",
-        "Focusing purely on the 'Being Told' component",
-        "Ensuring the learner remains passive"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "An adult learner feels disrespected and disengages from a course where the instructor is condescending. This behavior is explained because adults...?",
-      "options": [
-        "Have a short time perspective",
-        "Lack awareness of self",
-        "Tend to avoid and reject situations where they are treated like children",
-        "Prefer to be told what to do"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "In designing a course for adults, why is it important to allow for different activities and materials based on their backgrounds?",
-      "options": [
-        "To fulfill the 'Readiness to learn' assumption",
-        "To ensure the learning is trainer-centred",
-        "To account for their 'growing reservoir of experience'",
-        "To make the assessment more difficult"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "The text implies that the historical dominance of pedagogy in adult education was a mistake because...?",
-      "options": [
-        "Adults and children learn in fundamentally different ways",
-        "Pedagogy is an outdated theory",
-        "Ancient trainers like Plato did not use it",
-        "It was only designed for priesthood training"
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "A course that focuses primarily on the process of learning and discovery rather than the memorization of content is following the principles of...?",
-      "options": [
-        "Andragogy",
-        "Pedagogy",
-        "Formal Assessment",
-        "Trainer-centred learning"
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Which statement best synthesizes the shift in learning focus from Pedagogy to Andragogy?",
-      "options": [
-        "The focus shifts from instructor convenience to curriculum content.",
-        "The focus shifts from transmitting knowledge to discovering knowledge.",
-        "The focus shifts from active participation to passive reception.",
-        "The focus shifts from self-assessment to formal assessment."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "According to the Pedagogy-Andragogy continuum, a learner who moves from having erratic, shallow interests to deeper, stronger interests is progressing towards...?",
-      "options": [
-        "Andragogy",
-        "Pedagogy",
-        "Dependence",
-        "Subordination"
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "Why is 'self-assessment' a more suitable evaluation method in Andragogy?",
-      "options": [
-        "Because adults are less experienced",
-        "Because it reinforces the adult's self-concept and self-directed nature",
-        "Because it is easier for the instructor to grade",
-        "Because adults do not like feedback"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    },
-    {
-      "question": "The text states, 'Psychology teaches us that we learn what we do'. This statement was used to support the idea that...?",
-      "options": [
-        "Experience is the adult learner's living textbook",
-        "The instructor should be the center of learning",
-        "The curriculum should be established and fixed",
-        "Children's learning should be limited"
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Andragogy"
-    }
-  ],
-  "fourways": [
-    {
-      "question": "According to the chapter, what are the four ways of learning?",
-      "options": [
-        "Reading, Writing, Listening, Speaking",
-        "Being Told, Trial and Error, Imitation, Thinking",
-        "Observation, Practice, Assessment, Feedback",
-        "Visual, Auditory, Kinesthetic, Reading/Writing"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Learning by receiving direct instruction, either orally or in writing, is known as what?",
-      "options": [
-        "Imitation",
-        "Thinking",
-        "Trial and Error",
-        "Being Told"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Which way of learning is described as being particularly useful in learning skills by trying to do a thing by oneself?",
-      "options": [
-        "Being Told",
-        "Imitation",
-        "Trial & Error",
-        "Thinking"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Learning by copying the actions of another person, such as an instructor, is called what?",
-      "options": [
-        "Imitation",
-        "Thinking",
-        "Trial & Error",
-        "Being Told"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Learning by organising one's thoughts about a topic or problem to arrive at a solution is called what?",
-      "options": [
-        "Being Told",
-        "Thinking",
-        "Imitation",
-        "Trial & Error"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "A task that has one clear-cut procedure or method is called a...?",
-      "options": [
-        "Productive Task",
-        "Complex Task",
-        "Reproductive Task",
-        "Cognitive Task"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "A task that can be done in more than one way is known as a...?",
-      "options": [
-        "Reproductive Task",
-        "Productive Task",
-        "Simple Task",
-        "Manual Task"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Learning the correct method of saluting is given as an example of which way of learning?",
-      "options": [
-        "Trial & Error",
-        "Thinking",
-        "Being Told",
-        "Imitation"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Learning to hit the bull's eye of a target with a pistol is used as an example of which learning method?",
-      "options": [
-        "Thinking",
-        "Imitation",
-        "Trial & Error",
-        "Being Told"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Solving complex problems in Mathematics or Science is an example of learning by...?",
-      "options": [
-        "Imitation",
-        "Trial & Error",
-        "Thinking",
-        "Being Told"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "For learning by 'Being Told' to be effective, the trainee must accept the trainer as the provider of...?",
-      "options": [
-        "Motivation",
-        "Knowledge",
-        "Tools",
-        "Assessment"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "For learning by 'Imitation' to be effective, what must be available for the trainee to copy?",
-      "options": [
-        "A written manual",
-        "A good model performance",
-        "A set of tools",
-        "A reward"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "In learning by 'Thinking', what role should the trainer adopt?",
-      "options": [
-        "A disciplinary role",
-        "An advisory, counselling role",
-        "A passive observer role",
-        "An authoritative role"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "According to the diagram, which two ways of learning have the most influence on a Reproductive Task?",
-      "options": [
-        "Thinking and Trial & Error",
-        "Imitation and Being Told",
-        "Thinking and Imitation",
-        "Trial & Error and Being Told"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "According to the diagram, which two ways of learning have the most influence on a Productive Task?",
-      "options": [
-        "Imitation and Being Told",
-        "Trial & Error and Imitation",
-        "Thinking and Being Told",
-        "Thinking and Trial & Error"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "For a Productive Task, the instructor should play the role of a 'Guide' or a...?",
-      "options": [
-        "Lecturer",
-        "Disciplinarian",
-        "Facilitator",
-        "Controller"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Writing the cash account book of a public fund is an example of what type of task?",
-      "options": [
-        "Productive Task",
-        "Analytical Task",
-        "Creative Task",
-        "Reproductive Task"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Planning an industrial visit for a course is given as an example of what type of task?",
-      "options": [
-        "Reproductive Task",
-        "Productive Task",
-        "Simple Task",
-        "Memory Task"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "What feeling should a trainee have so that a failed attempt in 'Trial & Error' leads to nothing worse than friendly advice?",
-      "options": [
-        "A sense of urgency",
-        "A sense of competition",
-        "A sense of security",
-        "A sense of authority"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "In the 'Trial & Error' method, what happens when trainees perform a task correctly?",
-      "options": [
-        "They are given a new task",
-        "They feel happy and are motivated to repeat it",
-        "They are asked to teach others",
-        "They are told to stop practicing"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Why should learning situations for 'Trial & Error' be designed to avoid probable failure?",
-      "options": [
-        "Because failure is not a learning opportunity",
-        "Because frequent errors lower confidence and develop reluctance",
-        "Because it saves time and resources",
-        "Because success is guaranteed in the first attempt"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "What should an instructor do if it's unavoidable to expose trainees to a 'bad model' during 'Imitation' learning?",
-      "options": [
-        "Cancel the training session",
-        "Punish the bad model",
-        "Make efforts for positive learning and show the results of the bad performance",
-        "Ignore the bad model and hope trainees do not copy it"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "When is it more appropriate to use 'Being Told' instead of 'Thinking' for solving a problem?",
-      "options": [
-        "When the problem is very complex",
-        "When trainees are highly experienced",
-        "When there is a straightforward, definitive solution",
-        "When there is a lot of time available"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Which statement best differentiates a Productive Task from a Reproductive Task?",
-      "options": [
-        "Productive tasks are physical, while Reproductive tasks are mental.",
-        "Productive tasks are easy, while Reproductive tasks are hard.",
-        "Productive tasks have multiple correct methods, while Reproductive tasks have one clear-cut method.",
-        "Productive tasks are for groups, while Reproductive tasks are for individuals."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "An instructor is teaching a group of new chefs a standardized recipe that must be followed exactly. Which two learning methods would be most influential for this task?",
-      "options": [
-        "Thinking and Trial & Error",
-        "Imitation and Being Told",
-        "Thinking and Imitation",
-        "Trial & Error and Being Told"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "A think tank is tasked with developing innovative solutions to reduce city traffic. Which two learning methods will they predominantly rely on?",
-      "options": [
-        "Imitation and Being Told",
-        "Thinking and Trial & Error",
-        "Being Told and Trial & Error",
-        "Imitation and Thinking"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Why is it generally more effective to train an entire group together when teaching a new work behavior through 'Imitation'?",
-      "options": [
-        "Because it is cheaper and faster",
-        "Because individual members are less likely to adopt a new behavior alone",
-        "Because it encourages competition within the group",
-        "Because it allows for better assessment"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "While success is encouraged in 'Trial & Error', why is it beneficial for the learning situation to allow for one or two failures?",
-      "options": [
-        "To lower the trainee's confidence",
-        "To identify the weakest trainees in a group",
-        "To allow the trainee to learn by analyzing what went wrong",
-        "To make the learning process longer"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "An instructor who avoids imposing their own answers to a problem and encourages trainees to find their own solutions is fostering which way of learning?",
-      "options": [
-        "Imitation",
-        "Being Told",
-        "Trial & Error",
-        "Thinking"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "Based on the diagrams in the text, which learning way is considered the LEAST influential for a highly Reproductive Task?",
-      "options": [
-        "Imitation",
-        "Being Told",
-        "Thinking",
-        "Trial & Error"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "What key personal factor of the trainees must be considered when creating a learning situation based on 'Thinking'?",
-      "options": [
-        "Their physical strength",
-        "Their prior relationship with the trainer",
-        "Their maturity and experience",
-        "Their ability to imitate"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    },
-    {
-      "question": "According to the text, which is the most effective way to teach a recruit the correct, standardized way to assemble their rifle?",
-      "options": [
-        "Let them figure it out via Thinking",
-        "Allow them to learn by Trial & Error",
-        "Use a combination of Being Told and Imitation",
-        "Ask them to write a paper on it"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "4 Ways of Learning"
-    }
-  ],
-  "sat": [
-    {
-      "question": "According to the text, what is the key difference between 'learning' and 'training'?",
-      "options": [
-        "Learning is formal, while training is informal.",
-        "Training is a planned process that directs learning toward specific outcomes.",
-        "Learning is only for children, while training is for adults.",
-        "Training is a naturally occurring process, while learning is planned."
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
+      "module": "TL process, Andragogy, SAT, BTM & Ways of Learning"
     },
     {
       "question": "What does the acronym SAT stand for?",
@@ -1566,393 +134,19 @@
       ],
       "correct": 2,
       "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
+      "module": "TL process, Andragogy, SAT, BTM & Ways of Learning"
     },
     {
-      "question": "What is one of the reasons given for why training is necessary instead of just letting people learn on their own?",
+      "question": "According to the text, what are the four ways of learning?",
       "options": [
-        "People learn too quickly on their own.",
-        "People might never learn to perform a task properly.",
-        "Self-learning is too expensive.",
-        "Training guarantees a promotion."
+        "Reading, Writing, Listening, Speaking",
+        "Being Told, Trial and Error, Imitation, Thinking",
+        "Observation, Practice, Assessment, Feedback",
+        "Visual, Auditory, Kinesthetic, Reading/Writing"
       ],
       "correct": 1,
       "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which of the following is listed as a visible benefit of systematic training?",
-      "options": [
-        "Reduced employee morale",
-        "Increased costs",
-        "Fewer breakdowns or errors",
-        "Less utilization of time"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "The diagram of the SAT model shows the four steps revolving around what central issue?",
-      "options": [
-        "Performance Deficiency",
-        "Low Budgets",
-        "New Technology",
-        "Employee Complaints"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "What is the first stage in the Systematic Approach to Training model?",
-      "options": [
-        "Implement Training",
-        "Plan and Design",
-        "Assess Results",
-        "Identify Training Needs"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "What is the second stage of the SAT model, which occurs after needs have been identified?",
-      "options": [
-        "Plan and Design",
-        "Implement Training",
-        "Assess Results",
-        "Job Analysis"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which stage of SAT is where the learning actually takes place?",
-      "options": [
-        "Analysis Stage",
-        "Design Stage",
-        "Implementation Stage",
-        "Assessment Stage"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "What is the fourth and final stage of the SAT model?",
-      "options": [
-        "Assess Results",
-        "Identify Needs",
-        "Implement Training",
-        "Plan and Design"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which type of analysis considers broad issues like policy, new technology, and cost escalation?",
-      "options": [
-        "Job Analysis",
-        "Task Analysis",
-        "Organisational Training Needs Analysis",
-        "Performance Analysis"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which type of analysis investigates the jobs people do in detail, including their areas of responsibility?",
-      "options": [
-        "Organisational Analysis",
-        "Task Analysis",
-        "Job Analysis",
-        "Needs Analysis"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which analysis provides the basis for training activities by investigating the procedures, knowledge, and skills for key tasks?",
-      "options": [
-        "Task Analysis",
-        "Job Analysis",
-        "Organisational Analysis",
-        "Cost Analysis"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "In which stage of SAT is a decision made on whether to use On Job Training (OJT) or computer-based training?",
-      "options": [
-        "Identify Training Needs",
-        "Plan and Design Training",
-        "Implement Training",
-        "Assess Results"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "For a trainee to willingly participate in training activities, they must first recognise what?",
-      "options": [
-        "The cost of the training",
-        "The need for training",
-        "The trainer's qualifications",
-        "The location of the training"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "The assessment stage judges training based on the benefits derived and the _______ it achieves.",
-      "options": [
-        "satisfaction",
-        "length",
-        "results",
-        "popularity"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "The text states that once a task is learned wrongly, it is very difficult to do what?",
-      "options": [
-        "'Unlearn' and then relearn correctly",
-        "'Forget' and move on",
-        "'Repeat' the same mistake",
-        "'Teach' it to others"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "One of the three basic questions the 'Assess Results' stage needs to answer is:",
-      "options": [
-        "Did the trainees enjoy the food?",
-        "Was the training room comfortable?",
-        "Was the training worthwhile?",
-        "Did the trainer use a loud voice?"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Who must possess sufficient technical and instructional skills for the 'Implement Training' stage to be successful?",
-      "options": [
-        "The trainees",
-        "The management",
-        "The trainers",
-        "The administrative staff"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which of the following is a benefit of systematic training?",
-      "options": [
-        "Better identification of employee potential",
-        "Higher hidden costs",
-        "Longer time to learn a job",
-        "Increased number of errors"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "The success of the 'Implement Training' stage requires the active, wholehearted participation of whom?",
-      "options": [
-        "The trainees",
-        "The organisation's clients",
-        "The finance department",
-        "The senior management"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Which statement best synthesizes the relationship between learning and training?",
-      "options": [
-        "Learning is a subset of training.",
-        "Training is a systematic application of learning principles to achieve specific organizational goals.",
-        "Learning and training are identical processes with different names.",
-        "Training is theoretical, while learning is practical."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "An organisation notices a drop in production. According to the SAT model, what is the most appropriate first step?",
-      "options": [
-        "Immediately implement a training program.",
-        "Assess the results of previous training.",
-        "Conduct an analysis to determine if the drop is a training problem.",
-        "Fire the underperforming employees."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "A manager needs to create a detailed training manual outlining the exact steps, knowledge, and skills for operating a new machine. Which analysis is most critical for this task?",
-      "options": [
-        "Organisational Analysis",
-        "Job Analysis",
-        "Task Analysis",
-        "Cost-Benefit Analysis"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Why is the 'Assess Results' phase critical to the continuous improvement of a training system?",
-      "options": [
-        "It provides the budget for future training.",
-        "It determines if the training solved the initial performance problem, providing feedback for the entire cycle.",
-        "It is where the trainees receive their certificates.",
-        "It ensures that all instructors are properly paid."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "An employee has the necessary skills but is unmotivated, causing a performance deficiency. In which stage of SAT would this root cause likely be identified?",
-      "options": [
-        "Identify Training Needs",
-        "Plan and Design",
-        "Implement Training",
-        "Assess Results"
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "A training program is perfectly designed and implemented, but it fails to solve an organisational problem that was actually caused by faulty equipment. This represents a failure in which part of the SAT process?",
-      "options": [
-        "The analysis phase failed to correctly identify the nature of the problem.",
-        "The implementation phase failed to motivate the trainees.",
-        "The design phase chose the wrong training methods.",
-        "The assessment phase used the wrong data."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "A training program is evaluated by asking 'Did the training improve job performance?' This question is a core component of which SAT stage?",
-      "options": [
-        "Identify Training Needs",
-        "Plan and Design",
-        "Implement Training",
-        "Assess Results"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "During which phase of SAT would an organisation consider constraints such as low budgets, operational demands, and availability of personnel?",
-      "options": [
-        "Identify Training Needs",
-        "Plan and Design Training",
-        "Implement Training",
-        "Assess Results"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "What is the fundamental link between the 'Task Analysis' sub-stage and the 'Implement Training' stage?",
-      "options": [
-        "Task analysis results define the specific learning objectives that must be achieved during implementation.",
-        "Task analysis determines the budget for implementation.",
-        "Task analysis is performed after implementation to check results.",
-        "Task analysis and implementation are performed by the same people."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "If trainees are not supported by their direct supervisors in applying new skills after training, this represents a failure of a key factor within which stage?",
-      "options": [
-        "Identify Training Needs",
-        "Plan and Design",
-        "Implement Training",
-        "Assess Results"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "The benefit 'more rapid development to full job performance' directly addresses which problem that occurs without training?",
-      "options": [
-        "People may never learn the task properly.",
-        "They will learn the task much more slowly.",
-        "They are likely to learn a way that is wrong.",
-        "The high hidden costs to the organisation."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    },
-    {
-      "question": "Comparing the cost of a training program against the financial benefits of reduced errors and increased output is a key activity in answering which question from the assessment stage?",
-      "options": [
-        "Did the training achieve what was intended?",
-        "Did the training improve performance?",
-        "Was the training worthwhile?",
-        "Were the trainees motivated?"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Systematic Approach to Training (SAT)"
-    }
-  ],
-  "btm": [
-    {
-      "question": "According to the text, what is a 'model'?",
-      "options": [
-        "A complex theory",
-        "A representation of the actual object",
-        "A type of classroom",
-        "A method of assessment"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What do teaching models depict in a simple way?",
-      "options": [
-        "The history of education",
-        "The functioning of the T-L process",
-        "The school's architecture",
-        "The instructor's salary"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
+      "module": "TL process, Andragogy, SAT, BTM & Ways of Learning"
     },
     {
       "question": "Who designed the Basic Teaching Model (BTM)?",
@@ -1963,1128 +157,308 @@
         "Ivan Pavlov"
       ],
       "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "In what year was the Basic Teaching Model designed?",
-      "options": [
-        "1926",
-        "1982",
-        "1962",
-        "1996"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "The BTM is a system with three basic components: Input, Process, and...?",
-      "options": [
-        "Feedback",
-        "Output",
-        "Assessment",
-        "Objectives"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What 'vital link' ensures that the BTM is a closed-loop system?",
-      "options": [
-        "Objectives",
-        "Entry Behaviour",
-        "Instructional Procedure",
-        "Feedback"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What is the first component in the BTM diagram that defines the desired learning outcome?",
-      "options": [
-        "Assessment",
-        "Entry Behaviour",
-        "Specific Objectives",
-        "Instructional Procedure"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What is the second component of the BTM, which refers to the knowledge a trainee already possesses?",
-      "options": [
-        "Entry Behaviour",
-        "Terminal Behaviour",
-        "Instructional Process",
-        "Assessment"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What is the third component of the BTM, considered the 'most crucial part'?",
-      "options": [
-        "Specific Objectives",
-        "Entry Behaviour",
-        "Assessment",
-        "Instructional Process"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "Which component of the BTM deals with the success or failure of the system by measuring performance?",
-      "options": [
-        "Feedback",
-        "Instructional Process",
-        "Assessment",
-        "Entry Behaviour"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What does the acronym 'E.B.' stand for in the context of the BTM?",
-      "options": [
-        "Excellent Behaviour",
-        "Extra Bonus",
-        "Entry Behaviour",
-        "Evaluated Behaviour"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "Specific Objectives describe the trainee's terminal performance in terms of what kind of parameters?",
-      "options": [
-        "Vague",
-        "Theoretical",
-        "General",
-        "Measurable"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "Why is it of 'paramount importance' to assess Entry Behaviour before teaching begins?",
-      "options": [
-        "To make the class longer",
-        "Because any new experience has to be related to a past one",
-        "To ensure all students fail",
-        "To select the best students for the class"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "According to its characteristics, a teaching model defines the criterion behaviour for a trainee's...?",
-      "options": [
-        "attendance",
-        "attitude",
-        "performance",
-        "motivation"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "A teaching model provides a specific _______ of teaching activities to achieve laid down objectives.",
-      "options": [
-        "history",
-        "cost",
-        "outline",
-        "summary"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "The BTM is described in the text as the _______ of all models.",
-      "options": [
-        "simplest",
-        "most complex",
-        "most expensive",
-        "oldest"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "In the BTM, the use of teaching aids, media, and different strategies falls under which component?",
-      "options": [
-        "Specific Objectives",
-        "Assessment",
-        "Entry Behaviour",
-        "Instructional Process"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "The feedback loop in the BTM diagram asks which yes/no question?",
-      "options": [
-        "Was the instructor good?",
-        "Is the class over?",
-        "Did the students pay attention?",
-        "Learning takes place?"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "One of the characteristics of a teaching model is that it specifies various teaching _______ for causing effective interaction.",
-      "options": [
-        "technologies",
-        "timings",
-        "tactics",
-        "textbooks"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "A teaching model's ability to be improved and modified helps in achieving the what?",
-      "options": [
-        "Budget",
-        "Objective",
-        "Schedule",
-        "Attendance"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "Why is the Basic Teaching Model considered a 'closed-loop system'?",
-      "options": [
-        "Because it only works in a closed classroom.",
-        "Because the feedback from the assessment of the output informs and allows for modification of the process.",
-        "Because it does not allow for any new input once it starts.",
-        "Because it is a theoretical model with no practical application."
-      ],
-      "correct": 1,
       "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "An instructor begins a complex physics lecture without a pre-test or reviewing basic concepts. Which BTM component has been overlooked?",
-      "options": [
-        "Specific Objectives",
-        "Entry Behaviour",
-        "Instructional Process",
-        "Assessment"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What is the critical relationship between the 'Specific Objectives' and 'Assessment' components of the BTM?",
-      "options": [
-        "They are independent of each other.",
-        "Assessment defines the Specific Objectives.",
-        "The Assessment component is designed to directly measure if the pre-defined Specific Objectives were met.",
-        "Specific Objectives are only needed if the Assessment fails."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "If the 'Assessment' stage reveals that most trainees failed, the feedback loop in the BTM suggests that the primary component to be revisited and modified is the...?",
-      "options": [
-        "Specific Objectives",
-        "Entry Behaviour",
-        "Instructional Process",
-        "Terminal Behaviour"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "How does the 'Instructional Process' serve as a bridge in the BTM?",
-      "options": [
-        "It bridges the gap between the instructor and management.",
-        "It connects what the learner already knows (Entry Behaviour) with what they are expected to achieve (Specific Objectives).",
-        "It bridges the financial gap of the training.",
-        "It connects the BTM to other teaching models."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "Why is it essential for 'Specific Objectives' in the BTM to be 'observable'?",
-      "options": [
-        "So the instructor can see if students are paying attention.",
-        "So the performance can be concretely assessed to determine success or failure.",
-        "So other instructors can watch the class.",
-        "So the objectives look good on paper."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "An instructor's choice of using lectures, group work, and educational videos are all tactical decisions within which BTM component?",
-      "options": [
-        "Assessment",
-        "Specific Objectives",
-        "Instructional Process",
-        "Entry Behaviour"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "The BTM's focus on the 'terminal behaviour of the trainees' directly informs the creation of which component?",
-      "options": [
-        "Instructional Process",
-        "Entry Behaviour",
-        "Feedback Loop",
-        "Specific Objectives"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "What makes the BTM a 'system' rather than just a list of steps?",
-      "options": [
-        "It was designed by a systems engineer.",
-        "It is very complicated to understand.",
-        "Its components (Input, Process, Output, Feedback) are interconnected and work together to achieve a goal.",
-        "It requires a computer system to implement."
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "The characteristic that 'teaching situations and tactics can be improved and modified' highlights that the BTM views the teaching process as...?",
-      "options": [
-        "Rigid and unchangeable",
-        "Perfect from the start",
-        "Dynamic and adaptable",
-        "Something that cannot be planned"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "A teacher wants to ensure their lesson plan is aligned with the BTM. What should be their first step in the planning process?",
-      "options": [
-        "Choosing the teaching aids.",
-        "Defining clear, measurable, and observable learning objectives.",
-        "Preparing the final test.",
-        "Assessing the students' entry behaviour."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
-    },
-    {
-      "question": "If a trainee has the correct Entry Behaviour and the Instructional Process is excellent, but the Specific Objectives are vague, which BTM component becomes difficult to conduct meaningfully?",
-      "options": [
-        "Feedback",
-        "Assessment",
-        "Motivation",
-        "Planning"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Basic Teaching Model"
+      "module": "TL process, Andragogy, SAT, BTM & Ways of Learning"
     }
   ],
-  "dol": [
+  "mod4": [
     {
-      "question": "According to Benjamin Bloom, what are the three unique areas or domains of learning?",
+      "question": "A well-written learning objective should be:",
       "options": [
-        "Reading, Writing, and Arithmetic",
-        "Cognitive, Affective, and Psychomotor",
-        "Visual, Auditory, and Kinesthetic",
-        "Knowledge, Skill, and Attitude"
+        "Vague and general",
+        "Specific and measurable",
+        "Impossible to achieve",
+        "Only for teachers"
       ],
       "correct": 1,
       "difficulty": "easy",
-      "module": "Domains of Learning"
+      "module": "Objectives, Maxims & Questioning Technique"
     },
     {
-      "question": "Which domain of learning is concerned with subject matter, knowledge, and mental skills?",
+      "question": "According to Mager's criteria, which component specifies the acceptable level of performance?",
       "options": [
-        "Affective Domain",
-        "Psychomotor Domain",
-        "Cognitive Domain",
-        "Social Domain"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Which domain of learning deals with internal behaviours like feelings, attitudes, and values?",
-      "options": [
-        "Affective Domain",
-        "Cognitive Domain",
-        "Psychomotor Domain",
-        "Conditional Domain"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Which domain of learning is concerned with physical skills, manipulative ability, and neuromuscular co-ordination?",
-      "options": [
-        "Cognitive Domain",
-        "Affective Domain",
-        "Abstract Domain",
-        "Psychomotor Domain"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "What is the simplest and lowest level of the Cognitive domain, involving recognition and recall?",
-      "options": [
-        "Comprehension",
-        "Application",
-        "Knowledge",
-        "Analysis"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "The ability to reorganise, restate, and interpret given information belongs to which level of the Cognitive domain?",
-      "options": [
-        "Application",
-        "Synthesis",
-        "Comprehension",
-        "Knowledge"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Verbs like 'Define', 'Identify', and 'List' are representative of which level in the Cognitive domain?",
-      "options": [
-        "Knowledge",
-        "Application",
-        "Analysis",
-        "Evaluation"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Verbs like 'Solve', 'Relate', and 'Prepare' represent which cognitive level?",
-      "options": [
-        "Comprehension",
-        "Application",
-        "Synthesis",
-        "Knowledge"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Which level of the Cognitive domain involves decision-making and judging based on criteria?",
-      "options": [
-        "Analysis",
-        "Application",
-        "Synthesis",
-        "Evaluation"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Which domain is described as the most difficult to train in because its behaviours are voluntary and cannot be forced?",
-      "options": [
-        "Cognitive",
-        "Psychomotor",
-        "Affective",
-        "Theoretical"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Change in the Affective domain is measured through observable signs called what?",
-      "options": [
-        "Internal Behaviour Indicators",
-        "Cognitive Results",
-        "External Behaviour indicators",
-        "Psychomotor Actions"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "What is the lowest level of the Affective domain, referring to a trainee's willingness to attend to stimuli?",
-      "options": [
-        "Responding",
-        "Valuing",
-        "Receiving",
-        "Organising"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Which level of the Affective domain is concerned with active participation on the part of the trainee?",
-      "options": [
-        "Receiving",
-        "Responding",
-        "Valuing",
-        "Characterisation"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "What is the first step in learning a psychomotor skill, described as an 'inner drive'?",
-      "options": [
-        "Imitation",
-        "Impulsion",
-        "Manipulation",
-        "Control"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Which step in the Psychomotor domain involves a trainee attempting to copy a demonstrated performance?",
-      "options": [
-        "Manipulation",
-        "Coordination",
-        "Imitation",
-        "Habit formation"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "What is the final level of the Psychomotor domain, which results from repeated practice and continuous use of a skill?",
-      "options": [
-        "Control",
-        "Coordination",
-        "Manipulation",
-        "Habit formation"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Verbs like 'Assemble', 'Calibrate', 'Construct', and 'Drives' represent which domain of learning?",
-      "options": [
-        "Cognitive",
-        "Affective",
-        "Psychomotor",
-        "Abstract"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "The text states that some learning situations do not strictly fall under one domain, meaning there can be an...?",
-      "options": [
-        "Error",
-        "Overlap",
-        "Assessment",
-        "Objective"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Knowing the function of an AK-47's parts is an example of which domain?",
-      "options": [
-        "Cognitive",
-        "Affective",
-        "Psychomotor",
-        "Conditional"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "The physical act of aiming and firing an AK-47 rifle is an example of which domain?",
-      "options": [
-        "Cognitive",
-        "Affective",
-        "Psychomotor",
-        "Social"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A trainee knows all the safety rules for welding (Cognitive) but also willingly follows them out of a commitment to safety. This willingness to follow rules belongs to which domain?",
-      "options": [
-        "Psychomotor",
-        "Affective",
-        "Cognitive",
-        "Conditional"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "What is the primary difference between the 'Analysis' and 'Synthesis' levels of the Cognitive domain?",
-      "options": [
-        "Analysis is about judging value, while Synthesis is about applying knowledge.",
-        "Analysis is breaking a whole into its parts, while Synthesis is combining elements to form a new whole.",
-        "Analysis is recalling facts, while Synthesis is restating them.",
-        "Analysis involves physical skill, while Synthesis involves mental skill."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A trainee is asked to write a critique of two different battle plans, justifying which one is superior based on tactical principles. This task operates at which level of the Cognitive domain?",
-      "options": [
-        "Application",
-        "Analysis",
-        "Synthesis",
-        "Evaluation"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "Why is achieving change in the Affective domain considered uniquely challenging for trainers?",
-      "options": [
-        "Because it is the easiest domain to master.",
-        "Because affective behaviours are voluntary and cannot be coerced; the learner must choose to adopt them.",
-        "Because there are no verbs to describe affective behaviours.",
-        "Because it only applies to non-military training."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A student who not only answers questions when asked but also willingly volunteers to help other students and derives satisfaction from it is demonstrating which level of the Affective domain?",
-      "options": [
-        "Receiving",
-        "Responding",
-        "Valuing",
-        "Organisation"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A person is so committed to a 'healthy lifestyle' that it guides their diet, exercise, and daily choices, becoming a core part of their identity. This is a clear example of which level of the Affective domain?",
-      "options": [
-        "Valuing",
-        "Organisation",
-        "Characterisation",
-        "Responding"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "What key factor distinguishes 'Valuing' from 'Responding' in the affective domain?",
-      "options": [
-        "Valuing is motivated by an individual's commitment to the value, not merely by a desire to comply or obey.",
-        "Responding involves physical action while Valuing does not.",
-        "Valuing is the lowest level while Responding is the highest.",
-        "Responding is involuntary while Valuing is forced."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A trainee watches an instructor tie a knot and then tries to replicate the exact same movements. This action is characteristic of which level of the Psychomotor domain?",
-      "options": [
-        "Impulsion",
-        "Imitation",
-        "Manipulation",
-        "Coordination"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A tall trainee learns to fire a pistol. After imitating the instructor, he adjusts his stance and grip to better suit his own body frame. This adjustment process is known as what?",
-      "options": [
-        "Control",
-        "Imitation",
-        "Coordination",
-        "Manipulation"
-      ],
-      "correct": 3,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "The example of learning to drive a bus—requiring knowledge of rules, concern for safety, and physical skill—is used to illustrate what important concept?",
-      "options": [
-        "That the Psychomotor domain is the most important.",
-        "That learning situations can overlap, sometimes involving all three domains.",
-        "That the Cognitive domain is always separate from the others.",
-        "That attitudes do not matter in skill-based tasks."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "A trainee is asked to design a completely new and unique training exercise to solve a specific tactical problem. This task of creation primarily uses which level of the Cognitive domain?",
-      "options": [
-        "Application",
-        "Analysis",
-        "Synthesis",
-        "Evaluation"
-      ],
-      "correct": 2,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    },
-    {
-      "question": "An officer has to make a command decision that requires resolving a conflict between two deeply held values (e.g., mission security vs. personal freedom of the troops). This process of creating a unique value system is an example of which Affective domain level?",
-      "options": [
-        "Valuing",
-        "Organisation",
-        "Characterisation",
-        "Responding"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Domains of Learning"
-    }
-  ],
-  "objectives": [
-    {
-      "question": "In the context of training, what is an 'Aim' defined as?",
-      "options": [
-        "The outcome of the training",
-        "A statement of intent",
-        "The cost of the training",
-        "The assessment method"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "What is an 'Objective' in training?",
-      "options": [
-        "A broad statement of purpose",
-        "A description of the trainer's skills",
-        "What will be achieved as an outcome, expressed in terms of performance",
-        "The location of the training"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Which term describes the intention of the training?",
-      "options": [
-        "Objective",
-        "Standard",
-        "Aim",
-        "Condition"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Which term defines the achievement or outcome of the training?",
-      "options": [
-        "Aim",
-        "Intent",
-        "Objective",
-        "Purpose"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "What are the three types of objectives described in the chapter?",
-      "options": [
-        "Performance, Training, and Specific",
-        "Primary, Secondary, and Tertiary",
-        "Easy, Medium, and Hard",
-        "Aimed, Achieved, and Assessed"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Which objective describes the standard of performance required back in the workplace?",
-      "options": [
-        "Specific Objective",
-        "Training Objective",
-        "Enabling Objective",
-        "Performance Objective"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Which objective describes the standard achieved at the end of a formal training course?",
-      "options": [
-        "Performance Objective",
-        "Specific Objective",
-        "Training Objective",
-        "Broad Objective"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "What is another name for a Specific Objective?",
-      "options": [
-        "Performance Objective",
-        "Enabling Objective",
-        "Main Objective",
-        "Final Objective"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "According to the text, the performance gap between the Training Objective and the Performance Objective can be bridged by what?",
-      "options": [
-        "More classroom time",
-        "A final exam",
-        "On-Job-Training (OJT)",
-        "A better Aim"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "What are the three elements that should be included in a well-written objective?",
-      "options": [
-        "Performance, Conditions, and Standards",
-        "Aim, Goal, and Target",
-        "Who, What, and When",
-        "Knowledge, Skill, and Attitude"
-      ],
-      "correct": 0,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Of the three elements of an objective, which one is considered essential and must always be included?",
-      "options": [
-        "Conditions",
-        "Standards",
-        "Performance",
-        "Aim"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "What kind of verbs are required for a clear statement of performance?",
-      "options": [
-        "Vague Verbs",
-        "Passive Verbs",
-        "Action Verbs",
-        "Helping Verbs"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "The verb 'understand' is given as an example of a...?",
-      "options": [
-        "Good action verb",
-        "Poorly defined action verb",
-        "Verb for standards",
-        "Verb for conditions"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Specifying the tools, equipment, or manuals to be used falls under which element of an objective?",
-      "options": [
-        "Performance",
-        "Conditions",
-        "Standards",
-        "Aim"
-      ],
-      "correct": 1,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "A statement such as 'must be completed in not more than 10 minutes' is an example of what kind of standard?",
-      "options": [
-        "Accuracy",
-        "Quality",
-        "Speed",
-        "Condition"
-      ],
-      "correct": 2,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "A statement such as 'must be completed without error' is an example of what kind of standard?",
-      "options": [
-        "Speed",
         "Condition",
-        "Complexity",
-        "Accuracy"
-      ],
-      "correct": 3,
-      "difficulty": "easy",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "What is the cumulative effect of completing all Specific Objectives?",
-      "options": [
-        "It allows the trainee to skip the final exam.",
-        "It proves the Aim was wrong.",
-        "It enables a person to achieve the Training Objective.",
-        "It defines the Performance Objective."
+        "Behavior",
+        "Criterion",
+        "Context"
       ],
       "correct": 2,
       "difficulty": "easy",
-      "module": "Writing Objectives"
+      "module": "Objectives, Maxims & Questioning Technique"
     },
     {
-      "question": "When writing objectives, should you use double verbs like 'remove and repair'?",
+      "question": "Which questioning technique encourages higher-order thinking?",
       "options": [
-        "Yes, it is more descriptive.",
-        "No, you should use the more inclusive of the two.",
-        "Only if the task is complex.",
-        "It does not matter."
+        "Yes/No questions",
+        "Open-ended questions",
+        "Leading questions",
+        "Rhetorical questions"
       ],
       "correct": 1,
       "difficulty": "easy",
-      "module": "Writing Objectives"
+      "module": "Objectives, Maxims & Questioning Technique"
     },
     {
-      "question": "Why should you avoid using the word 'safely' in every objective statement?",
+      "question": "What is a maxim in educational context?",
       "options": [
-        "Safety is not important.",
-        "It makes the objective too long.",
-        "Safety is an integral part of all training and doesn't need to be repeated.",
-        "It is a vague term."
+        "A type of assessment",
+        "A fundamental principle or rule",
+        "A learning objective",
+        "A teaching method"
+      ],
+      "correct": 1,
+      "difficulty": "hard",
+      "module": "Objectives, Maxims & Questioning Technique"
+    }
+  ],
+  "mod5": [
+    {
+      "question": "Which teaching method involves direct instruction by the trainer?",
+      "options": [
+        "Group Discussion",
+        "Lecture",
+        "Demonstration",
+        "Coaching"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training"
+    },
+    {
+      "question": "What is the primary advantage of demonstration as a teaching method?",
+      "options": [
+        "It's the fastest method",
+        "It allows learners to see the actual process",
+        "It requires no preparation",
+        "It works only for large groups"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training"
+    },
+    {
+      "question": "CBT stands for:",
+      "options": [
+        "Computer-Based Training",
+        "Cognitive Behavioral Therapy",
+        "Competency-Based Testing",
+        "Classroom-Based Teaching"
+      ],
+      "correct": 0,
+      "difficulty": "easy",
+      "module": "Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training"
+    },
+    {
+      "question": "Which method is most effective for developing problem-solving skills?",
+      "options": [
+        "Lecture",
+        "Demonstration",
+        "Group Discussion",
+        "Reading"
+      ],
+      "correct": 2,
+      "difficulty": "hard",
+      "module": "Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training"
+    }
+  ],
+  "mod6": [
+    {
+      "question": "What is the most important quality of an effective instructor?",
+      "options": [
+        "Subject matter expertise",
+        "Ability to communicate effectively",
+        "Strict discipline",
+        "Advanced degrees"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Instructor Like Qualities, Video in Training, Feedback"
+    },
+    {
+      "question": "When using video in training, what is the most important consideration?",
+      "options": [
+        "Video quality",
+        "Relevance to learning objectives",
+        "Length of video",
+        "Cost of production"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Instructor Like Qualities, Video in Training, Feedback"
+    },
+    {
+      "question": "Effective feedback should be:",
+      "options": [
+        "General and vague",
+        "Specific and timely",
+        "Only positive",
+        "Given once at the end"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Instructor Like Qualities, Video in Training, Feedback"
+    },
+    {
+      "question": "Which instructor quality helps build rapport with learners?",
+      "options": [
+        "Strictness",
+        "Empathy",
+        "Perfectionism",
+        "Aloofness"
+      ],
+      "correct": 1,
+      "difficulty": "hard",
+      "module": "Instructor Like Qualities, Video in Training, Feedback"
+    }
+  ],
+  "mod7": [
+    {
+      "question": "TDEC stands for:",
+      "options": [
+        "Training Design and Evaluation Committee",
+        "Technical Development and Education Center",
+        "Test Development and Evaluation Cycle",
+        "Training Documentation and Evaluation Criteria"
+      ],
+      "correct": 0,
+      "difficulty": "easy",
+      "module": "TDEC, Item Analysis, Result Analysis"
+    },
+    {
+      "question": "What is the purpose of item analysis?",
+      "options": [
+        "To grade papers faster",
+        "To evaluate the effectiveness of test questions",
+        "To reduce course content",
+        "To increase class size"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "TDEC, Item Analysis, Result Analysis"
+    },
+    {
+      "question": "In result analysis, what does a low discrimination index indicate?",
+      "options": [
+        "The item is too easy",
+        "The item is too difficult",
+        "The item doesn't distinguish between high and low performers",
+        "The item is perfectly designed"
       ],
       "correct": 2,
       "difficulty": "easy",
-      "module": "Writing Objectives"
+      "module": "TDEC, Item Analysis, Result Analysis"
     },
     {
-      "question": "What is wrong with using words like 'correctly' or 'accurately' in an objective?",
+      "question": "Which statistical measure is used to determine item difficulty?",
       "options": [
-        "They are too specific.",
-        "They are vague and should be replaced with a precise standard.",
-        "They only apply to speed standards.",
-        "They are not action verbs."
+        "Mean score",
+        "Percentage of correct responses",
+        "Standard deviation",
+        "Correlation coefficient"
+      ],
+      "correct": 1,
+      "difficulty": "hard",
+      "module": "TDEC, Item Analysis, Result Analysis"
+    }
+  ],
+  "mod8": [
+    {
+      "question": "Training directives are issued by:",
+      "options": [
+        "Individual instructors",
+        "Training institutions",
+        "Higher military/organizational authorities",
+        "Student committees"
+      ],
+      "correct": 2,
+      "difficulty": "easy",
+      "module": "Training Directives"
+    },
+    {
+      "question": "The primary purpose of training directives is to:",
+      "options": [
+        "Increase paperwork",
+        "Provide standardized guidance for training",
+        "Reduce training costs",
+        "Eliminate practical training"
       ],
       "correct": 1,
       "difficulty": "easy",
-      "module": "Writing Objectives"
+      "module": "Training Directives"
     },
     {
-      "question": "What is the fundamental difference between an Aim and an Objective for a training program?",
+      "question": "Training directives typically include:",
       "options": [
-        "The Aim is for trainees, and the Objective is for management.",
-        "The Aim describes the broad intention, while the Objective defines a specific, measurable performance outcome.",
-        "The Aim is written before the training, and the Objective is written after.",
-        "The Aim focuses on cost, while the Objective focuses on time."
+        "Only scheduling information",
+        "Objectives, methods, and evaluation criteria",
+        "Just instructor names",
+        "Only equipment lists"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Training Directives"
+    },
+    {
+      "question": "Which level of authority typically issues training directives for military institutions?",
+      "options": [
+        "Company level",
+        "Platoon level",
+        "Command/Headquarters level",
+        "Individual level"
+      ],
+      "correct": 2,
+      "difficulty": "hard",
+      "module": "Training Directives"
+    }
+  ],
+  "mod9": [
+    {
+      "question": "What is the primary source of motivation according to most theories?",
+      "options": [
+        "External rewards only",
+        "Internal drives and external incentives",
+        "Punishment and fear",
+        "Competition with others"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Motivation, Communication, Code of Ethics"
+    },
+    {
+      "question": "Effective communication in training requires:",
+      "options": [
+        "Speaking loudly",
+        "Using technical jargon",
+        "Clear, simple language",
+        "Avoiding eye contact"
+      ],
+      "correct": 2,
+      "difficulty": "easy",
+      "module": "Motivation, Communication, Code of Ethics"
+    },
+    {
+      "question": "A code of ethics for trainers typically includes:",
+      "options": [
+        "Only legal requirements",
+        "Professional standards and moral principles",
+        "Personal preferences",
+        "Organizational politics"
+      ],
+      "correct": 1,
+      "difficulty": "easy",
+      "module": "Motivation, Communication, Code of Ethics"
+    },
+    {
+      "question": "Which communication barrier is most common in training environments?",
+      "options": [
+        "Physical distance",
+        "Language and technical complexity",
+        "Time constraints",
+        "Equipment failure"
       ],
       "correct": 1,
       "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "A training plan states its goal is to 'improve the interviewing skills of officers'. Why is this considered an Aim and not a well-defined Objective?",
-      "options": [
-        "It is too long to be an objective.",
-        "It does not specify a measurable performance, the conditions, or the standards.",
-        "Interviewing is a skill that cannot be measured.",
-        "It should be called a Goal, not an Aim."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "In which situation is it essential for the Training Objective to be identical to the Performance Objective?",
-      "options": [
-        "In basic literacy training.",
-        "In training for emergency situations like firefighting or flying an aircraft.",
-        "In all On-Job-Training (OJT) situations.",
-        "When the training budget is very low."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "An objective states: 'The trainee will be able to list the parts of a 9mm carbine.' Which two of the three key elements of an objective are missing?",
-      "options": [
-        "Performance and Standards",
-        "Conditions and Standards",
-        "Performance and Conditions",
-        "Aim and Performance"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "In the objective, 'The trainee will be able to extinguish an electrical fire using a CO2 extinguisher without error', the phrase 'using a CO2 extinguisher' represents which element?",
-      "options": [
-        "The Performance",
-        "The Condition",
-        "The Standard",
-        "The Aim"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Why is the verb 'know' considered ineffective for an objective, whereas a verb like 'state' is effective?",
-      "options": [
-        "'Know' is an internal state that is not directly observable, while 'state' describes an observable action.",
-        "'Know' is too informal for a training document.",
-        "'Know' applies to the Affective Domain only.",
-        "'State' is a more complex action than 'know'."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "How do well-written Specific Objectives facilitate the achievement of a broader Training Objective?",
-      "options": [
-        "They act as prerequisites, breaking the larger task into manageable units of knowledge and skill.",
-        "They serve as alternative goals if the Training Objective is too hard.",
-        "They provide a summary of the Training Objective.",
-        "They are used to test the trainees before the training begins."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "A manager wants to ensure training is cost-effective. Why is defining the 'Range of Learning' under the 'Conditions' element crucial for this goal?",
-      "options": [
-        "It ensures the training is as long as possible.",
-        "It prevents wasting resources by training staff on equipment or tasks they will not use on the job.",
-        "It specifies the exact cost of the training.",
-        "It allows any type of equipment to be used."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "If a job task always requires a checklist, why is it critical to include 'with the use of a checklist' in the objective's conditions?",
-      "options": [
-        "To make the training assessment harder.",
-        "To ensure the training and assessment are realistic and reflect how the job is actually performed.",
-        "To test the trainee's memory of the checklist.",
-        "To reduce the time needed for the assessment."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "An objective that reads, 'The trainee will appreciate the need for safety' is considered weak because...?",
-      "options": [
-        "'Appreciate' is a vague term that does not describe an observable performance.",
-        "Safety is not an important topic for objectives.",
-        "It does not mention the trainer.",
-        "It should include a specific safety rule."
-      ],
-      "correct": 0,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "The text states that moving the training objective up or down the learning curve has a significant effect on what?",
-      "options": [
-        "The trainer's salary",
-        "The time and cost of the training",
-        "The performance of the trainer",
-        "The location of the training"
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
-    },
-    {
-      "question": "Which statement best describes the relationship between Training Objectives and Specific Objectives?",
-      "options": [
-        "A Training Objective is a summary of all the Specific Objectives.",
-        "Specific Objectives are milestones of knowledge and skill that enable the achievement of the overall Training Objective.",
-        "They are two different names for the same thing.",
-        "A Training Objective is for the trainer, and a Specific Objective is for the trainee."
-      ],
-      "correct": 1,
-      "difficulty": "hard",
-      "module": "Writing Objectives"
+      "module": "Motivation, Communication, Code of Ethics"
     }
   ]
 }

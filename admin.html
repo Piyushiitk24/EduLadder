@@ -320,60 +320,67 @@
                         <i class="fas fa-books"></i> Learning Modules Overview
                     </h2>
                     <div class="modules-grid">
-                        <div class="module-card" data-module="tlprocess">
-                            <div class="module-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                            <h3>Teaching Learning Process</h3>
-                            <p>Comprehensive guide to effective teaching methodologies</p>
-                            <div class="question-count" id="count-tlprocess">Loading...</div>
-                        </div>
-
-                        <div class="module-card" data-module="learningtheories">
-                            <div class="module-icon"><i class="fas fa-brain"></i></div>
-                            <h3>Learning Theories</h3>
-                            <p>Fundamental theories of how learning occurs</p>
-                            <div class="question-count" id="count-learningtheories">Loading...</div>
-                        </div>
-
-                        <div class="module-card" data-module="fourways">
-                            <div class="module-icon"><i class="fas fa-route"></i></div>
-                            <h3>4 Ways of Learning</h3>
-                            <p>Visual, Auditory, Reading/Writing, and Kinesthetic learning styles</p>
-                            <div class="question-count" id="count-fourways">Loading...</div>
-                        </div>
-
-                        <div class="module-card" data-module="andragogy">
-                            <div class="module-icon"><i class="fas fa-user-graduate"></i></div>
-                            <h3>Andragogy</h3>
-                            <p>Adult learning principles and methodologies</p>
-                            <div class="question-count" id="count-andragogy">Loading...</div>
-                        </div>
-
-                        <div class="module-card" data-module="sat">
-                            <div class="module-icon"><i class="fas fa-cogs"></i></div>
-                            <h3>Systematic Approach to Training</h3>
-                            <p>Structured methodology for training design</p>
-                            <div class="question-count" id="count-sat">Loading...</div>
-                        </div>
-
-                        <div class="module-card" data-module="btm">
-                            <div class="module-icon"><i class="fas fa-layer-group"></i></div>
-                            <h3>Basic Teaching Model</h3>
-                            <p>Fundamental framework for structured teaching</p>
-                            <div class="question-count" id="count-btm">Loading...</div>
-                        </div>
-
-                        <div class="module-card" data-module="dol">
+                        <div class="module-card" data-module="mod1">
                             <div class="module-icon"><i class="fas fa-cube"></i></div>
-                            <h3>Domains of Learning</h3>
-                            <p>Cognitive, Affective, and Psychomotor learning domains</p>
-                            <div class="question-count" id="count-dol">Loading...</div>
+                            <h3>Module 1</h3>
+                            <p>Domains of Learning</p>
+                            <div class="question-count" id="count-mod1">Loading...</div>
                         </div>
 
-                        <div class="module-card" data-module="objectives">
+                        <div class="module-card" data-module="mod2">
+                            <div class="module-icon"><i class="fas fa-list-alt"></i></div>
+                            <h3>Module 2</h3>
+                            <p>TOS, Master Syllabus & Evaluation</p>
+                            <div class="question-count" id="count-mod2">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod3">
+                            <div class="module-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <h3>Module 3</h3>
+                            <p>TL process, Andragogy, SAT, BTM & Ways of Learning</p>
+                            <div class="question-count" id="count-mod3">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod4">
                             <div class="module-icon"><i class="fas fa-bullseye"></i></div>
-                            <h3>Writing Objectives</h3>
-                            <p>Creating clear, measurable learning objectives</p>
-                            <div class="question-count" id="count-objectives">Loading...</div>
+                            <h3>Module 4</h3>
+                            <p>Objectives, Maxims & Questioning Technique</p>
+                            <div class="question-count" id="count-mod4">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod5">
+                            <div class="module-icon"><i class="fas fa-users"></i></div>
+                            <h3>Module 5</h3>
+                            <p>Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training</p>
+                            <div class="question-count" id="count-mod5">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod6">
+                            <div class="module-icon"><i class="fas fa-user-tie"></i></div>
+                            <h3>Module 6</h3>
+                            <p>Instructor Like Qualities, Video in Training, Feedback</p>
+                            <div class="question-count" id="count-mod6">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod7">
+                            <div class="module-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h3>Module 7</h3>
+                            <p>TDEC, Item Analysis, Result Analysis</p>
+                            <div class="question-count" id="count-mod7">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod8">
+                            <div class="module-icon"><i class="fas fa-book"></i></div>
+                            <h3>Module 8</h3>
+                            <p>Training Directives</p>
+                            <div class="question-count" id="count-mod8">Loading...</div>
+                        </div>
+
+                        <div class="module-card" data-module="mod9">
+                            <div class="module-icon"><i class="fas fa-comments"></i></div>
+                            <h3>Module 9</h3>
+                            <p>Motivation, Communication, Code of Ethics</p>
+                            <div class="question-count" id="count-mod9">Loading...</div>
                         </div>
                     </div>
                 </div>
@@ -456,7 +463,7 @@
 
         // Update question counts for each module
         function updateQuestionCounts() {
-            const modules = ['tlprocess', 'learningtheories', 'fourways', 'andragogy', 'sat', 'btm', 'dol', 'objectives'];
+            const modules = ['mod1', 'mod2', 'mod3', 'mod4', 'mod5', 'mod6', 'mod7', 'mod8', 'mod9'];
             
             console.log('Updating question counts. Data loaded:', !!allQuestionsData);
             if (allQuestionsData) {
@@ -1083,19 +1090,26 @@ objectives,Writing Objectives,hard,According to Mager's criteria for writing obj
         }
 
         function downloadTemplate() {
-            // Create the exact template content matching our requirements
+            // Create the template content with new module IDs and names
             const csvContent = `module_id,module_name,difficulty,question_text,option_a,option_b,option_c,option_d,correct_option
-tlprocess,Teaching Learning Process,easy,What is the first step in the teaching-learning process?,Assessment,Planning,Implementation,Evaluation,B
-tlprocess,Teaching Learning Process,hard,According to Kolb's experiential learning theory which stage follows 'Concrete Experience'?,Abstract Conceptualization,Reflective Observation,Active Experimentation,Theoretical Analysis,B
-learningtheories,Learning Theories,easy,Who is known as the father of behaviorism?,Jean Piaget,B.F. Skinner,John Watson,Albert Bandura,C
-learningtheories,Learning Theories,hard,According to Vygotsky's Zone of Proximal Development learning occurs best when:,Students work completely independently,Tasks are too difficult to complete,Students receive appropriate guidance,Learning is purely theoretical,C
-fourways,4 Ways of Learning,easy,Visual learners prefer to learn through:,Listening to lectures,Seeing charts and diagrams,Physical movement,Group discussions,B
-andragogy,Andragogy,easy,Andragogy is the study of:,Child learning,Adult learning,Animal behavior,Memory techniques,B
-sat,Systematic Approach to Training (SAT),easy,SAT stands for:,Simple Approach to Teaching,Systematic Approach to Training,Strategic Academic Training,Standard Assessment Tool,B
-btm,Basic Teaching Model,easy,The Basic Teaching Model typically includes:,Only assessment,Preparation presentation practice,Just lecturing,Testing only,B
-dol,Domains of Learning,easy,The three main domains of learning are:,Reading writing arithmetic,Cognitive affective psychomotor,Visual auditory kinesthetic,Memory thinking feeling,B
-objectives,Writing Objectives,easy,A learning objective should be:,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B`;
-            
+mod1,Domains of Learning,easy,Which of the following is NOT one of the three primary domains of learning?,Cognitive,Affective,Psychomotor,Social,D
+mod1,Domains of Learning,hard,Which action verb is most suitable for the Responding level in the affective domain?,Assists,Organizes,Evaluates,Generates,A
+mod2,TOS, Master Syllabus & Evaluation,easy,What does TOS stand for in educational planning?,Table of Specifications,Test of Skills,Training Outcome Standards,Technical Objective Setting,A
+mod2,TOS, Master Syllabus & Evaluation,hard,Which evaluation method provides immediate feedback during the learning process?,Summative evaluation,Formative evaluation,Diagnostic evaluation,Comparative evaluation,B
+mod3,TL process, Andragogy, SAT, BTM & Ways of Learning,easy,What does the acronym SAT stand for?,Standard Assessment of Training,Systematic Approach to Teaching,Systematic Approach to Training,Strategic Analysis of Tasks,C
+mod3,TL process, Andragogy, SAT, BTM & Ways of Learning,hard,Who designed the Basic Teaching Model (BTM)?,B.F. Skinner,Jean Piaget,Robert Glaser,Ivan Pavlov,C
+mod4,Objectives, Maxims & Questioning Technique,easy,A well-written learning objective should be:,Vague and general,Specific and measurable,Impossible to achieve,Only for teachers,B
+mod4,Objectives, Maxims & Questioning Technique,hard,What is a maxim in educational context?,A type of assessment,A fundamental principle or rule,A learning objective,A teaching method,B
+mod5,Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training,easy,CBT stands for:,Computer-Based Training,Cognitive Behavioral Therapy,Competency-Based Testing,Classroom-Based Teaching,A
+mod5,Lesson, Lecture, Demonstration, Group Discussion, Coaching, CBT, Media in Training,hard,Which method is most effective for developing problem-solving skills?,Lecture,Demonstration,Group Discussion,Reading,C
+mod6,Instructor Like Qualities, Video in Training, Feedback,easy,Effective feedback should be:,General and vague,Specific and timely,Only positive,Given once at the end,B
+mod6,Instructor Like Qualities, Video in Training, Feedback,hard,Which instructor quality helps build rapport with learners?,Strictness,Empathy,Perfectionism,Aloofness,B
+mod7,TDEC, Item Analysis, Result Analysis,easy,TDEC stands for:,Training Design and Evaluation Committee,Technical Development and Education Center,Test Development and Evaluation Cycle,Training Documentation and Evaluation Criteria,A
+mod7,TDEC, Item Analysis, Result Analysis,hard,Which statistical measure is used to determine item difficulty?,Mean score,Percentage of correct responses,Standard deviation,Correlation coefficient,B
+mod8,Training Directives,easy,Training directives are issued by:,Individual instructors,Training institutions,Higher military/organizational authorities,Student committees,C
+mod8,Training Directives,hard,Which level of authority typically issues training directives for military institutions?,Company level,Platoon level,Command/Headquarters level,Individual level,C
+mod9,Motivation, Communication, Code of Ethics,easy,Effective communication in training requires:,Speaking loudly,Using technical jargon,Clear, simple language,Avoiding eye contact,C
+mod9,Motivation, Communication, Code of Ethics,hard,Which communication barrier is most common in training environments?,Physical distance,Language and technical complexity,Time constraints,Equipment failure,B`;
             const blob = new Blob([csvContent], { type: 'text/csv' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -1103,7 +1117,6 @@ objectives,Writing Objectives,easy,A learning objective should be:,Vague and gen
             a.download = 'template_questions.csv';
             a.click();
             window.URL.revokeObjectURL(url);
-            
             showStatus('✅ CSV template downloaded successfully! Use this exact format for uploading questions.', 'success');
         }
 
