@@ -854,27 +854,26 @@ function selectModule(moduleId) {
   if (selectedCard) {
     selectedCard.classList.add('selected');
     selectedModule = moduleId;
-    
+
     // Load questions for the selected module
     const success = setModuleQuestions(moduleId);
-    if (success) {
-      console.log(`Successfully loaded questions for module: ${moduleId}`);
-      console.log(`Easy questions: ${moduleQuestions.easy.length}, Hard questions: ${moduleQuestions.hard.length}`);
-      
-      // Enable the next button
-      const nextBtn = document.getElementById('moduleNextBtn');
-      if (nextBtn) {
-        nextBtn.disabled = false;
-        nextBtn.classList.remove('disabled');
-        nextBtn.style.opacity = '1';
-        nextBtn.style.cursor = 'pointer';
-        nextBtn.style.backgroundColor = '#ff6b35';
-        console.log('Next button enabled');
-      } else {
-        console.error('Next button not found!');
-      }
+
+    // Always enable the next button when a module is selected
+    const nextBtn = document.getElementById('moduleNextBtn');
+    if (nextBtn) {
+      nextBtn.disabled = false;
+      nextBtn.classList.remove('disabled');
+      nextBtn.style.opacity = '1';
+      nextBtn.style.cursor = 'pointer';
+      nextBtn.style.backgroundColor = '#ff6b35';
+      console.log('Next button enabled');
     } else {
-      console.error(`Failed to load questions for module: ${moduleId}`);
+      console.error('Next button not found!');
+    }
+
+    // If questions are missing, show a user-friendly error
+    if (!success) {
+      alert('No questions found for this module. Please check your questions.json or contact the administrator.');
     }
   } else {
     console.error(`Module card not found for: ${moduleId}`);
