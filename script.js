@@ -460,7 +460,10 @@ const initialState = () => {
 document.addEventListener("DOMContentLoaded", async function() {
   // Load questions from JSON file
   await loadQuestions();
-  
+
+  // After loading questions, mark unavailable modules
+  markUnavailableModules();
+
   // Show the welcome screen first
   showScreen("welcomeScreen");
 
@@ -474,6 +477,38 @@ document.addEventListener("DOMContentLoaded", async function() {
     showScreen("moduleScreen");
   });
 });
+
+// Mark modules with no questions as unavailable (greyed out, Coming Soon)
+function markUnavailableModules() {
+  // Get all module cards
+  const allCards = document.querySelectorAll('.module-card');
+  if (!allCards || !allQuestionsData) return;
+  allCards.forEach(card => {
+    const moduleId = card.getAttribute('data-module');
+    // If module is missing or has no questions, mark as unavailable
+    if (!allQuestionsData[moduleId] || !Array.isArray(allQuestionsData[moduleId]) || allQuestionsData[moduleId].length === 0) {
+      card.classList.add('unavailable');
+      card.setAttribute('data-unavailable', 'true');
+      // Add Coming Soon overlay if not already present
+      if (!card.querySelector('.coming-soon-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'coming-soon-overlay';
+        overlay.innerText = 'Coming Soon';
+        card.appendChild(overlay);
+      }
+      // Remove click handler if present
+      card.onclick = null;
+    } else {
+      card.classList.remove('unavailable');
+      card.removeAttribute('data-unavailable');
+      // Remove Coming Soon overlay if present
+      const overlay = card.querySelector('.coming-soon-overlay');
+      if (overlay) overlay.remove();
+      // Restore click handler
+      card.onclick = function() { selectModule(moduleId); };
+    }
+  });
+}
 
 
 // Select players for game
@@ -842,6 +877,11 @@ function updatescoreboard(playerStats) {
 
 // Function to select a module
 function selectModule(moduleId) {
+  // Prevent selection if module is unavailable
+  const card = document.querySelector(`[data-module="${moduleId}"]`);
+  if (card && card.classList.contains('unavailable')) {
+    return;
+  }
   console.log(`Selecting module: ${moduleId}`);
   console.log('Available questions data:', allQuestionsData ? Object.keys(allQuestionsData) : 'No data');
   
