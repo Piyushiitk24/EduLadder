@@ -38,7 +38,8 @@ function setModuleQuestions(moduleId) {
   // Check if moduleData is an array (new format) or object with easy/hard (old format)
   if (Array.isArray(moduleData)) {
     // New format: array of questions with difficulty property
-    const easyQuestions = moduleData.filter(q => q.difficulty === 'easy');
+    // Treat 'medium' as playable by grouping it with 'easy' for gameplay
+    const easyQuestions = moduleData.filter(q => q.difficulty === 'easy' || q.difficulty === 'medium');
     const hardQuestions = moduleData.filter(q => q.difficulty === 'hard');
     
     // Convert to the format expected by the game
@@ -191,13 +192,16 @@ function showQuestionModal(playerNumber, snakeIndex, isStart = false, snakeTail 
   questionText.innerText = q.text;
 
   optionsContainer.innerHTML = "";
+  // Render only non-empty options but preserve original indices in value
   q.options.forEach((opt, idx) => {
-    optionsContainer.innerHTML += `
-      <label class="option-label">
-        <input type="radio" name="questionOption" value="${idx}" />
-        <span class="option-text">${opt}</span>
-      </label>
-    `;
+    if (typeof opt === 'string' && opt.trim().length > 0) {
+      optionsContainer.innerHTML += `
+        <label class="option-label">
+          <input type="radio" name="questionOption" value="${idx}" />
+          <span class="option-text">${opt}</span>
+        </label>
+      `;
+    }
   });
 
   // Function to handle closing the modal
